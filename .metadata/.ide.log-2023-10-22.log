@@ -1,0 +1,712 @@
+2023-10-23 01:41:40,293 [INFO] MainUpdater:2868 - connection check result : 10
+2023-10-23 01:41:40,335 [INFO] MainUpdater:2868 - connection check result : 10
+2023-10-23 01:41:40,384 [INFO] MicroXplorer:468 - Change Database Path : 
+2023-10-23 01:41:40,384 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.92
+2023-10-23 01:41:40,419 [WARN] ThirdParty:871 - waiting for thirdparty lock release [close project]
+2023-10-23 01:41:40,419 [INFO] ThirdParty:873 - entering critical section [close project]
+2023-10-23 01:41:40,419 [INFO] ThirdParty:883 - exiting critical section [close project]
+2023-10-23 01:41:40,423 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2023-10-23 01:41:40,431 [WARN] IpParametersView:151 - Warning: This peripheral hasn't parameters
+2023-10-23 01:41:40,437 [WARN] MainPanel:272 - <html><b><center>Warning: This peripheral has no parameters to be configured<br></b></html>
+2023-10-23 01:41:40,448 [INFO] UtilMem:75 - Begin LoadConfig() Used Memory: 569840312 Bytes (817889280)
+2023-10-23 01:41:40,448 [INFO] MicroXplorer:468 - Change Database Path : 
+2023-10-23 01:41:40,448 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.92
+2023-10-23 01:41:40,449 [INFO] OpenFileManager:308 - Change cursor
+2023-10-23 01:41:40,471 [INFO] RulesReader:64 - Compatibility file has been processed (293 Rules)
+2023-10-23 01:41:40,483 [INFO] Mcu:1946 - Initializing MCU STM32F429ZITx STM32F429ZITx STM32F429ZIT6
+2023-10-23 01:41:42,012 [INFO] Context:659 - Trying to add GPIOservice into a context  which must be forbidden
+2023-10-23 01:41:42,349 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,349 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,349 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,349 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,349 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,349 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,349 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,349 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,349 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,349 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,349 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,349 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,349 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,349 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,349 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,349 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,350 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,350 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,350 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,350 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,350 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,350 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,350 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,350 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,350 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,350 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,350 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,350 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,350 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,350 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,350 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,350 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,350 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 01:41:42,351 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2023-10-23 01:41:42,351 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2023-10-23 01:41:42,351 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2023-10-23 01:41:42,351 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2023-10-23 01:41:42,351 [WARN] ModelIntegratedComponent:184 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2023-10-23 01:41:42,355 [INFO] ThirdPartyModel:298 - Start build external matchings
+2023-10-23 01:41:42,357 [INFO] ThirdPartyModel:316 - End build external matchings
+2023-10-23 01:41:42,359 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (ETH) : Invalid parameter (PHY_Name)
+2023-10-23 01:41:42,359 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (ETH) : Invalid parameter (PHY_Value)
+2023-10-23 01:41:42,359 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (ETH) : Invalid parameter (PhyAddress)
+2023-10-23 01:41:42,359 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (ADC12outputFreq_Value)
+2023-10-23 01:41:42,360 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (ADC34outputFreq_Value)
+2023-10-23 01:41:42,360 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2023-10-23 01:41:42,360 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (I2C1Freq_Value)
+2023-10-23 01:41:42,360 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (I2C2Freq_Value)
+2023-10-23 01:41:42,360 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (I2C3Freq_Value)
+2023-10-23 01:41:42,360 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Parameter (MCO2PinFreq_Value) has invalid value (168000000)
+2023-10-23 01:41:42,360 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (MCOFreq_Value)
+2023-10-23 01:41:42,360 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (PLLMCOFreq_Value)
+2023-10-23 01:41:42,360 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (PLLMUL)
+2023-10-23 01:41:42,360 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (PRESCALERUSB)
+2023-10-23 01:41:42,361 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Parameter (RTCHSEDivFreq_Value) has invalid value (4000000)
+2023-10-23 01:41:42,361 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (SYSCLKSourceVirtual)
+2023-10-23 01:41:42,361 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIM15Freq_Value)
+2023-10-23 01:41:42,361 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIM16Freq_Value)
+2023-10-23 01:41:42,361 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIM17Freq_Value)
+2023-10-23 01:41:42,361 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIM1Freq_Value)
+2023-10-23 01:41:42,361 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIM20Freq_Value)
+2023-10-23 01:41:42,361 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIM2Freq_Value)
+2023-10-23 01:41:42,361 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIM3Freq_Value)
+2023-10-23 01:41:42,361 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIM8Freq_Value)
+2023-10-23 01:41:42,361 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (UART4Freq_Value)
+2023-10-23 01:41:42,361 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (UART5Freq_Value)
+2023-10-23 01:41:42,361 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (USART1Freq_Value)
+2023-10-23 01:41:42,361 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (USART2Freq_Value)
+2023-10-23 01:41:42,361 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (USART3Freq_Value)
+2023-10-23 01:41:42,361 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (USBFreq_Value)
+2023-10-23 01:41:42,361 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (VCOOutput2Freq_Value)
+2023-10-23 01:41:42,615 [INFO] UtilMem:75 - End LoadConfig() Used Memory: 273857928 Bytes (817889280)
+2023-10-23 01:41:42,649 [WARN] ThirdParty:833 - waiting for thirdparty lock release [change project]
+2023-10-23 01:41:42,649 [INFO] ThirdParty:835 - entering critical section [change project]
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USBPD 4.1
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.0.0
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.1
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.2
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.1.0
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.0
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2023-10-23 01:41:42,649 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2023-10-23 01:41:42,649 [INFO] ThirdParty:841 - exiting critical section [change project]
+2023-10-23 01:41:42,808 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2023-10-23 01:41:42,809 [INFO] PinOutPanel:1499 - setPackage(STM32F429ZITx,LQFP144)
+2023-10-23 01:41:43,063 [INFO] UtilMem:75 - Before build in PCC Used Memory: 491231072 Bytes (817889280)
+2023-10-23 01:41:43,253 [INFO] UtilMem:75 - After build in PCC Used Memory: 538416992 Bytes (817889280)
+2023-10-23 01:41:43,270 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,270 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,270 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,270 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,270 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,270 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,270 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,270 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,271 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,271 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,271 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,271 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,271 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,271 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,271 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,271 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,271 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,272 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,272 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,272 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,272 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,272 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,273 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,273 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,273 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,273 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,273 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,274 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,274 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,274 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,274 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,274 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,274 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,274 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,275 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,275 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,275 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,275 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,275 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,275 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,276 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,276 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,276 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,276 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,276 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,277 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,277 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,277 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,277 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,277 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,278 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,278 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,278 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,279 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,279 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,279 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,280 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,280 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,280 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,280 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,280 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,281 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,281 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,282 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,282 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,283 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 01:41:43,297 [INFO] ApiDbMcu:507 - Load IP Config File for PDM2PCM
+2023-10-23 01:41:43,339 [INFO] CADModel:165 - CPN selected for project levelSTM32F429ZIT6
+2023-10-23 01:41:43,339 [INFO] CADModel:114 - Register for checkConnection events
+2023-10-23 01:41:43,398 [INFO] OpenFileManager:328 - Restore cursor
+2023-10-23 01:43:48,802 [INFO] Gpio:273 - dependency for GPIO [ETH, RCC, SYS, USART3, USB_OTG_FS]
+2023-10-23 02:17:43,110 [INFO] Gpio:273 - dependency for GPIO [ETH, RCC, SYS, USART3, USB_OTG_FS]
+2023-10-23 02:17:43,137 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-23 02:17:43,187 [INFO] Gpio:273 - dependency for GPIO [ETH, RCC, SYS, USART3, USB_OTG_FS]
+2023-10-23 02:17:43,215 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-23 02:17:43,318 [INFO] Gpio:273 - dependency for GPIO [ETH, RCC, SYS, USART3, USB_OTG_FS]
+2023-10-23 02:17:43,350 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-23 02:17:48,421 [INFO] Gpio:273 - dependency for GPIO [ETH, RCC, SYS, USART3, USB_OTG_FS]
+2023-10-23 02:17:48,447 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-23 02:17:48,496 [INFO] Gpio:273 - dependency for GPIO [ETH, RCC, SYS, USART3, USB_OTG_FS]
+2023-10-23 02:17:48,522 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-23 02:17:48,618 [INFO] Gpio:273 - dependency for GPIO [ETH, RCC, SYS, USART3, USB_OTG_FS]
+2023-10-23 02:17:48,644 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-23 02:18:37,433 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 612923984 Bytes (897581056)
+2023-10-23 02:18:39,089 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 667976272 Bytes (897581056)
+2023-10-23 02:18:39,541 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 748190280 Bytes (897581056)
+2023-10-23 02:18:39,727 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-23 02:18:39,727 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-23 02:18:39,727 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2023-10-23 02:18:39,727 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-23 02:18:39,727 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-10-23 02:18:39,727 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-23 02:18:39,727 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ETH
+2023-10-23 02:18:39,728 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\
+2023-10-23 02:18:39,909 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\license.tmp_save
+2023-10-23 02:18:39,992 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\license.tmp
+2023-10-23 02:18:40,055 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\gpio.c_save
+2023-10-23 02:18:40,154 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\gpio.c
+2023-10-23 02:18:40,165 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\gpio.h_save
+2023-10-23 02:18:40,238 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\gpio.h
+2023-10-23 02:18:40,407 [WARN] IPConfigManager:2937 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2023-10-23 02:18:40,430 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\eth.c_save
+2023-10-23 02:18:40,533 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\eth.c
+2023-10-23 02:18:40,545 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\eth.h_save
+2023-10-23 02:18:40,614 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\eth.h
+2023-10-23 02:18:40,626 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usart.c_save
+2023-10-23 02:18:40,705 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usart.c
+2023-10-23 02:18:40,708 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usart.h_save
+2023-10-23 02:18:40,788 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usart.h
+2023-10-23 02:18:40,800 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usb_otg.c_save
+2023-10-23 02:18:40,880 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usb_otg.c
+2023-10-23 02:18:40,883 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usb_otg.h_save
+2023-10-23 02:18:40,947 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usb_otg.h
+2023-10-23 02:18:40,968 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_it.c_save
+2023-10-23 02:18:41,119 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_it.c
+2023-10-23 02:18:41,126 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_it.h_save
+2023-10-23 02:18:41,185 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_it.h
+2023-10-23 02:18:41,204 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_hal_msp.c_save
+2023-10-23 02:18:41,282 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_hal_msp.c
+2023-10-23 02:18:41,289 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\system.tmp_save
+2023-10-23 02:18:41,341 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\system.tmp
+2023-10-23 02:18:41,359 [INFO] CodeEngine:311 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_hal_conf.h_save
+2023-10-23 02:18:41,438 [INFO] CodeEngine:335 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_hal_conf.h
+2023-10-23 02:18:41,481 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\main.h_save
+2023-10-23 02:18:41,567 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\main.h
+2023-10-23 02:18:41,584 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\main.c_save
+2023-10-23 02:18:41,671 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\main.c
+2023-10-23 02:18:42,032 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 121mS.
+2023-10-23 02:18:42,034 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-10-23 02:18:42,296 [INFO] ConfigFileManager:1457 - The Die is : DIE419
+2023-10-23 02:18:42,305 [INFO] ApiDbMcu:507 - Load IP Config File for FATFS
+2023-10-23 02:18:42,317 [INFO] ApiDbMcu:507 - Load IP Config File for FREERTOS
+2023-10-23 02:18:42,328 [INFO] ApiDbMcu:507 - Load IP Config File for LIBJPEG
+2023-10-23 02:18:42,340 [INFO] ApiDbMcu:507 - Load IP Config File for LWIP
+2023-10-23 02:18:42,356 [INFO] ApiDbMcu:507 - Load IP Config File for MBEDTLS
+2023-10-23 02:18:42,369 [INFO] ApiDbMcu:507 - Load IP Config File for USB_DEVICE
+2023-10-23 02:18:42,381 [INFO] ApiDbMcu:507 - Load IP Config File for USB_HOST
+2023-10-23 02:18:43,523 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1489mS.
+2023-10-23 02:18:43,523 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-10-23 02:18:43,525 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-10-23 02:19:57,695 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 361676400 Bytes (1020264448)
+2023-10-23 02:19:57,852 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-23 02:19:57,852 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-23 02:19:57,852 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2023-10-23 02:19:57,852 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-23 02:19:57,852 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-10-23 02:19:57,852 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-23 02:19:57,852 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ETH
+2023-10-23 02:19:57,853 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\
+2023-10-23 02:19:57,998 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\license.tmp_save
+2023-10-23 02:19:58,075 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\license.tmp
+2023-10-23 02:19:58,106 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\gpio.c_save
+2023-10-23 02:19:58,173 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\gpio.c
+2023-10-23 02:19:58,176 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\gpio.h_save
+2023-10-23 02:19:58,225 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\gpio.h
+2023-10-23 02:19:58,305 [WARN] IPConfigManager:2937 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2023-10-23 02:19:58,320 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\eth.c_save
+2023-10-23 02:19:58,387 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\eth.c
+2023-10-23 02:19:58,391 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\eth.h_save
+2023-10-23 02:19:58,439 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\eth.h
+2023-10-23 02:19:58,450 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usart.c_save
+2023-10-23 02:19:58,515 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usart.c
+2023-10-23 02:19:58,518 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usart.h_save
+2023-10-23 02:19:58,572 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usart.h
+2023-10-23 02:19:58,584 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usb_otg.c_save
+2023-10-23 02:19:58,649 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usb_otg.c
+2023-10-23 02:19:58,653 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usb_otg.h_save
+2023-10-23 02:19:58,700 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usb_otg.h
+2023-10-23 02:19:58,713 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_it.c_save
+2023-10-23 02:19:58,780 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_it.c
+2023-10-23 02:19:58,784 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_it.h_save
+2023-10-23 02:19:58,831 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_it.h
+2023-10-23 02:19:58,844 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_hal_msp.c_save
+2023-10-23 02:19:58,910 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_hal_msp.c
+2023-10-23 02:19:58,913 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\system.tmp_save
+2023-10-23 02:19:58,959 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\system.tmp
+2023-10-23 02:19:58,971 [INFO] CodeEngine:311 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_hal_conf.h_save
+2023-10-23 02:19:59,057 [INFO] CodeEngine:335 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_hal_conf.h
+2023-10-23 02:19:59,084 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\main.h_save
+2023-10-23 02:19:59,178 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\main.h
+2023-10-23 02:19:59,188 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\main.c_save
+2023-10-23 02:19:59,272 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\main.c
+2023-10-23 02:19:59,669 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 104mS.
+2023-10-23 02:19:59,671 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-10-23 02:19:59,816 [INFO] ConfigFileManager:1457 - The Die is : DIE419
+2023-10-23 02:20:00,736 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1065mS.
+2023-10-23 02:20:00,736 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-10-23 02:20:00,738 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-10-23 02:20:16,180 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 546298752 Bytes (1051721728)
+2023-10-23 02:20:16,313 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-23 02:20:16,313 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-23 02:20:16,313 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2023-10-23 02:20:16,313 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-23 02:20:16,313 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-10-23 02:20:16,314 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-23 02:20:16,314 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ETH
+2023-10-23 02:20:16,314 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\
+2023-10-23 02:20:16,500 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\license.tmp_save
+2023-10-23 02:20:16,598 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\license.tmp
+2023-10-23 02:20:16,628 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\gpio.c_save
+2023-10-23 02:20:16,711 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\gpio.c
+2023-10-23 02:20:16,714 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\gpio.h_save
+2023-10-23 02:20:16,762 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\gpio.h
+2023-10-23 02:20:16,838 [WARN] IPConfigManager:2937 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2023-10-23 02:20:16,851 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\eth.c_save
+2023-10-23 02:20:16,918 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\eth.c
+2023-10-23 02:20:16,922 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\eth.h_save
+2023-10-23 02:20:16,969 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\eth.h
+2023-10-23 02:20:16,981 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usart.c_save
+2023-10-23 02:20:17,047 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usart.c
+2023-10-23 02:20:17,050 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usart.h_save
+2023-10-23 02:20:17,103 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usart.h
+2023-10-23 02:20:17,115 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usb_otg.c_save
+2023-10-23 02:20:17,180 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usb_otg.c
+2023-10-23 02:20:17,183 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usb_otg.h_save
+2023-10-23 02:20:17,230 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usb_otg.h
+2023-10-23 02:20:17,244 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_it.c_save
+2023-10-23 02:20:17,309 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_it.c
+2023-10-23 02:20:17,312 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_it.h_save
+2023-10-23 02:20:17,360 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_it.h
+2023-10-23 02:20:17,372 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_hal_msp.c_save
+2023-10-23 02:20:17,436 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_hal_msp.c
+2023-10-23 02:20:17,439 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\system.tmp_save
+2023-10-23 02:20:17,502 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\system.tmp
+2023-10-23 02:20:17,514 [INFO] CodeEngine:311 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_hal_conf.h_save
+2023-10-23 02:20:17,596 [INFO] CodeEngine:335 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_hal_conf.h
+2023-10-23 02:20:17,621 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\main.h_save
+2023-10-23 02:20:17,684 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\main.h
+2023-10-23 02:20:17,695 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\main.c_save
+2023-10-23 02:20:17,763 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\main.c
+2023-10-23 02:20:18,163 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 113mS.
+2023-10-23 02:20:18,165 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-10-23 02:20:18,303 [INFO] ConfigFileManager:1457 - The Die is : DIE419
+2023-10-23 02:20:19,242 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1077mS.
+2023-10-23 02:20:19,243 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-10-23 02:20:19,244 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-10-23 02:25:20,429 [INFO] Gpio:273 - dependency for GPIO [ETH, RCC, SYS, USART3, USB_OTG_FS]
+2023-10-23 02:25:20,455 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-23 02:25:20,543 [INFO] Gpio:273 - dependency for GPIO [ETH, RCC, SYS, USART3, USB_OTG_FS]
+2023-10-23 02:25:20,571 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-23 02:25:24,185 [INFO] Gpio:273 - dependency for GPIO [ETH, RCC, SYS, USART3, USB_OTG_FS]
+2023-10-23 02:25:24,213 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-23 02:25:24,306 [INFO] Gpio:273 - dependency for GPIO [ETH, RCC, SYS, USART3, USB_OTG_FS]
+2023-10-23 02:25:24,338 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-23 02:25:32,925 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 867010056 Bytes (1021313024)
+2023-10-23 02:28:51,026 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 566031072 Bytes (951058432)
+2023-10-23 02:28:51,180 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-23 02:28:51,180 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-23 02:28:51,180 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2023-10-23 02:28:51,180 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-23 02:28:51,180 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-10-23 02:28:51,181 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-23 02:28:51,181 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ETH
+2023-10-23 02:28:51,181 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\
+2023-10-23 02:28:51,321 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\license.tmp_save
+2023-10-23 02:28:51,399 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\license.tmp
+2023-10-23 02:28:51,424 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\gpio.c_save
+2023-10-23 02:28:51,490 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\gpio.c
+2023-10-23 02:28:51,493 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\gpio.h_save
+2023-10-23 02:28:51,541 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\gpio.h
+2023-10-23 02:28:51,615 [WARN] IPConfigManager:2937 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2023-10-23 02:28:51,627 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\eth.c_save
+2023-10-23 02:28:51,695 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\eth.c
+2023-10-23 02:28:51,698 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\eth.h_save
+2023-10-23 02:28:51,752 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\eth.h
+2023-10-23 02:28:51,764 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usart.c_save
+2023-10-23 02:28:51,836 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usart.c
+2023-10-23 02:28:51,839 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usart.h_save
+2023-10-23 02:28:51,892 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usart.h
+2023-10-23 02:28:51,905 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usb_otg.c_save
+2023-10-23 02:28:51,979 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usb_otg.c
+2023-10-23 02:28:51,983 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usb_otg.h_save
+2023-10-23 02:28:52,031 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usb_otg.h
+2023-10-23 02:28:52,044 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_it.c_save
+2023-10-23 02:28:52,110 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_it.c
+2023-10-23 02:28:52,113 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_it.h_save
+2023-10-23 02:28:52,160 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_it.h
+2023-10-23 02:28:52,173 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_hal_msp.c_save
+2023-10-23 02:28:52,239 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_hal_msp.c
+2023-10-23 02:28:52,241 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\system.tmp_save
+2023-10-23 02:28:52,286 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\system.tmp
+2023-10-23 02:28:52,297 [INFO] CodeEngine:311 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_hal_conf.h_save
+2023-10-23 02:28:52,383 [INFO] CodeEngine:335 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_hal_conf.h
+2023-10-23 02:28:52,408 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\main.h_save
+2023-10-23 02:28:52,472 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\main.h
+2023-10-23 02:28:52,483 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\main.c_save
+2023-10-23 02:28:52,548 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\main.c
+2023-10-23 02:28:53,020 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 111mS.
+2023-10-23 02:28:53,023 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-10-23 02:28:53,160 [INFO] ConfigFileManager:1457 - The Die is : DIE419
+2023-10-23 02:28:54,088 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1065mS.
+2023-10-23 02:28:54,089 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-10-23 02:28:54,091 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-10-23 02:33:31,966 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 678640176 Bytes (1025507328)
+2023-10-23 02:33:35,084 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 706425392 Bytes (1025507328)
+2023-10-23 02:33:35,484 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 746271280 Bytes (1025507328)
+2023-10-23 02:33:35,657 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-23 02:33:35,657 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-23 02:33:35,657 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2023-10-23 02:33:35,658 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-23 02:33:35,658 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-10-23 02:33:35,658 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-23 02:33:35,658 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ETH
+2023-10-23 02:33:35,659 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\
+2023-10-23 02:33:35,790 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\license.tmp_save
+2023-10-23 02:33:35,896 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\license.tmp
+2023-10-23 02:33:35,925 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\gpio.c_save
+2023-10-23 02:33:36,008 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\gpio.c
+2023-10-23 02:33:36,011 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\gpio.h_save
+2023-10-23 02:33:36,058 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\gpio.h
+2023-10-23 02:33:36,130 [WARN] IPConfigManager:2937 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2023-10-23 02:33:36,144 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\eth.c_save
+2023-10-23 02:33:36,211 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\eth.c
+2023-10-23 02:33:36,214 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\eth.h_save
+2023-10-23 02:33:36,261 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\eth.h
+2023-10-23 02:33:36,273 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usart.c_save
+2023-10-23 02:33:36,336 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usart.c
+2023-10-23 02:33:36,339 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usart.h_save
+2023-10-23 02:33:36,393 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usart.h
+2023-10-23 02:33:36,405 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usb_otg.c_save
+2023-10-23 02:33:36,470 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usb_otg.c
+2023-10-23 02:33:36,473 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usb_otg.h_save
+2023-10-23 02:33:36,521 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usb_otg.h
+2023-10-23 02:33:36,535 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_it.c_save
+2023-10-23 02:33:36,599 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_it.c
+2023-10-23 02:33:36,602 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_it.h_save
+2023-10-23 02:33:36,649 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_it.h
+2023-10-23 02:33:36,662 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_hal_msp.c_save
+2023-10-23 02:33:36,748 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_hal_msp.c
+2023-10-23 02:33:36,750 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\system.tmp_save
+2023-10-23 02:33:36,816 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\system.tmp
+2023-10-23 02:33:36,828 [INFO] CodeEngine:311 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_hal_conf.h_save
+2023-10-23 02:33:36,909 [INFO] CodeEngine:335 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_hal_conf.h
+2023-10-23 02:33:36,934 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\main.h_save
+2023-10-23 02:33:36,999 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\main.h
+2023-10-23 02:33:37,009 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\main.c_save
+2023-10-23 02:33:37,072 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\main.c
+2023-10-23 02:33:37,462 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 117mS.
+2023-10-23 02:33:37,464 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-10-23 02:33:37,601 [INFO] ConfigFileManager:1457 - The Die is : DIE419
+2023-10-23 02:33:38,479 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1014mS.
+2023-10-23 02:33:38,479 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-10-23 02:33:38,481 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-10-23 02:36:57,179 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 392944016 Bytes (1052770304)
+2023-10-23 02:36:57,235 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 416534928 Bytes (1052770304)
+2023-10-23 02:36:57,685 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 456907152 Bytes (1052770304)
+2023-10-23 02:36:57,845 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-23 02:36:57,845 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-23 02:36:57,845 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2023-10-23 02:36:57,845 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-23 02:36:57,845 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-10-23 02:36:57,845 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-23 02:36:57,845 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ETH
+2023-10-23 02:36:57,846 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\
+2023-10-23 02:36:57,990 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\license.tmp_save
+2023-10-23 02:36:58,065 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\license.tmp
+2023-10-23 02:36:58,092 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\gpio.c_save
+2023-10-23 02:36:58,159 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\gpio.c
+2023-10-23 02:36:58,162 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\gpio.h_save
+2023-10-23 02:36:58,210 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\gpio.h
+2023-10-23 02:36:58,282 [WARN] IPConfigManager:2937 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2023-10-23 02:36:58,294 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\eth.c_save
+2023-10-23 02:36:58,361 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\eth.c
+2023-10-23 02:36:58,364 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\eth.h_save
+2023-10-23 02:36:58,412 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\eth.h
+2023-10-23 02:36:58,424 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usart.c_save
+2023-10-23 02:36:58,490 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usart.c
+2023-10-23 02:36:58,493 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usart.h_save
+2023-10-23 02:36:58,546 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usart.h
+2023-10-23 02:36:58,558 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usb_otg.c_save
+2023-10-23 02:36:58,622 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\usb_otg.c
+2023-10-23 02:36:58,626 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usb_otg.h_save
+2023-10-23 02:36:58,674 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\usb_otg.h
+2023-10-23 02:36:58,686 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_it.c_save
+2023-10-23 02:36:58,751 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_it.c
+2023-10-23 02:36:58,755 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_it.h_save
+2023-10-23 02:36:58,802 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_it.h
+2023-10-23 02:36:58,816 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_hal_msp.c_save
+2023-10-23 02:36:58,880 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\stm32f4xx_hal_msp.c
+2023-10-23 02:36:58,882 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\system.tmp_save
+2023-10-23 02:36:58,975 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\MXTmpFiles\system.tmp
+2023-10-23 02:36:58,989 [INFO] CodeEngine:311 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_hal_conf.h_save
+2023-10-23 02:36:59,070 [INFO] CodeEngine:335 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\stm32f4xx_hal_conf.h
+2023-10-23 02:36:59,105 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\main.h_save
+2023-10-23 02:36:59,168 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Inc\main.h
+2023-10-23 02:36:59,178 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\main.c_save
+2023-10-23 02:36:59,243 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\7segment_switch\Core\Src\main.c
+2023-10-23 02:36:59,633 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 102mS.
+2023-10-23 02:36:59,635 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-10-23 02:36:59,773 [INFO] ConfigFileManager:1457 - The Die is : DIE419
+2023-10-23 02:37:00,649 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1014mS.
+2023-10-23 02:37:00,649 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-10-23 02:37:00,651 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-10-23 02:42:05,144 [INFO] Gpio:273 - dependency for GPIO [ETH, RCC, SYS, USART3, USB_OTG_FS]
+2023-10-23 02:42:05,177 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-23 02:48:51,641 [INFO] MainUpdater:2868 - connection check result : 10
+2023-10-23 02:48:51,641 [INFO] MainUpdater:2868 - connection check result : 10
+2023-10-23 02:48:51,681 [INFO] MicroXplorer:468 - Change Database Path : 
+2023-10-23 02:48:51,682 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.92
+2023-10-23 02:48:51,702 [WARN] ThirdParty:871 - waiting for thirdparty lock release [close project]
+2023-10-23 02:48:51,702 [INFO] ThirdParty:873 - entering critical section [close project]
+2023-10-23 02:48:51,704 [INFO] ThirdParty:883 - exiting critical section [close project]
+2023-10-23 02:48:51,707 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2023-10-23 02:48:51,712 [WARN] IpParametersView:151 - Warning: This peripheral hasn't parameters
+2023-10-23 02:48:51,716 [WARN] MainPanel:272 - <html><b><center>Warning: This peripheral has no parameters to be configured<br></b></html>
+2023-10-23 02:48:51,719 [INFO] UtilMem:75 - Begin LoadConfig() Used Memory: 486315480 Bytes (1061158912)
+2023-10-23 02:48:51,720 [INFO] MicroXplorer:468 - Change Database Path : 
+2023-10-23 02:48:51,720 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.92
+2023-10-23 02:48:51,720 [INFO] OpenFileManager:308 - Change cursor
+2023-10-23 02:48:51,735 [INFO] RulesReader:64 - Compatibility file has been processed (293 Rules)
+2023-10-23 02:48:51,746 [INFO] Mcu:1946 - Initializing MCU STM32F429ZITx STM32F429ZITx STM32F429ZIT6
+2023-10-23 02:48:53,193 [INFO] Context:659 - Trying to add GPIOservice into a context  which must be forbidden
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,442 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-10-23 02:48:53,443 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2023-10-23 02:48:53,443 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2023-10-23 02:48:53,443 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2023-10-23 02:48:53,444 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2023-10-23 02:48:53,444 [WARN] ModelIntegratedComponent:184 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2023-10-23 02:48:53,446 [INFO] ThirdPartyModel:298 - Start build external matchings
+2023-10-23 02:48:53,447 [INFO] ThirdPartyModel:316 - End build external matchings
+2023-10-23 02:48:53,448 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (ETH) : Invalid parameter (PHY_Name)
+2023-10-23 02:48:53,448 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (ETH) : Invalid parameter (PHY_Value)
+2023-10-23 02:48:53,448 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (ETH) : Invalid parameter (PhyAddress)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (ADC12outputFreq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (ADC34outputFreq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (I2C1Freq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (I2C2Freq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (I2C3Freq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Parameter (MCO2PinFreq_Value) has invalid value (168000000)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (MCOFreq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (PLLMCOFreq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (PLLMUL)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (PRESCALERUSB)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Parameter (RTCHSEDivFreq_Value) has invalid value (4000000)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (SYSCLKSourceVirtual)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIM15Freq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIM16Freq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIM17Freq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIM1Freq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIM20Freq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIM2Freq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIM3Freq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIM8Freq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (UART4Freq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (UART5Freq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (USART1Freq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (USART2Freq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (USART3Freq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (USBFreq_Value)
+2023-10-23 02:48:53,449 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (VCOOutput2Freq_Value)
+2023-10-23 02:48:53,704 [INFO] UtilMem:75 - End LoadConfig() Used Memory: 335417400 Bytes (1061158912)
+2023-10-23 02:48:53,738 [WARN] ThirdParty:833 - waiting for thirdparty lock release [change project]
+2023-10-23 02:48:53,738 [INFO] ThirdParty:835 - entering critical section [change project]
+2023-10-23 02:48:53,738 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USBPD 4.1
+2023-10-23 02:48:53,738 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2023-10-23 02:48:53,738 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2023-10-23 02:48:53,738 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.0.0
+2023-10-23 02:48:53,738 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2023-10-23 02:48:53,738 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.1
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.2
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.1.0
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.0
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2023-10-23 02:48:53,739 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2023-10-23 02:48:53,739 [INFO] ThirdParty:841 - exiting critical section [change project]
+2023-10-23 02:48:53,850 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2023-10-23 02:48:53,851 [INFO] PinOutPanel:1499 - setPackage(STM32F429ZITx,LQFP144)
+2023-10-23 02:48:54,030 [INFO] UtilMem:75 - Before build in PCC Used Memory: 390725704 Bytes (1061158912)
+2023-10-23 02:48:54,186 [INFO] UtilMem:75 - After build in PCC Used Memory: 437391480 Bytes (1061158912)
+2023-10-23 02:48:54,200 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,200 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,200 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,200 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,200 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,201 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,201 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,201 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,201 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,201 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,201 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,201 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,201 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,201 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,201 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,201 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,201 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,201 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,201 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,201 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,201 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,202 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,202 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,202 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,202 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,202 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,202 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,202 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,202 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,203 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,203 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,203 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,203 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,203 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,203 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,203 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,203 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,204 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,204 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,204 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,204 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,204 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,204 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,204 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,205 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,205 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,205 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,205 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,205 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,205 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,205 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,206 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,206 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,206 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,206 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,206 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,207 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,207 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,207 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,207 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,207 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,208 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,208 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,208 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,209 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,209 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-10-23 02:48:54,212 [INFO] ApiDbMcu:507 - Load IP Config File for PDM2PCM
+2023-10-23 02:48:54,242 [INFO] CADModel:165 - CPN selected for project levelSTM32F429ZIT6
+2023-10-23 02:48:54,242 [INFO] CADModel:114 - Register for checkConnection events
+2023-10-23 02:48:54,298 [INFO] OpenFileManager:328 - Restore cursor
+2023-10-23 03:17:36,282 [INFO] Gpio:273 - dependency for GPIO [ETH, RCC, SYS, USART3, USB_OTG_FS]
