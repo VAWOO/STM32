@@ -60,8 +60,8 @@ all: main-build
 main-build: 7segment_switch.elf secondary-outputs
 
 # Tool invocations
-7segment_switch.elf 7segment_switch.map: $(OBJS) $(USER_OBJS) C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\7segment_switch\STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "7segment_switch.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\7segment_switch\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7segment_switch.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+7segment_switch.elf 7segment_switch.map: $(OBJS) $(USER_OBJS) D:\Nelly\workspace\STM32CubeIDE\7segment_switch\STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "7segment_switch.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\7segment_switch\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7segment_switch.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
