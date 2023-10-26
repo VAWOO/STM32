@@ -21,6 +21,8 @@
 #include "adc.h"
 #include "dac.h"
 #include "eth.h"
+#include "i2c.h"
+#include "rtc.h"
 #include "usart.h"
 #include "usb_otg.h"
 #include "gpio.h"
@@ -38,7 +40,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define LCD_ADDR (0x27 << 1)
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -49,7 +51,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-char uart_buf[50];
+char uart_buf[70];
+char lcd_string[30];
 int adc_value = 0;
 int dac_value1 = 0;
 int dac_value2 = 4095;
@@ -59,12 +62,25 @@ int dac_value2 = 4095;
 void SystemClock_Config(void);
 static void MX_NVIC_Init(void);
 /* USER CODE BEGIN PFP */
-
+void I2C_Scan(void);
+void LCD_SendCommand(uint8_t lcd_addr, uint8_t cmd);
+void LCD_SendString(uint8_t lcd_addr, char *str);
+void LCD_Init(uint8_t lcd_addr);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+//int flag = 0;
+//void HAL_IncTick(void)
+//{
+//	uwTick += uwTickFreq;
+//	if((uwTick%1000)==0)
+//	{
+//		flag = 1;
+//		HAL_GPIO_TogglePin(GPIOB, LD2_Pin);
+//	}
+//}
+int timer_cnt = 0;
 /* USER CODE END 0 */
 
 /**
@@ -100,10 +116,15 @@ int main(void)
   MX_USB_OTG_FS_PCD_Init();
   MX_ADC1_Init();
   MX_DAC_Init();
+  MX_I2C1_Init();
+  MX_RTC_Init();
 
   /* Initialize interrupts */
   MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
+  I2C_Scan();
+  LCD_Init(LCD_ADDR);
+
   HAL_DAC_Start(&hdac, DAC_CHANNEL_1);
   HAL_DAC_Start(&hdac, DAC_CHANNEL_2);
 
@@ -124,8 +145,18 @@ int main(void)
 	  HAL_DAC_SetValue(&hdac, DAC_CHANNEL_2, DAC_ALIGN_12B_R, dac_value2);
 
 	  memset(uart_buf, 0, sizeof(uart_buf));
-	  sprintf(uart_buf, "ADC Value: %d, DAC1 Value: %d, DAC2 Value: %d\r\n", adc_value, dac_value1, dac_value2);
+	  sprintf(uart_buf, "ADC Value: %4d  DAC1 Value: %4d  DAC2 Value: %4d\r\n", adc_value, dac_value1, dac_value2);
 	  HAL_UART_Transmit(&huart3, (uint8_t *)uart_buf, strlen(uart_buf), HAL_MAX_DELAY);
+
+	  // set address to 0x00
+	  LCD_SendCommand(LCD_ADDR, 0b10000000);
+	  LCD_SendString(LCD_ADDR, " ADC DAC1 DAC2");
+
+  	  // set address to 0x40
+	  LCD_SendCommand(LCD_ADDR, 0b11000000);
+	  sprintf(lcd_string, "%4d %4d %4d", adc_value, dac_value1, dac_value2);
+	  LCD_SendString(LCD_ADDR, lcd_string);
+
 	  HAL_Delay(250);
     /* USER CODE END WHILE */
 
@@ -151,8 +182,9 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE|RCC_OSCILLATORTYPE_LSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
+  RCC_OscInitStruct.LSEState = RCC_LSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 4;

@@ -32,7 +32,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define LCD_ADDR (0x27 << 1)
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -66,14 +66,16 @@ static void MX_USART3_UART_Init(void);
 static void MX_USB_OTG_FS_PCD_Init(void);
 static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
-
+void I2C_Scan(void);
+void init();
+void LCD_SendCommand(uint8_t lcd_addr, uint8_t cmd);
+void LCD_SendString(uint8_t lcd_addr, char *str);
+void LCD_Init(uint8_t lcd_addr);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-extern void I2C_Scan(void);
-void init();
 /* USER CODE END 0 */
 
 /**
@@ -109,14 +111,23 @@ int main(void)
   MX_USB_OTG_FS_PCD_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-
-  init();
+//  init();
+  I2C_Scan();
+  LCD_Init(LCD_ADDR);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+		// set address to 0x00
+		LCD_SendCommand(LCD_ADDR, 0b10000000);
+		LCD_SendString(LCD_ADDR, "My name is");
+
+		// set address to 0x40
+		LCD_SendCommand(LCD_ADDR, 0b11000000);
+		LCD_SendString(LCD_ADDR, "CHOI JINWOO");
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
