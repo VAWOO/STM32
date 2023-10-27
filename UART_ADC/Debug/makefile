@@ -60,8 +60,8 @@ all: main-build
 main-build: UART_ADC.elf secondary-outputs
 
 # Tool invocations
-UART_ADC.elf UART_ADC.map: $(OBJS) $(USER_OBJS) D:\Nelly\workspace\STM32CubeIDE\UART_ADC\STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "UART_ADC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\UART_ADC\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_ADC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+UART_ADC.elf UART_ADC.map: $(OBJS) $(USER_OBJS) C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\UART_ADC\STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "UART_ADC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\UART_ADC\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_ADC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
