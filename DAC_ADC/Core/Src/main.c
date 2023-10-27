@@ -70,17 +70,7 @@ void LCD_Init(uint8_t lcd_addr);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-//int flag = 0;
-//void HAL_IncTick(void)
-//{
-//	uwTick += uwTickFreq;
-//	if((uwTick%1000)==0)
-//	{
-//		flag = 1;
-//		HAL_GPIO_TogglePin(GPIOB, LD2_Pin);
-//	}
-//}
-int timer_cnt = 0;
+
 /* USER CODE END 0 */
 
 /**
