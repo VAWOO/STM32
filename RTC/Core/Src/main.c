@@ -134,8 +134,6 @@ int main(void)
   	  // set address to 0x40
 	  LCD_SendCommand(LCD_ADDR, 0b11000000);
 	  LCD_SendString(LCD_ADDR, showTime);
-
-	  HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -204,7 +202,119 @@ static void MX_NVIC_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	static uint32_t before_tick = 0;
 
+	if(GPIO_Pin == GPIO_PIN_0)
+	{
+		if (HAL_GetTick() - before_tick >= 300)
+		{
+			before_tick = HAL_GetTick();
+
+			RTC_TimeTypeDef sTime;
+			HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+
+			sTime.Seconds++;
+
+			if (sTime.Seconds >= 60)
+			{
+				sTime.Seconds = 0;
+				sTime.Minutes++;
+
+				if (sTime.Minutes >= 60)
+				{
+					sTime.Minutes = 0;
+					sTime.Hours++;
+
+					if (sTime.Hours >= 24)
+					{
+						sTime.Hours = 0;
+					}
+				}
+			}
+
+			HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+		}
+	}
+
+	else if (GPIO_Pin == GPIO_PIN_3)
+	{
+		if (HAL_GetTick() - before_tick >= 300)
+		{
+			before_tick = HAL_GetTick();
+
+			RTC_TimeTypeDef sTime;
+			HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+
+			if (sTime.Seconds > 0)
+			{
+				sTime.Seconds--;
+			}
+			else
+			{
+				if (sTime.Minutes > 0)
+				{
+					sTime.Minutes--;
+					sTime.Seconds = 59;
+				}
+				else
+				{
+					if (sTime.Hours > 0)
+					{
+						sTime.Hours--;
+						sTime.Minutes = 59;
+						sTime.Seconds = 59;
+					}
+					else
+					{
+						// ?���? 0 ?��?���? �?�? ?��?���? 처리
+					}
+				}
+			}
+		}
+	}
+
+	else if (GPIO_Pin == GPIO_PIN_13)
+	{
+		if (HAL_GetTick() - before_tick >= 300)
+		{
+			before_tick = HAL_GetTick();
+
+			static int selection = 0; // 시간
+			RTC_TimeTypeDef sTime;
+			HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+
+			while(1)
+			{
+				if (GPIO_Pin == GPIO_PIN_13)
+				{
+					if (HAL_GetTick() - before_tick >= 300)
+					{
+						before_tick = HAL_GetTick();
+						selection = 1; // 분
+
+						if (GPIO_Pin == GPIO_PIN_13)
+						{
+							if (HAL_GetTick() - before_tick >= 300)
+							{
+								before_tick = HAL_GetTick();
+								selection = 2; // 초
+
+								if (GPIO_Pin == GPIO_PIN_13)
+								{
+									if (HAL_GetTick() - before_tick >= 300);
+									break;
+								}
+							}
+						}
+					}
+				}
+			}
+			HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+		}
+	}
+}
 /* USER CODE END 4 */
 
 /**
