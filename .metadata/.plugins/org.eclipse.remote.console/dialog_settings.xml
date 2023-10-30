@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<section name="org.eclipse.remote.internal.console.TerminalConsoleSettingsDialog">
 		<item key="connectionType" value="org.eclipse.remote.serial.core.connectionType"/>
-		<item key="connectionName" value="UART_COM7"/>
-		<item key="encoding" value="ISO-8859-1"/>
+		<item key="connectionName" value="TEST"/>
+		<item key="encoding" value="UTF-8"/>
 	</section>
 </section>
