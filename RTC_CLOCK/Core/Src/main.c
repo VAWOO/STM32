@@ -33,7 +33,8 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+RTC_DateTypeDef sDate;
+RTC_TimeTypeDef sTime;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -50,10 +51,11 @@
 
 /* USER CODE BEGIN PV */
 char uart_buf[70];
-char timeSet[100];
 char showTime[30] = {0};
 char showDate[30] = {0};
 char ampm[2][3] = {"AM", "PM"};
+
+static uint8_t selection = 0; // 시, 분, 초 선택 OFF
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -69,8 +71,6 @@ void LCD_SendString(uint8_t lcd_addr, char *str);
 /* USER CODE BEGIN 0 */
 void get_time(void)
 {
-	RTC_DateTypeDef sDate;
-	RTC_TimeTypeDef sTime;
 	HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
 	HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
 
@@ -193,6 +193,9 @@ void SystemClock_Config(void)
   */
 static void MX_NVIC_Init(void)
 {
+  /* EXTI1_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(EXTI1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI1_IRQn);
   /* EXTI9_5_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
@@ -205,12 +208,8 @@ static void MX_NVIC_Init(void)
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 	static uint32_t before_tick = 0;
-	static uint8_t selection = 1; // 시, 분, 초 선택 OFF
 
-	RTC_TimeTypeDef sTime;
-	HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
-
-	if (GPIO_Pin == GPIO_PIN_7)
+	if (GPIO_Pin == GPIO_PIN_1)
 	{
 		if (HAL_GetTick() - before_tick >= 300)
 		{
@@ -218,8 +217,8 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
 			selection++;
 
-			if (selection > 4)
-				selection = 1;
+			if (selection > 3)
+				selection = 0;
 		}
 	}
 
@@ -229,30 +228,28 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		{
 			before_tick = HAL_GetTick();
 
-			if (selection == 2) // 시간 선택
+			if (selection == 1) // 시간 선택
 			{
 				sTime.Hours++;
 
 				if (sTime.Hours > 12)
 					sTime.Hours = 0;
 			}
-			else if (selection == 3) // 분 선택
+			else if (selection == 2) // 분 선택
 			{
 				sTime.Minutes++;
 
 				if (sTime.Minutes > 59)
 					sTime.Minutes = 0;
 			}
-			else if (selection == 4) // 초 선택
+			else if (selection == 3) // 초 선택
 			{
 				sTime.Seconds++;
 
 				if (sTime.Seconds > 59)
 					sTime.Seconds = 0;
 			}
-
-			if (selection != 1)
-				HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+			HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
 		}
 	}
 
@@ -262,30 +259,28 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		{
 			before_tick = HAL_GetTick();
 
-			if (selection == 2)
+			if (selection == 1)
 			{
 				if (sTime.Hours == 0)
 					sTime.Hours = 12;
 				else
 					sTime.Hours--;
 			}
-			else if (selection == 3)
+			else if (selection == 2)
 			{
 				if (sTime.Minutes == 0)
 					sTime.Minutes = 59;
 				else
 					sTime.Minutes--;
 			}
-			else if (selection == 4)
+			else if (selection == 3)
 			{
 				if (sTime.Seconds == 0)
 					sTime.Seconds = 59;
 				else
 					sTime.Seconds--;
 			}
-
-			if (selection != 1)
-				HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+			HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
 		}
 	}
 }
