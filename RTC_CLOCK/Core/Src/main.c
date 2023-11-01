@@ -55,7 +55,7 @@ char showTime[30] = {0};
 char showDate[30] = {0};
 char ampm[2][3] = {"AM", "PM"};
 
-static uint8_t selection = 0; // 시, 분, 초 선택 OFF
+static uint8_t selection = 0; // hour, minute, second select
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -74,8 +74,45 @@ void get_time(void)
 	HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
 	HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
 
-	sprintf((char*)showDate, "%04d-%02d-%02d", 2000+sDate.Year, sDate.Month, sDate.Date);
-	sprintf((char*)showTime, "%s %02d:%02d:%02d",ampm[sTime.TimeFormat >> 6], sTime.Hours, sTime.Minutes, sTime.Seconds);
+    if (sTime.Hours == 0)
+    {
+        if (sTime.TimeFormat == RTC_HOURFORMAT_12)
+            strcpy(ampm[sTime.TimeFormat >> 6], "AM");
+    }
+    else if (sTime.Hours == 12)
+    {
+        if (sTime.TimeFormat == RTC_HOURFORMAT_12)
+            strcpy(ampm[sTime.TimeFormat >> 6], "PM");
+    }
+    else
+    {
+        if (sTime.TimeFormat == RTC_HOURFORMAT_12)
+        {
+            if (sTime.Hours < 12)
+                strcpy(ampm[sTime.TimeFormat >> 6], "AM");
+            else
+                strcpy(ampm[sTime.TimeFormat >> 6], "PM");
+        }
+    }
+
+
+	if (sTime.Hours == 12 && strcmp(ampm[sTime.TimeFormat >> 6], "AM") == 0)
+	{
+		sTime.Hours = 0;
+	}
+
+
+	if (selection == 0)
+		sprintf((char*)showDate, "%04d-%02d-%02d      ", 2000+sDate.Year, sDate.Month, sDate.Date);
+	else if (selection == 1)
+		sprintf((char*)showDate, "%04d-%02d-%02d[HOUR]", 2000+sDate.Year, sDate.Month, sDate.Date);
+	else if (selection == 2)
+	    sprintf((char*)showDate, "%04d-%02d-%02d[MIN] ", 2000+sDate.Year, sDate.Month, sDate.Date);
+	else if (selection == 3)
+	    sprintf((char*)showDate, "%04d-%02d-%02d[SEC] ", 2000+sDate.Year, sDate.Month, sDate.Date);
+
+
+	sprintf((char *)showTime, "%s %02d:%02d:%02d", ampm[sTime.TimeFormat >> 6], sTime.Hours, sTime.Minutes, sTime.Seconds);
 }
 /* USER CODE END 0 */
 
@@ -228,21 +265,36 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		{
 			before_tick = HAL_GetTick();
 
-			if (selection == 1) // 시간 선택
+			if (selection == 1) // hour select
 			{
 				sTime.Hours++;
 
-				if (sTime.Hours > 12)
-					sTime.Hours = 0;
+				if (sTime.Hours == 12)
+				{
+					if (strcmp(ampm[sTime.TimeFormat >> 6], "AM") == 0)
+					{
+						strcpy(ampm[sTime.TimeFormat >> 6], "PM");
+						sTime.Hours = 12;
+					}
+					else
+					{
+						strcpy(ampm[sTime.TimeFormat >> 6], "AM");
+						sTime.Hours = 0;
+					}
+				}
+				else if (sTime.Hours > 12)
+				{
+					sTime.Hours = 1;
+				}
 			}
-			else if (selection == 2) // 분 선택
+			else if (selection == 2) // minutes select
 			{
 				sTime.Minutes++;
 
 				if (sTime.Minutes > 59)
 					sTime.Minutes = 0;
 			}
-			else if (selection == 3) // 초 선택
+			else if (selection == 3) // second select
 			{
 				sTime.Seconds++;
 
@@ -262,7 +314,27 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 			if (selection == 1)
 			{
 				if (sTime.Hours == 0)
+				{
+					if (strcmp(ampm[sTime.TimeFormat >> 6], "AM") == 0)
+					{
+						strcpy(ampm[sTime.TimeFormat >> 6], "PM");
+						sTime.Hours = 11;
+					}
+					else
+					{
+						strcpy(ampm[sTime.TimeFormat >> 6], "AM");
+						sTime.Hours = 11;
+					}
+				}
+				else if (strcmp(ampm[sTime.TimeFormat >> 6], "PM") == 0 && sTime.Hours == 1)
+				{
 					sTime.Hours = 12;
+				}
+				else if (strcmp(ampm[sTime.TimeFormat >> 6], "PM") == 0 && sTime.Hours == 12)
+				{
+					strcpy(ampm[sTime.TimeFormat >> 6], "AM");
+					sTime.Hours = 11;
+				}
 				else
 					sTime.Hours--;
 			}

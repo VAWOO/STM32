@@ -5380,3 +5380,39 @@ java.util.ConcurrentModificationException
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-10-31 15:27:00.047
 !MESSAGE Indexed 'EXTI_UP_DOWN' (28 sources, 119 headers) in 2.39 sec: 10,876 declarations; 47,727 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.25%)
+!SESSION 2023-10-31 16:35:22.952 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-10-31 16:35:39.569
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-10-31 16:35:39.569
+!MESSAGE Log4j2 initialized with config file C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-10-31 16:35:50.951
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-11-01 09:43:06.887 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-01 09:43:28.931
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-01 09:43:28.941
+!MESSAGE Log4j2 initialized with config file C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-01 09:43:45.553
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-11-01 15:23:03.899
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@3b3fe0e9): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-11-01 15:48:03.076
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@707d78c9): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
