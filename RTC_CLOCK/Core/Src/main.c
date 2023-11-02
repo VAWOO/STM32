@@ -74,33 +74,30 @@ void get_time(void)
 	HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
 	HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
 
-    if (sTime.Hours == 0)
-    {
-        if (sTime.TimeFormat == RTC_HOURFORMAT_12)
-            strcpy(ampm[sTime.TimeFormat >> 6], "AM");
-    }
-    else if (sTime.Hours == 12)
-    {
-        if (sTime.TimeFormat == RTC_HOURFORMAT_12)
-            strcpy(ampm[sTime.TimeFormat >> 6], "PM");
-    }
-    else
-    {
-        if (sTime.TimeFormat == RTC_HOURFORMAT_12)
-        {
-            if (sTime.Hours < 12)
-                strcpy(ampm[sTime.TimeFormat >> 6], "AM");
-            else
-                strcpy(ampm[sTime.TimeFormat >> 6], "PM");
-        }
-    }
-
-
 	if (sTime.Hours == 12 && strcmp(ampm[sTime.TimeFormat >> 6], "AM") == 0)
-	{
 		sTime.Hours = 0;
-	}
 
+	if (sTime.Hours == 12)
+	{
+		if (strcmp(ampm[sTime.TimeFormat >> 6], "AM") == 0)
+		{
+			strcpy(ampm[sTime.TimeFormat >> 6], "PM");
+			sTime.Hours = 12;
+		}
+		else
+		{
+			strcpy(ampm[sTime.TimeFormat >> 6], "AM");
+			sTime.Hours = 0;
+		}
+	}
+	else if (sTime.Hours == 0)
+	{
+		strcpy(ampm[sTime.TimeFormat >> 6], "AM");
+	}
+	else if (sTime.Hours > 12)
+	{
+		sTime.Hours = 1;
+	}
 
 	if (selection == 0)
 		sprintf((char*)showDate, "%04d-%02d-%02d      ", 2000+sDate.Year, sDate.Month, sDate.Date);
