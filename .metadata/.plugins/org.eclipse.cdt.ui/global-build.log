@@ -9735,3 +9735,718 @@ Finished building: default.size.stdout
  
 Finished building: RTC_CLOCK.list
  
+10:01:44 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:249:33: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  249 |                                 if (sTime.Hours == 12);
+      |                                 ^~
+../Core/Src/main.c:250:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  250 |                                 {
+      |                                 ^
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23360	    108	   4108	  27576	   6bb8	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+10:02:12 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23368	    108	   4108	  27584	   6bc0	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+10:05:32 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23368	    108	   4108	  27584	   6bc0	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+10:08:26 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23280	    108	   4108	  27496	   6b68	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+10:12:08 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23292	    108	   4108	  27508	   6b74	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+10:14:16 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:80:29: warning: statement with no effect [-Wunused-value]
+   80 |                 sTime.Hours - 12;
+      |                 ~~~~~~~~~~~~^~~~
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23360	    108	   4108	  27576	   6bb8	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+10:14:44 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23376	    108	   4108	  27592	   6bc8	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+10:15:29 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23280	    108	   4108	  27496	   6b68	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+10:20:40 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:81:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   81 |                 if (sTime.Hours == 12);
+      |                 ^~
+../Core/Src/main.c:82:17: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   82 |                 {
+      |                 ^
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23424	    108	   4108	  27640	   6bf8	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+10:20:52 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23432	    108	   4108	  27648	   6c00	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+10:22:28 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23432	    108	   4108	  27648	   6c00	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+10:23:53 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/rtc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/rtc.d" -MT"Core/Src/rtc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/rtc.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23432	    108	   4108	  27648	   6c00	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+11:23:27 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23436	    108	   4108	  27652	   6c04	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+11:24:57 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23452	    108	   4108	  27668	   6c14	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+11:25:51 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23452	    108	   4108	  27668	   6c14	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+11:27:06 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:88:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   88 |                 if (sTime.Hours == 0);
+      |                 ^~
+../Core/Src/main.c:89:17: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   89 |                 {
+      |                 ^
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23444	    108	   4108	  27660	   6c0c	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+11:27:19 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23452	    108	   4108	  27668	   6c14	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+13:03:06 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23492	    108	   4108	  27708	   6c3c	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+13:05:08 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23492	    108	   4108	  27708	   6c3c	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+13:08:03 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:90:37: warning: statement with no effect [-Wunused-value]
+   90 |                         sTime.Hours + 1;
+      |                         ~~~~~~~~~~~~^~~
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23484	    108	   4108	  27700	   6c34	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+13:08:29 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23496	    108	   4108	  27712	   6c40	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+13:10:10 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23508	    108	   4108	  27724	   6c4c	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+13:14:53 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:90:14: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   90 |         else if (sTime.Hours == 12);
+      |              ^~
+../Core/Src/main.c:91:9: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   91 |         {
+      |         ^
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23460	    108	   4108	  27676	   6c1c	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+13:15:18 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23472	    108	   4108	  27688	   6c28	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+13:16:12 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23472	    108	   4108	  27688	   6c28	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+13:20:31 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23504	    108	   4108	  27720	   6c48	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+13:24:52 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23556	    108	   4108	  27772	   6c7c	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+13:42:47 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23620	    108	   4108	  27836	   6cbc	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+13:43:48 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23620	    108	   4108	  27836	   6cbc	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+13:56:25 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23628	    108	   4108	  27844	   6cc4	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+15:01:57 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23620	    108	   4108	  27836	   6cbc	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+15:05:14 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23672	    108	   4108	  27888	   6cf0	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+15:25:59 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23476	    108	   4108	  27692	   6c2c	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+15:27:23 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23548	    108	   4108	  27764	   6c74	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+15:28:56 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23476	    108	   4108	  27692	   6c2c	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+15:35:29 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:60:16: warning: 'DownButton_flag' defined but not used [-Wunused-variable]
+   60 | static uint8_t DownButton_flag = 0;
+      |                ^~~~~~~~~~~~~~~
+../Core/Src/main.c:59:16: warning: 'UpButton_flag' defined but not used [-Wunused-variable]
+   59 | static uint8_t UpButton_flag = 0;
+      |                ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23424	    108	   4100	  27632	   6bf0	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+15:36:34 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:60:16: warning: 'DownButton_flag' defined but not used [-Wunused-variable]
+   60 | static uint8_t DownButton_flag = 0;
+      |                ^~~~~~~~~~~~~~~
+../Core/Src/main.c:59:16: warning: 'UpButton_flag' defined but not used [-Wunused-variable]
+   59 | static uint8_t UpButton_flag = 0;
+      |                ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23416	    108	   4100	  27624	   6be8	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+15:37:30 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:60:16: warning: 'DownButton_flag' defined but not used [-Wunused-variable]
+   60 | static uint8_t DownButton_flag = 0;
+      |                ^~~~~~~~~~~~~~~
+../Core/Src/main.c:59:16: warning: 'UpButton_flag' defined but not used [-Wunused-variable]
+   59 | static uint8_t UpButton_flag = 0;
+      |                ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23340	    108	   4100	  27548	   6b9c	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+15:38:24 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:60:16: warning: 'DownButton_flag' defined but not used [-Wunused-variable]
+   60 | static uint8_t DownButton_flag = 0;
+      |                ^~~~~~~~~~~~~~~
+../Core/Src/main.c:59:16: warning: 'UpButton_flag' defined but not used [-Wunused-variable]
+   59 | static uint8_t UpButton_flag = 0;
+      |                ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23324	    108	   4100	  27532	   6b8c	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+15:43:07 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23480	    108	   4108	  27696	   6c30	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+15:46:48 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23548	    108	   4108	  27764	   6c74	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+15:48:31 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23548	    108	   4108	  27764	   6c74	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+15:53:32 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23616	    108	   4108	  27832	   6cb8	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+15:53:48 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23588	    108	   4108	  27804	   6c9c	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+16:10:10 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:60:16: warning: 'DownButton_flag' defined but not used [-Wunused-variable]
+   60 | static uint8_t DownButton_flag = 0;
+      |                ^~~~~~~~~~~~~~~
+../Core/Src/main.c:59:16: warning: 'UpButton_flag' defined but not used [-Wunused-variable]
+   59 | static uint8_t UpButton_flag = 0;
+      |                ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23356	    108	   4100	  27564	   6bac	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+16:13:37 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:60:16: warning: 'DownButton_flag' defined but not used [-Wunused-variable]
+   60 | static uint8_t DownButton_flag = 0;
+      |                ^~~~~~~~~~~~~~~
+../Core/Src/main.c:59:16: warning: 'UpButton_flag' defined but not used [-Wunused-variable]
+   59 | static uint8_t UpButton_flag = 0;
+      |                ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  23356	    108	   4100	  27564	   6bac	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 

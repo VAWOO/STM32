@@ -5491,3 +5491,24 @@ java.lang.Exception: Cannot execute this command while the selected thread is ru
 
 !ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-11-02 14:44:37.529
 !MESSAGE Existing sessions are:
+!SESSION 2023-11-03 09:48:24.007 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-03 09:48:48.160
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-03 09:48:48.174
+!MESSAGE Log4j2 initialized with config file C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-03 09:49:04.968
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-11-03 10:20:52.994
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@3c37ef3a): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-11-03 11:27:18.171
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@46bfdabc): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
