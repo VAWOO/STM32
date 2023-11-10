@@ -56,8 +56,6 @@ char showDate[30] = {0};
 char ampm[2][3] = {"AM", "PM"};
 
 static uint8_t selection = 0; // hour, minute, second select
-static uint8_t UpButton_flag = 0;
-static uint8_t DownButton_flag = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -76,71 +74,11 @@ void get_time(void)
 	HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
 	HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
 
-	if (sTime.TimeFormat == RTC_HOURFORMAT12_PM && sTime.Hours == 0)
+	// 초기 타이머 시간 AM 00:00:00
+	if (strcmp(ampm[sTime.TimeFormat], "AM") == 0 && sTime.Hours == 12)
 	{
-		// 기존 시간이 PM이고 12시일 때, AM:00:00으로 변경
-		sTime.TimeFormat = RTC_HOURFORMAT12_AM;
-		sTime.Hours = 0;
+		sTime.Hours -= 12;
 	}
-	else if (sTime.TimeFormat == RTC_HOURFORMAT12_AM && sTime.Hours == 12)
-	{
-		// 기존 시간이 AM이고 12시일 때, PM:12:00으로 변경
-		sTime.TimeFormat = RTC_HOURFORMAT12_PM;
-		sTime.Hours = 12;
-	}
-	else if (sTime.TimeFormat == RTC_HOURFORMAT12_PM)
-	{
-		// PM일 때 시간 증가
-		sTime.Hours++;
-	}
-	else if (sTime.TimeFormat == RTC_HOURFORMAT12_AM)
-	{
-		// AM일 때 시간 증가
-		sTime.Hours++;
-		if (sTime.Hours > 12)
-		{
-			sTime.Hours = 1;
-		}
-	}
-
-//	// AM/PM Setting
-//	if (sTime.Hours == 12)
-//	{
-//		if (strcmp(ampm[sTime.TimeFormat >> 6], "AM") == 0)
-//			strcpy(ampm[sTime.TimeFormat >> 6], "PM");
-//		else if (strcmp(ampm[sTime.TimeFormat >> 6], "PM") == 0)
-//		{
-//			strcpy(ampm[sTime.TimeFormat >> 6], "AM");
-//			sTime.Hours = 0;
-//		}
-//	}
-//	else if (sTime.Hours == 0)
-//		strcpy(ampm[sTime.TimeFormat >> 6], "AM");
-//
-//	if (UpButton_flag == 1 || (UpButton_flag == 0 && DownButton_flag == 0))
-//	{
-//		if (sTime.Hours == 0)
-//		{
-//
-//		}
-//		else if (sTime.Hours == 12)
-//		{
-////			if (strcmp(ampm[sTime.TimeFormat >> 6], "AM") == 0)
-////			{
-////				strcpy(ampm[sTime.TimeFormat >> 6], "PM");
-////				sTime.Hours = 12;
-////			}
-//		}
-//		else if (sTime.Hours == 13 && strcmp(ampm[sTime.TimeFormat >> 6], "PM") == 0)
-//		{
-//			strcpy(ampm[sTime.TimeFormat >> 6], "PM");
-//			sTime.Hours = 1;
-//		}
-//	}
-//	else if (DownButton_flag == 1)
-//	{
-//
-//	}
 
 	if (selection == 0)
 		sprintf((char*)showDate, "%04d-%02d-%02d      ", 2000+sDate.Year, sDate.Month, sDate.Date);
@@ -151,62 +89,7 @@ void get_time(void)
 	else if (selection == 3)
 	    sprintf((char*)showDate, "%04d-%02d-%02d[SEC] ", 2000+sDate.Year, sDate.Month, sDate.Date);
 
-	sprintf((char *)showTime, "%s %02d:%02d:%02d", ampm[sTime.TimeFormat >> 6], sTime.Hours, sTime.Minutes, sTime.Seconds);
-
-	HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
-//	void get_time(void)
-//	{
-//	    HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
-//	    HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
-//
-//	    if (selection == 0)
-//	    {
-//	        sprintf((char *)showDate, "%04d-%02d-%02d      ", 2000 + sDate.Year, sDate.Month, sDate.Date);
-//	    }
-//	    else if (selection == 1)
-//	    {
-//	        if (sTime.TimeFormat == RTC_HOURFORMAT12_PM && sTime.Hours == 0)
-//	        {
-//	            // 기존 시간이 PM이고 12시일 때, AM:00:00으로 변경
-//	            sTime.TimeFormat = RTC_HOURFORMAT12_AM;
-//	            sTime.Hours = 0;
-//	        }
-//	        else if (sTime.TimeFormat == RTC_HOURFORMAT12_AM && sTime.Hours == 12)
-//	        {
-//	            // 기존 시간이 AM이고 12시일 때, PM:12:00으로 변경
-//	            sTime.TimeFormat = RTC_HOURFORMAT12_PM;
-//	            sTime.Hours = 12;
-//	        }
-//	        else if (sTime.TimeFormat == RTC_HOURFORMAT12_PM)
-//	        {
-//	            // PM일 때 시간 증가
-//	            sTime.Hours++;
-//	        }
-//	        else if (sTime.TimeFormat == RTC_HOURFORMAT12_AM)
-//	        {
-//	            // AM일 때 시간 증가
-//	            sTime.Hours++;
-//	            if (sTime.Hours > 12)
-//	            {
-//	                sTime.Hours = 1;
-//	            }
-//	        }
-//	        sprintf((char *)showDate, "%04d-%02d-%02d[HOUR]", 2000 + sDate.Year, sDate.Month, sDate.Date);
-//	    }
-//	    else if (selection == 2)
-//	    {
-//	        sprintf((char *)showDate, "%04d-%02d-%02d[MIN] ", 2000 + sDate.Year, sDate.Month, sDate.Date);
-//	    }
-//	    else if (selection == 3)
-//	    {
-//	        sprintf((char *)showDate, "%04d-%02d-%02d[SEC] ", 2000 + sDate.Year, sDate.Month, sDate.Date);
-//	    }
-//
-//	    sprintf((char *)showTime, "%s %02d:%02d:%02d", ampm[sTime.TimeFormat >> 6], sTime.Hours, sTime.Minutes, sTime.Seconds);
-//
-//	    // 시간 변경 적용
-//	    HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
-//	}
+	sprintf((char *)showTime, "%s %02d:%02d:%02d", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes, sTime.Seconds);
 }
 /* USER CODE END 0 */
 
@@ -361,7 +244,27 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
 			if (selection == 1) // hour select
 			{
+				HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+
 				sTime.Hours++;
+
+				if (sTime.Hours == 12)
+				{
+					if (strcmp(ampm[sTime.TimeFormat], "AM") == 0)
+					{
+						strcpy(ampm[sTime.TimeFormat], "PM");
+						sTime.Hours = 12;
+					}
+					else
+					{
+						strcpy(ampm[sTime.TimeFormat], "AM");
+						sTime.Hours = 0;
+					}
+				}
+				else if (sTime.Hours > 12)
+				{
+					sTime.Hours = 1;
+				}
 			}
 			else if (selection == 2) // minutes select
 			{
@@ -389,7 +292,34 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
 			if (selection == 1)
 			{
-				sTime.Hours--;
+				HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+
+				if (sTime.Hours == 0)
+				{
+					if (strcmp(ampm[sTime.TimeFormat], "AM") == 0)
+					{
+						strcpy(ampm[sTime.TimeFormat], "PM");
+						sTime.Hours = 11;
+					}
+					else
+					{
+						strcpy(ampm[sTime.TimeFormat], "AM");
+						sTime.Hours = 11;
+					}
+				}
+				else if (strcmp(ampm[sTime.TimeFormat], "PM") == 0 && sTime.Hours == 1)
+				{
+					sTime.Hours = 12;
+				}
+				else if (strcmp(ampm[sTime.TimeFormat], "PM") == 0 && sTime.Hours == 12)
+				{
+					strcpy(ampm[sTime.TimeFormat], "AM");
+					sTime.Hours = 11;
+				}
+				else
+				{
+					sTime.Hours--;
+				}
 			}
 			else if (selection == 2)
 			{
