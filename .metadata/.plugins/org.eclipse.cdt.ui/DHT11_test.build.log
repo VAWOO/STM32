@@ -1,0 +1,52 @@
+14:07:00 **** Incremental Build of configuration Debug for project DHT11_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:92:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   92 |         sprintf((char*)showTime, "%02d:%02d:%02d         ", sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   29 | #include "gpio.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:92:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   92 |         sprintf((char*)showTime, "%02d:%02d:%02d         ", sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:92:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:245:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  245 |   printf("Hello World !!\r\n");
+      |   ^~~~~~
+../Core/Src/main.c:245:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:245:3: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+../Core/Src/main.c:245:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:278:11: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  278 |           sprintf(buf, "%3.1f, %2.1f        ", Temperature, Humidity);
+      |           ^~~~~~~
+../Core/Src/main.c:278:11: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:294:13: warning: implicit declaration of function 'LCD_SendCommand' [-Wimplicit-function-declaration]
+  294 |             LCD_SendCommand(LCD_ADDR, 0b10000000);
+      |             ^~~~~~~~~~~~~~~
+../Core/Src/main.c:295:13: warning: implicit declaration of function 'LCD_SendString' [-Wimplicit-function-declaration]
+  295 |             LCD_SendString(LCD_ADDR, buf);
+      |             ^~~~~~~~~~~~~~
+../Core/Src/main.c:241:10: warning: unused variable 'temperature' [-Wunused-variable]
+  241 |   double temperature = 0;
+      |          ^~~~~~~~~~~
+../Core/Src/main.c:208:7: warning: unused variable 'count' [-Wunused-variable]
+  208 |   int count = 0;
+      |       ^~~~~
+arm-none-eabi-gcc -o "DHT11_test.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\DHT11_test\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DHT11_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: DHT11_test.elf
+ 
+arm-none-eabi-size   DHT11_test.elf 
+arm-none-eabi-objdump -h -S  DHT11_test.elf  > "DHT11_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  40160	    476	   4156	  44792	   aef8	DHT11_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: DHT11_test.list
+ 
+
+14:07:02 Build Finished. 0 errors, 9 warnings. (took 2s.290ms)
+
