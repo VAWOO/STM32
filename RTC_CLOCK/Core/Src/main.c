@@ -56,7 +56,6 @@ RTC_TimeTypeDef sTime;
 char uart_buf[70];
 char showTime[30] = {0};
 char showDate[30] = {0};
-char dhtValue[30] = {0};
 char ampm[2][3] = {"AM", "PM"};
 
 static uint8_t selection = 0; // hour, minute, second select
@@ -66,9 +65,23 @@ static uint8_t selection = 0; // hour, minute, second select
 void SystemClock_Config(void);
 static void MX_NVIC_Init(void);
 /* USER CODE BEGIN PFP */
+extern void I2C_Scan(void);
 void LCD_Init(uint8_t lcd_addr);
 void LCD_SendCommand(uint8_t lcd_addr, uint8_t cmd);
 void LCD_SendString(uint8_t lcd_addr, char *str);
+
+int _write(int file, char *ptr, int len)
+{
+	HAL_UART_Transmit(&huart3, (uint8_t *)ptr, len, 500);
+
+	return len;
+}
+
+int _io_putchar(int ch)
+{
+	HAL_UART_Transmit(&huart3, (uint8_t *)&ch, 1, 1000);
+	return ch;
+}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -103,8 +116,8 @@ float Humidity = 0;
 uint8_t Presence = 0;
 
 void delay_us(uint16_t time) {
-	__HAL_TIM_SET_COUNTER(&htim1, 0);              // ???��머�?? 0?���??????????? 초기?��
-	while((__HAL_TIM_GET_COUNTER(&htim1))<time);   // ?��?��?�� ?��간까�??????????? ??�???????????
+	__HAL_TIM_SET_COUNTER(&htim1, 0);
+	while((__HAL_TIM_GET_COUNTER(&htim1))<time);
 }
 void Set_Pin_Output (GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin)
 {
@@ -202,8 +215,8 @@ int main(void)
   /* Initialize interrupts */
   MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_Base_Start(&htim1);
   LCD_Init(LCD_ADDR);
+  HAL_TIM_Base_Start(&htim1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -224,14 +237,15 @@ int main(void)
 	  Temperature = (float) TEMP;
 	  Humidity = (float) RH;
 
-	  sprintf(dhtValue, "TEMP: %3.1f RH: %2.1f", Temperature, Humidity); // @suppress("Float formatting support")
+	  char dhtvalue[30];
+	  sprintf(dhtvalue, "%3.1f, %2.1f        ", Temperature, Humidity);
 
 	  get_time();
 
 	  LCD_SendCommand(LCD_ADDR, 0b10000000);
-	  LCD_SendString(LCD_ADDR, dhtValue);
+	  LCD_SendString(LCD_ADDR, dhtvalue);
 
-	  // set address to 0x40
+
 	  LCD_SendCommand(LCD_ADDR, 0b11000000);
 	  LCD_SendString(LCD_ADDR, showTime);
 

@@ -1,10 +1,17 @@
-16:33:17 **** Incremental Build of configuration Debug for project test3 ****
+16:28:56 **** Incremental Build of configuration Debug for project test3 ****
 make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test3.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\test3\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test3.elf
+ 
 arm-none-eabi-size   test3.elf 
+arm-none-eabi-objdump -h -S  test3.elf  > "test3.list"
    text	   data	    bss	    dec	    hex	filename
-  40160	    476	   4156	  44792	   aef8	test3.elf
+  40200	    476	   4132	  44808	   af08	test3.elf
 Finished building: default.size.stdout
  
+Finished building: test3.list
+ 
 
-16:33:18 Build Finished. 0 errors, 0 warnings. (took 362ms)
+16:28:58 Build Finished. 0 errors, 0 warnings. (took 1s.656ms)
 

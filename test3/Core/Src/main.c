@@ -30,6 +30,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "stdio.h"
+#include "string.h"
 
 #define LCD_ADDR (0x27 << 1)
 /* USER CODE END Includes */
@@ -58,7 +60,10 @@ void init();
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+static void MX_NVIC_Init(void);
 /* USER CODE BEGIN PFP */
+void LCD_SendCommand(uint8_t lcd_addr, uint8_t cmd);
+void LCD_SendString(uint8_t lcd_addr, char *str);
 
 int _write(int file, char *ptr, int len)
 {
@@ -101,8 +106,8 @@ float Humidity = 0;
 uint8_t Presence = 0;
 
 void delay_us(uint16_t time) {
-	__HAL_TIM_SET_COUNTER(&htim1, 0);              // ???ï¿½ï¿½ë¨¸ï¿½?? 0?ï¿½ï¿½ï¿?????????? ì´ˆê¸°?ï¿½ï¿½
-	while((__HAL_TIM_GET_COUNTER(&htim1))<time);   // ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ ?ï¿½ï¿½ê°„ê¹Œï¿?????????? ??ï¿??????????
+	__HAL_TIM_SET_COUNTER(&htim3, 0);
+	while((__HAL_TIM_GET_COUNTER(&htim3))<time);
 }
 void Set_Pin_Output (GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin)
 {
@@ -158,10 +163,6 @@ uint8_t DHT11_Read (void)
 	}
 	return i;
 }
-
-
-
-
 /* USER CODE END 0 */
 
 /**
@@ -198,110 +199,25 @@ int main(void)
   MX_ADC1_Init();
   MX_DAC_Init();
   MX_RTC_Init();
-  MX_TIM1_Init();
   MX_I2C1_Init();
+  MX_TIM3_Init();
+
+  /* Initialize interrupts */
+  MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
-
-  HAL_TIM_Base_Start(&htim1);
-
+  HAL_TIM_Base_Start_IT(&htim3);
   init();
-  int count = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-//  while (1)
-//  {
+  while (1)
+  {
+	  init();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-//	  int return_val = HAL_UART_Receive(&huart3, (uint8_t *)&data, sizeof(data), 500);
-//
-//	  printf("Receive : %d", return_val);
-//
-////	  if(0)
-////	  {
-////		  HAL_UART_Transmit(&huart3, (uint8_t *)&data, sizeof(data), 500);
-////		  HAL_GPIO_TogglePin(GPIOB, LD1_Pin);
-////	  }
-//
-////	  if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_SET)
-////	  {
-////		  HAL_GPIO_WritePin(GPIOB, LD1_Pin|LD3_Pin|LD2_Pin, 1);
-////		  HAL_Delay(500);
-////		  HAL_GPIO_WritePin(GPIOB, LD1_Pin|LD3_Pin|LD2_Pin, 0);
-////		  HAL_Delay(500);
-////		  printf("USART print test count = %d\r\n", count++);
-////	  }
-//
-//
-//
-//  }
-
-  double temperature = 0;
-
-  //HAL_ADC_Start(&hadc1);
-
-  printf("Hello World !!\r\n");
-
-
-
-  while(1)
-  {
-
-//    HAL_ADC_Start(&hadc1);
-//    RTC_TimeTypeDef sTime;
-//
-//    if(HAL_ADC_PollForConversion(&hadc1, 1000000) == HAL_OK)
-//    {
-//      uint32_t adc_value = HAL_ADC_GetValue(&hadc1);
-//      temperature = adc_value * 3.3/ 0xfff;
-//      temperature = (temperature-0.76)/0.0025 + 25.0;
-//      //printf("Temperature : %f\r\n", temperature);
-//    }
-
-    	DHT11_Start();
-	  Presence = DHT11_Check_Response();
-	  Rh_byte1 = DHT11_Read ();
-	  Rh_byte2 = DHT11_Read ();
-	  Temp_byte1 = DHT11_Read ();
-	  Temp_byte2 = DHT11_Read ();
-	  SUM = DHT11_Read();
-
-	  TEMP = Temp_byte1;
-	  RH = Rh_byte1;
-
-	  Temperature = (float) TEMP;
-	  Humidity = (float) RH;
-
-	  char buf[30];
-	  sprintf(buf, "%3.1f, %2.1f        ", Temperature, Humidity);
-
-	  printf(buf);
-	  printf("\r\n");
-	  HAL_Delay(500);
-
-//	  delay_us(100000);
-//	  printf("%d",count++);
-//	  printf(" 100ms\r\n");
-	  HAL_GPIO_WritePin(GPIOB, LD1_Pin|LD3_Pin|LD2_Pin, 1);
-	  delay_us(10);
-	  HAL_GPIO_WritePin(GPIOB, LD1_Pin|LD3_Pin|LD2_Pin, 0);
-	  delay_us(10);
-
-	  get_time();
-
-	    LCD_SendCommand(LCD_ADDR, 0b10000000);
-	    LCD_SendString(LCD_ADDR, buf);
-
-//	    // set address to 0x40
-	    LCD_SendCommand(LCD_ADDR, 0b11000000);
-	    LCD_SendString(LCD_ADDR, showTime);
-
-
   }
-
-
   /* USER CODE END 3 */
 }
 
@@ -351,7 +267,45 @@ void SystemClock_Config(void)
   }
 }
 
+/**
+  * @brief NVIC Configuration.
+  * @retval None
+  */
+static void MX_NVIC_Init(void)
+{
+  /* TIM3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(TIM3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(TIM3_IRQn);
+}
+
 /* USER CODE BEGIN 4 */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *hrim)
+{
+	uwTick += uwTickFreq;
+	if ((uwTick%10000)==0)
+	{
+	  DHT11_Start();
+	  Presence = DHT11_Check_Response();
+	  Rh_byte1 = DHT11_Read ();
+	  Rh_byte2 = DHT11_Read ();
+	  Temp_byte1 = DHT11_Read ();
+	  Temp_byte2 = DHT11_Read ();
+	  SUM = DHT11_Read();
+
+	  TEMP = Temp_byte1;
+	  RH = Rh_byte1;
+
+	  Temperature = (float) TEMP;
+	  Humidity = (float) RH;
+
+	  char dhtvalue[30];
+	  sprintf(dhtvalue, "%3.1f, %2.1f        ", Temperature, Humidity);
+
+	  LCD_SendCommand(LCD_ADDR, 0b10000000);
+	  LCD_SendString(LCD_ADDR, dhtvalue);
+	}
+
+}
 
 /* USER CODE END 4 */
 

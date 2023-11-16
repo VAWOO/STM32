@@ -14481,3 +14481,930 @@ arm-none-eabi-size   test3.elf
   40160	    476	   4156	  44792	   aef8	test3.elf
 Finished building: default.size.stdout
  
+10:52:34 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:92:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   92 |         sprintf((char*)showTime, "%02d:%02d:%02d         ", sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   29 | #include "gpio.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:92:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   92 |         sprintf((char*)showTime, "%02d:%02d:%02d         ", sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:92:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:245:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  245 |   printf("Hello World !!\r\n");
+      |   ^~~~~~
+../Core/Src/main.c:245:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:245:3: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+../Core/Src/main.c:245:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:278:11: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  278 |           sprintf(buf, "%3.1f, %2.1f        ", Temperature, Humidity);
+      |           ^~~~~~~
+../Core/Src/main.c:278:11: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:294:13: warning: implicit declaration of function 'LCD_SendCommand' [-Wimplicit-function-declaration]
+  294 |             LCD_SendCommand(LCD_ADDR, 0b10000000);
+      |             ^~~~~~~~~~~~~~~
+../Core/Src/main.c:295:13: warning: implicit declaration of function 'LCD_SendString' [-Wimplicit-function-declaration]
+  295 |             LCD_SendString(LCD_ADDR, buf);
+      |             ^~~~~~~~~~~~~~
+../Core/Src/main.c:241:10: warning: unused variable 'temperature' [-Wunused-variable]
+  241 |   double temperature = 0;
+      |          ^~~~~~~~~~~
+../Core/Src/main.c:208:7: warning: unused variable 'count' [-Wunused-variable]
+  208 |   int count = 0;
+      |       ^~~~~
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  31064	    112	   4160	  35336	   8a08	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+10:53:08 **** Incremental Build of configuration Debug for project test3 ****
+make -j8 all 
+arm-none-eabi-size   test3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40160	    476	   4156	  44792	   aef8	test3.elf
+Finished building: default.size.stdout
+ 
+10:53:27 **** Incremental Build of configuration Debug for project test3 ****
+make -j8 all 
+arm-none-eabi-size   test3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40160	    476	   4156	  44792	   aef8	test3.elf
+Finished building: default.size.stdout
+ 
+10:53:45 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:92:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   92 |         sprintf((char*)showTime, "%02d:%02d:%02d         ", sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   29 | #include "gpio.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:92:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   92 |         sprintf((char*)showTime, "%02d:%02d:%02d         ", sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:92:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:245:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  245 |   printf("Hello World !!\r\n");
+      |   ^~~~~~
+../Core/Src/main.c:245:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:245:3: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+../Core/Src/main.c:245:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:278:11: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  278 |           sprintf(buf, "%3.1f, %2.1f        ", Temperature, Humidity);
+      |           ^~~~~~~
+../Core/Src/main.c:278:11: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:294:13: warning: implicit declaration of function 'LCD_SendCommand' [-Wimplicit-function-declaration]
+  294 |             LCD_SendCommand(LCD_ADDR, 0b10000000);
+      |             ^~~~~~~~~~~~~~~
+../Core/Src/main.c:295:13: warning: implicit declaration of function 'LCD_SendString' [-Wimplicit-function-declaration]
+  295 |             LCD_SendString(LCD_ADDR, buf);
+      |             ^~~~~~~~~~~~~~
+../Core/Src/main.c:241:10: warning: unused variable 'temperature' [-Wunused-variable]
+  241 |   double temperature = 0;
+      |          ^~~~~~~~~~~
+../Core/Src/main.c:208:7: warning: unused variable 'count' [-Wunused-variable]
+  208 |   int count = 0;
+      |       ^~~~~
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  31064	    112	   4160	  35336	   8a08	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+11:03:36 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:245:18: error: 'buf' undeclared (first use in this function)
+  245 |           printf(buf);
+      |                  ^~~
+../Core/Src/main.c:245:18: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:222:10: warning: unused variable 'temperature' [-Wunused-variable]
+  222 |   double temperature = 0;
+      |          ^~~~~~~~~~~
+../Core/Src/main.c:221:7: warning: unused variable 'count' [-Wunused-variable]
+  221 |   int count = 0;
+      |       ^~~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:03:45 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:222:10: warning: unused variable 'temperature' [-Wunused-variable]
+  222 |   double temperature = 0;
+      |          ^~~~~~~~~~~
+../Core/Src/main.c:221:7: warning: unused variable 'count' [-Wunused-variable]
+  221 |   int count = 0;
+      |       ^~~~~
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  31804	    120	   4256	  36180	   8d54	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+11:04:30 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  31788	    120	   4256	  36164	   8d44	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+11:06:39 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  31788	    120	   4256	  36164	   8d44	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+11:11:59 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  48420	    484	   4252	  53156	   cfa4	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+11:12:27 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  48172	    484	   4252	  52908	   ceac	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+11:14:02 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:241:19: error: 'buf' undeclared (first use in this function)
+  241 |           sprintf(buf, "%3.1f, %2.1f        ", Temperature, Humidity);
+      |                   ^~~
+../Core/Src/main.c:241:19: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:14:17 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  48180	    484	   4252	  52916	   ceb4	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+11:14:49 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-size   RTC_CLOCK.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48180	    484	   4252	  52916	   ceb4	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+11:16:01 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-size   RTC_CLOCK.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48180	    484	   4252	  52916	   ceb4	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+11:17:45 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-size   RTC_CLOCK.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48180	    484	   4252	  52916	   ceb4	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+11:18:34 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:92:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   92 |         sprintf((char*)showTime, "%02d:%02d:%02d         ", sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   29 | #include "gpio.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:92:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   92 |         sprintf((char*)showTime, "%02d:%02d:%02d         ", sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:92:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:245:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  245 |   printf("Hello World !!\r\n");
+      |   ^~~~~~
+../Core/Src/main.c:245:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:245:3: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+../Core/Src/main.c:245:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:278:11: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  278 |           sprintf(buf, "%3.1f, %2.1f        ", Temperature, Humidity);
+      |           ^~~~~~~
+../Core/Src/main.c:278:11: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:294:13: warning: implicit declaration of function 'LCD_SendCommand' [-Wimplicit-function-declaration]
+  294 |             LCD_SendCommand(LCD_ADDR, 0b10000000);
+      |             ^~~~~~~~~~~~~~~
+../Core/Src/main.c:295:13: warning: implicit declaration of function 'LCD_SendString' [-Wimplicit-function-declaration]
+  295 |             LCD_SendString(LCD_ADDR, buf);
+      |             ^~~~~~~~~~~~~~
+../Core/Src/main.c:241:10: warning: unused variable 'temperature' [-Wunused-variable]
+  241 |   double temperature = 0;
+      |          ^~~~~~~~~~~
+../Core/Src/main.c:208:7: warning: unused variable 'count' [-Wunused-variable]
+  208 |   int count = 0;
+      |       ^~~~~
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  47684	    476	   4156	  52316	   cc5c	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+11:21:28 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  48180	    484	   4220	  52884	   ce94	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+11:22:03 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-size   RTC_CLOCK.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48180	    484	   4220	  52884	   ce94	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+11:29:30 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:246:36: error: 'buf' undeclared (first use in this function)
+  246 |           LCD_SendString(LCD_ADDR, buf);
+      |                                    ^~~
+../Core/Src/main.c:246:36: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:29:35 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  48180	    484	   4220	  52884	   ce94	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+11:35:21 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:93:13: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+   93 |         if (strcmp(ampm[sTime.TimeFormat], "AM") == 0 && sTime.Hours == 12)
+      |             ^~~~~~
+../Core/Src/main.c:30:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   29 | #include "gpio.h"
+  +++ |+#include <string.h>
+   30 | 
+../Core/Src/main.c:99:17: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   99 |                 sprintf((char*)showDate, "%04d-%02d-%02d      ", 2000+sDate.Year, sDate.Month, sDate.Date);
+      |                 ^~~~~~~
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   29 | #include "gpio.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:99:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   99 |                 sprintf((char*)showDate, "%04d-%02d-%02d      ", 2000+sDate.Year, sDate.Month, sDate.Date);
+      |                 ^~~~~~~
+../Core/Src/main.c:99:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:101:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  101 |                 sprintf((char*)showDate, "%04d-%02d-%02d[HOUR]", 2000+sDate.Year, sDate.Month, sDate.Date);
+      |                 ^~~~~~~
+../Core/Src/main.c:101:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:103:13: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  103 |             sprintf((char*)showDate, "%04d-%02d-%02d[MIN] ", 2000+sDate.Year, sDate.Month, sDate.Date);
+      |             ^~~~~~~
+../Core/Src/main.c:103:13: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:105:13: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  105 |             sprintf((char*)showDate, "%04d-%02d-%02d[SEC] ", 2000+sDate.Year, sDate.Month, sDate.Date);
+      |             ^~~~~~~
+../Core/Src/main.c:105:13: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:107:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  107 |         sprintf((char *)showTime, "%s %02d:%02d:%02d", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:107:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:218:3: warning: implicit declaration of function 'init' [-Wimplicit-function-declaration]
+  218 |   init();
+      |   ^~~~
+../Core/Src/main.c:240:11: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  240 |           sprintf(dhtvalue, "%3.1f, %2.1f        ", Temperature, Humidity);
+      |           ^~~~~~~
+../Core/Src/main.c:240:11: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:364:49: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+  364 |                                                 strcpy(ampm[sTime.TimeFormat], "PM");
+      |                                                 ^~~~~~
+../Core/Src/main.c:364:49: note: include '<string.h>' or provide a declaration of 'strcpy'
+../Core/Src/main.c:364:49: warning: incompatible implicit declaration of built-in function 'strcpy' [-Wbuiltin-declaration-mismatch]
+../Core/Src/main.c:364:49: note: include '<string.h>' or provide a declaration of 'strcpy'
+../Core/Src/main.c:369:49: warning: incompatible implicit declaration of built-in function 'strcpy' [-Wbuiltin-declaration-mismatch]
+  369 |                                                 strcpy(ampm[sTime.TimeFormat], "AM");
+      |                                                 ^~~~~~
+../Core/Src/main.c:369:49: note: include '<string.h>' or provide a declaration of 'strcpy'
+../Core/Src/main.c:408:49: warning: incompatible implicit declaration of built-in function 'strcpy' [-Wbuiltin-declaration-mismatch]
+  408 |                                                 strcpy(ampm[sTime.TimeFormat], "PM");
+      |                                                 ^~~~~~
+../Core/Src/main.c:408:49: note: include '<string.h>' or provide a declaration of 'strcpy'
+../Core/Src/main.c:413:49: warning: incompatible implicit declaration of built-in function 'strcpy' [-Wbuiltin-declaration-mismatch]
+  413 |                                                 strcpy(ampm[sTime.TimeFormat], "AM");
+      |                                                 ^~~~~~
+../Core/Src/main.c:413:49: note: include '<string.h>' or provide a declaration of 'strcpy'
+../Core/Src/main.c:423:41: warning: incompatible implicit declaration of built-in function 'strcpy' [-Wbuiltin-declaration-mismatch]
+  423 |                                         strcpy(ampm[sTime.TimeFormat], "AM");
+      |                                         ^~~~~~
+../Core/Src/main.c:423:41: note: include '<string.h>' or provide a declaration of 'strcpy'
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  48628	    484	   4220	  53332	   d054	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+11:36:06 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:220:3: warning: implicit declaration of function 'init' [-Wimplicit-function-declaration]
+  220 |   init();
+      |   ^~~~
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  48628	    484	   4220	  53332	   d054	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+12:42:38 **** Incremental Build of configuration Debug for project test3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:92:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   92 |         sprintf((char*)showTime, "%02d:%02d:%02d         ", sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   29 | #include "gpio.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:92:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   92 |         sprintf((char*)showTime, "%02d:%02d:%02d         ", sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:92:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:273:11: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  273 |           sprintf(buf, "%3.1f, %2.1f        ", Temperature, Humidity);
+      |           ^~~~~~~
+../Core/Src/main.c:273:11: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:278:13: warning: implicit declaration of function 'LCD_SendCommand' [-Wimplicit-function-declaration]
+  278 |             LCD_SendCommand(LCD_ADDR, 0b10000000);
+      |             ^~~~~~~~~~~~~~~
+../Core/Src/main.c:279:13: warning: implicit declaration of function 'LCD_SendString' [-Wimplicit-function-declaration]
+  279 |             LCD_SendString(LCD_ADDR, buf);
+      |             ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "test3.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\test3\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test3.elf
+ 
+arm-none-eabi-size   test3.elf 
+arm-none-eabi-objdump -h -S  test3.elf  > "test3.list"
+   text	   data	    bss	    dec	    hex	filename
+  39832	    476	   4156	  44464	   adb0	test3.elf
+Finished building: default.size.stdout
+ 
+Finished building: test3.list
+ 
+13:26:08 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  48628	    484	   4220	  53332	   d054	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+13:27:02 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  48180	    484	   4220	  52884	   ce94	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+13:35:16 **** Incremental Build of configuration Debug for project test3 ****
+make -j8 all 
+arm-none-eabi-gcc -o "test3.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\test3\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test3.elf
+ 
+arm-none-eabi-size   test3.elf 
+arm-none-eabi-objdump -h -S  test3.elf  > "test3.list"
+   text	   data	    bss	    dec	    hex	filename
+  39832	    476	   4156	  44464	   adb0	test3.elf
+Finished building: default.size.stdout
+ 
+Finished building: test3.list
+ 
+13:35:42 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:92:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   92 |         sprintf((char*)showTime, "%02d:%02d:%02d         ", sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   29 | #include "gpio.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:92:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   92 |         sprintf((char*)showTime, "%02d:%02d:%02d         ", sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:92:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:273:11: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  273 |           sprintf(buf, "%3.1f, %2.1f        ", Temperature, Humidity);
+      |           ^~~~~~~
+../Core/Src/main.c:273:11: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:278:13: warning: implicit declaration of function 'LCD_SendCommand' [-Wimplicit-function-declaration]
+  278 |             LCD_SendCommand(LCD_ADDR, 0b10000000);
+      |             ^~~~~~~~~~~~~~~
+../Core/Src/main.c:279:13: warning: implicit declaration of function 'LCD_SendString' [-Wimplicit-function-declaration]
+  279 |             LCD_SendString(LCD_ADDR, buf);
+      |             ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  47348	    476	   4156	  51980	   cb0c	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+13:36:13 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:92:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   92 |         sprintf((char*)showTime, "%02d:%02d:%02d         ", sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   29 | #include "gpio.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:92:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   92 |         sprintf((char*)showTime, "%02d:%02d:%02d         ", sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:92:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:273:11: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  273 |           sprintf(buf, "%3.1f, %2.1f        ", Temperature, Humidity);
+      |           ^~~~~~~
+../Core/Src/main.c:273:11: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:278:13: warning: implicit declaration of function 'LCD_SendCommand' [-Wimplicit-function-declaration]
+  278 |             LCD_SendCommand(LCD_ADDR, 0b10000000);
+      |             ^~~~~~~~~~~~~~~
+../Core/Src/main.c:279:13: warning: implicit declaration of function 'LCD_SendString' [-Wimplicit-function-declaration]
+  279 |             LCD_SendString(LCD_ADDR, buf);
+      |             ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  47348	    476	   4156	  51980	   cb0c	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+14:29:46 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/rtc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/rtc.d" -MT"Core/Src/rtc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/rtc.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  48180	    484	   4220	  52884	   ce94	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+14:30:45 **** Incremental Build of configuration Debug for project test3 ****
+make -j8 all 
+arm-none-eabi-size   test3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  39832	    476	   4156	  44464	   adb0	test3.elf
+Finished building: default.size.stdout
+ 
+14:31:33 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:93:13: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+   93 |         if (strcmp(ampm[sTime.TimeFormat], "AM") == 0 && sTime.Hours == 12)
+      |             ^~~~~~
+../Core/Src/main.c:30:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   29 | #include "gpio.h"
+  +++ |+#include <string.h>
+   30 | 
+../Core/Src/main.c:99:17: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   99 |                 sprintf((char*)showDate, "%04d-%02d-%02d      ", 2000+sDate.Year, sDate.Month, sDate.Date);
+      |                 ^~~~~~~
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   29 | #include "gpio.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:99:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   99 |                 sprintf((char*)showDate, "%04d-%02d-%02d      ", 2000+sDate.Year, sDate.Month, sDate.Date);
+      |                 ^~~~~~~
+../Core/Src/main.c:99:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:101:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  101 |                 sprintf((char*)showDate, "%04d-%02d-%02d[HOUR]", 2000+sDate.Year, sDate.Month, sDate.Date);
+      |                 ^~~~~~~
+../Core/Src/main.c:101:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:103:13: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  103 |             sprintf((char*)showDate, "%04d-%02d-%02d[MIN] ", 2000+sDate.Year, sDate.Month, sDate.Date);
+      |             ^~~~~~~
+../Core/Src/main.c:103:13: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:105:13: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  105 |             sprintf((char*)showDate, "%04d-%02d-%02d[SEC] ", 2000+sDate.Year, sDate.Month, sDate.Date);
+      |             ^~~~~~~
+../Core/Src/main.c:105:13: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:107:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  107 |         sprintf((char *)showTime, "%s %02d:%02d:%02d", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:107:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:240:11: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  240 |           sprintf(dhtvalue, "%3.1f, %2.1f        ", Temperature, Humidity);
+      |           ^~~~~~~
+../Core/Src/main.c:240:11: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:364:49: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+  364 |                                                 strcpy(ampm[sTime.TimeFormat], "PM");
+      |                                                 ^~~~~~
+../Core/Src/main.c:364:49: note: include '<string.h>' or provide a declaration of 'strcpy'
+../Core/Src/main.c:364:49: warning: incompatible implicit declaration of built-in function 'strcpy' [-Wbuiltin-declaration-mismatch]
+../Core/Src/main.c:364:49: note: include '<string.h>' or provide a declaration of 'strcpy'
+../Core/Src/main.c:369:49: warning: incompatible implicit declaration of built-in function 'strcpy' [-Wbuiltin-declaration-mismatch]
+  369 |                                                 strcpy(ampm[sTime.TimeFormat], "AM");
+      |                                                 ^~~~~~
+../Core/Src/main.c:369:49: note: include '<string.h>' or provide a declaration of 'strcpy'
+../Core/Src/main.c:408:49: warning: incompatible implicit declaration of built-in function 'strcpy' [-Wbuiltin-declaration-mismatch]
+  408 |                                                 strcpy(ampm[sTime.TimeFormat], "PM");
+      |                                                 ^~~~~~
+../Core/Src/main.c:408:49: note: include '<string.h>' or provide a declaration of 'strcpy'
+../Core/Src/main.c:413:49: warning: incompatible implicit declaration of built-in function 'strcpy' [-Wbuiltin-declaration-mismatch]
+  413 |                                                 strcpy(ampm[sTime.TimeFormat], "AM");
+      |                                                 ^~~~~~
+../Core/Src/main.c:413:49: note: include '<string.h>' or provide a declaration of 'strcpy'
+../Core/Src/main.c:423:41: warning: incompatible implicit declaration of built-in function 'strcpy' [-Wbuiltin-declaration-mismatch]
+  423 |                                         strcpy(ampm[sTime.TimeFormat], "AM");
+      |                                         ^~~~~~
+../Core/Src/main.c:423:41: note: include '<string.h>' or provide a declaration of 'strcpy'
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  48180	    484	   4220	  52884	   ce94	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+14:32:01 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:99:17: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   99 |                 sprintf((char*)showDate, "%04d-%02d-%02d      ", 2000+sDate.Year, sDate.Month, sDate.Date);
+      |                 ^~~~~~~
+../Core/Src/main.c:34:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   33 | #include "string.h"
+  +++ |+#include <stdio.h>
+   34 | /* USER CODE END Includes */
+../Core/Src/main.c:99:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   99 |                 sprintf((char*)showDate, "%04d-%02d-%02d      ", 2000+sDate.Year, sDate.Month, sDate.Date);
+      |                 ^~~~~~~
+../Core/Src/main.c:99:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:101:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  101 |                 sprintf((char*)showDate, "%04d-%02d-%02d[HOUR]", 2000+sDate.Year, sDate.Month, sDate.Date);
+      |                 ^~~~~~~
+../Core/Src/main.c:101:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:103:13: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  103 |             sprintf((char*)showDate, "%04d-%02d-%02d[MIN] ", 2000+sDate.Year, sDate.Month, sDate.Date);
+      |             ^~~~~~~
+../Core/Src/main.c:103:13: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:105:13: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  105 |             sprintf((char*)showDate, "%04d-%02d-%02d[SEC] ", 2000+sDate.Year, sDate.Month, sDate.Date);
+      |             ^~~~~~~
+../Core/Src/main.c:105:13: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:107:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  107 |         sprintf((char *)showTime, "%s %02d:%02d:%02d", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:107:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:240:11: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  240 |           sprintf(dhtvalue, "%3.1f, %2.1f        ", Temperature, Humidity);
+      |           ^~~~~~~
+../Core/Src/main.c:240:11: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  48180	    484	   4220	  52884	   ce94	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+15:17:59 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  48180	    484	   4220	  52884	   ce94	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+15:20:09 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-size   RTC_CLOCK.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48180	    484	   4220	  52884	   ce94	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+15:21:12 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-size   RTC_CLOCK.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48180	    484	   4220	  52884	   ce94	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+15:22:06 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-size   RTC_CLOCK.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48180	    484	   4220	  52884	   ce94	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+15:23:25 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_CLOCK.elf
+ 
+arm-none-eabi-size   RTC_CLOCK.elf 
+arm-none-eabi-objdump -h -S  RTC_CLOCK.elf  > "RTC_CLOCK.list"
+   text	   data	    bss	    dec	    hex	filename
+  48180	    484	   4220	  52884	   ce94	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_CLOCK.list
+ 
+15:26:18 **** Incremental Build of configuration Debug for project test3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:92:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   92 |         sprintf((char*)showTime, "%02d:%02d:%02d         ", sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   29 | #include "gpio.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:92:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   92 |         sprintf((char*)showTime, "%02d:%02d:%02d         ", sTime.Hours, sTime.Minutes, sTime.Seconds);
+      |         ^~~~~~~
+../Core/Src/main.c:92:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:223:11: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  223 |           sprintf(buf, "%3.1f, %2.1f        ", Temperature, Humidity);
+      |           ^~~~~~~
+../Core/Src/main.c:223:11: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:227:11: warning: implicit declaration of function 'LCD_SendCommand' [-Wimplicit-function-declaration]
+  227 |           LCD_SendCommand(LCD_ADDR, 0b10000000);
+      |           ^~~~~~~~~~~~~~~
+../Core/Src/main.c:228:11: warning: implicit declaration of function 'LCD_SendString' [-Wimplicit-function-declaration]
+  228 |           LCD_SendString(LCD_ADDR, buf);
+      |           ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "test3.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\test3\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test3.elf
+ 
+arm-none-eabi-size   test3.elf 
+arm-none-eabi-objdump -h -S  test3.elf  > "test3.list"
+   text	   data	    bss	    dec	    hex	filename
+  39832	    476	   4156	  44464	   adb0	test3.elf
+Finished building: default.size.stdout
+ 
+Finished building: test3.list
+ 
+15:27:14 **** Incremental Build of configuration Debug for project test3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test3.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\test3\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test3.elf
+ 
+arm-none-eabi-size   test3.elf 
+arm-none-eabi-objdump -h -S  test3.elf  > "test3.list"
+   text	   data	    bss	    dec	    hex	filename
+  39832	    476	   4156	  44464	   adb0	test3.elf
+Finished building: default.size.stdout
+ 
+Finished building: test3.list
+ 
+15:28:17 **** Incremental Build of configuration Debug for project test3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test3.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\test3\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test3.elf
+ 
+arm-none-eabi-size   test3.elf 
+arm-none-eabi-objdump -h -S  test3.elf  > "test3.list"
+   text	   data	    bss	    dec	    hex	filename
+  39920	    484	   4220	  44624	   ae50	test3.elf
+Finished building: default.size.stdout
+ 
+Finished building: test3.list
+ 
+15:54:42 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-size   RTC_CLOCK.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48180	    484	   4220	  52884	   ce94	RTC_CLOCK.elf
+Finished building: default.size.stdout
+ 
+16:28:11 **** Incremental Build of configuration Debug for project test3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Core/Src/main.c: In function 'delay_us':
+../Core/Src/main.c:109:32: error: 'htim1' undeclared (first use in this function); did you mean 'htim3'?
+  109 |         __HAL_TIM_SET_COUNTER(&htim1, 0);
+      |                                ^~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1283:59: note: in definition of macro '__HAL_TIM_SET_COUNTER'
+ 1283 | #define __HAL_TIM_SET_COUNTER(__HANDLE__, __COUNTER__)  ((__HANDLE__)->Instance->CNT = (__COUNTER__))
+      |                                                           ^~~~~~~~~~
+../Core/Src/main.c:109:32: note: each undeclared identifier is reported only once for each function it appears in
+  109 |         __HAL_TIM_SET_COUNTER(&htim1, 0);
+      |                                ^~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1283:59: note: in definition of macro '__HAL_TIM_SET_COUNTER'
+ 1283 | #define __HAL_TIM_SET_COUNTER(__HANDLE__, __COUNTER__)  ((__HANDLE__)->Instance->CNT = (__COUNTER__))
+      |                                                           ^~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:208:23: error: 'htim1' undeclared (first use in this function); did you mean 'htim3'?
+  208 |   HAL_TIM_Base_Start(&htim1);
+      |                       ^~~~~
+      |                       htim3
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:28:31 **** Incremental Build of configuration Debug for project test3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Core/Src/main.c: In function 'delay_us':
+../Core/Src/main.c:109:32: error: 'htim1' undeclared (first use in this function); did you mean 'htim3'?
+  109 |         __HAL_TIM_SET_COUNTER(&htim1, 0);
+      |                                ^~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1283:59: note: in definition of macro '__HAL_TIM_SET_COUNTER'
+ 1283 | #define __HAL_TIM_SET_COUNTER(__HANDLE__, __COUNTER__)  ((__HANDLE__)->Instance->CNT = (__COUNTER__))
+      |                                                           ^~~~~~~~~~
+../Core/Src/main.c:109:32: note: each undeclared identifier is reported only once for each function it appears in
+  109 |         __HAL_TIM_SET_COUNTER(&htim1, 0);
+      |                                ^~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1283:59: note: in definition of macro '__HAL_TIM_SET_COUNTER'
+ 1283 | #define __HAL_TIM_SET_COUNTER(__HANDLE__, __COUNTER__)  ((__HANDLE__)->Instance->CNT = (__COUNTER__))
+      |                                                           ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:28:56 **** Incremental Build of configuration Debug for project test3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test3.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\test3\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test3.elf
+ 
+arm-none-eabi-size   test3.elf 
+arm-none-eabi-objdump -h -S  test3.elf  > "test3.list"
+   text	   data	    bss	    dec	    hex	filename
+  40200	    476	   4132	  44808	   af08	test3.elf
+Finished building: default.size.stdout
+ 
+Finished building: test3.list
+ 
