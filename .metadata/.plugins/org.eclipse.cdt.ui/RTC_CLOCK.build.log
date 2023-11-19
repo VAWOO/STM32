@@ -1,10 +1,10 @@
-15:54:42 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
-make -j8 all 
+03:32:44 **** Incremental Build of configuration Debug for project RTC_CLOCK ****
+make -j12 all 
 arm-none-eabi-size   RTC_CLOCK.elf 
    text	   data	    bss	    dec	    hex	filename
-  48180	    484	   4220	  52884	   ce94	RTC_CLOCK.elf
+  47508	    484	   4268	  52260	   cc24	RTC_CLOCK.elf
 Finished building: default.size.stdout
  
 
-15:54:42 Build Finished. 0 errors, 0 warnings. (took 358ms)
+03:32:45 Build Finished. 0 errors, 0 warnings. (took 259ms)
 

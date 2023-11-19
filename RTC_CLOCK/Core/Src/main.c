@@ -65,23 +65,9 @@ static uint8_t selection = 0; // hour, minute, second select
 void SystemClock_Config(void);
 static void MX_NVIC_Init(void);
 /* USER CODE BEGIN PFP */
-extern void I2C_Scan(void);
 void LCD_Init(uint8_t lcd_addr);
 void LCD_SendCommand(uint8_t lcd_addr, uint8_t cmd);
 void LCD_SendString(uint8_t lcd_addr, char *str);
-
-int _write(int file, char *ptr, int len)
-{
-	HAL_UART_Transmit(&huart3, (uint8_t *)ptr, len, 500);
-
-	return len;
-}
-
-int _io_putchar(int ch)
-{
-	HAL_UART_Transmit(&huart3, (uint8_t *)&ch, 1, 1000);
-	return ch;
-}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -223,43 +209,43 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  DHT11_Start();
-	  Presence = DHT11_Check_Response();
-	  Rh_byte1 = DHT11_Read ();
-	  Rh_byte2 = DHT11_Read ();
-	  Temp_byte1 = DHT11_Read ();
-	  Temp_byte2 = DHT11_Read ();
-	  SUM = DHT11_Read();
-
-	  TEMP = Temp_byte1;
-	  RH = Rh_byte1;
-
-	  Temperature = (float) TEMP;
-	  Humidity = (float) RH;
-
-	  char dhtvalue[30];
-	  sprintf(dhtvalue, "%3.1f, %2.1f        ", Temperature, Humidity);
-
-	  get_time();
-
-	  LCD_SendCommand(LCD_ADDR, 0b10000000);
-	  LCD_SendString(LCD_ADDR, dhtvalue);
-
-
-	  LCD_SendCommand(LCD_ADDR, 0b11000000);
-	  LCD_SendString(LCD_ADDR, showTime);
-
+//	  DHT11_Start();
+//	  Presence = DHT11_Check_Response();
+//	  Rh_byte1 = DHT11_Read ();
+//	  Rh_byte2 = DHT11_Read ();
+//	  Temp_byte1 = DHT11_Read ();
+//	  Temp_byte2 = DHT11_Read ();
+//	  SUM = DHT11_Read();
+//
+//	  TEMP = Temp_byte1;
+//	  RH = Rh_byte1;
+//
+//	  Temperature = (float) TEMP;
+//	  Humidity = (float) RH;
+//
+//	  char dhtvalue[30];
+//	  sprintf(dhtvalue, "%3.1f, %2.1f        ", Temperature, Humidity);
+//
 //	  get_time();
-
-//	  memset(uart_buf, 0, sizeof(uart_buf));
-//	  sprintf(uart_buf, "%s\t\r\n%s\t\r\n", showDate, showTime);
-//	  HAL_UART_Transmit(&huart3, (uint8_t *)uart_buf, strlen(uart_buf), 10000);
 //
 //	  LCD_SendCommand(LCD_ADDR, 0b10000000);
-//	  LCD_SendString(LCD_ADDR, showDate);
+//	  LCD_SendString(LCD_ADDR, dhtvalue);
+//
 //
 //	  LCD_SendCommand(LCD_ADDR, 0b11000000);
 //	  LCD_SendString(LCD_ADDR, showTime);
+
+	  get_time();
+
+	  memset(uart_buf, 0, sizeof(uart_buf));
+	  sprintf(uart_buf, "%s\t\r\n%s\t\r\n", showDate, showTime);
+	  HAL_UART_Transmit(&huart3, (uint8_t *)uart_buf, strlen(uart_buf), 10000);
+
+	  LCD_SendCommand(LCD_ADDR, 0b10000000);
+	  LCD_SendString(LCD_ADDR, showDate);
+
+	  LCD_SendCommand(LCD_ADDR, 0b11000000);
+	  LCD_SendString(LCD_ADDR, showTime);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
