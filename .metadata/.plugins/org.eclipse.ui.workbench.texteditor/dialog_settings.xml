@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value="un"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="un"/>
+			<item value="UP"/>
+			<item value="before"/>
+			<item value="befor"/>
+			<item value="adc_value"/>
+			<item value="adc"/>
+			<item value="tx_data"/>
+			<item value="button_before"/>
+			<item value="button_before."/>
 			<item value="59"/>
 			<item value="while"/>
 			<item value="time"/>
 			<item value="htim1"/>
 			<item value="delay"/>
 			<item value="Temperature"/>
-			<item value="Presence"/>
-			<item value="temperature"/>
-			<item value="count"/>
-			<item value="Rh_byte2"/>
-			<item value="PM"/>
-			<item value="timeformat"/>
-			<item value="ampm"/>
-			<item value="pm"/>
-			<item value="am"/>
 		</list>
 		<list key="replacehistory">
 		</list>
