@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "adc.h"
+#include "dma.h"
 #include "eth.h"
 #include "i2c.h"
 #include "rtc.h"
@@ -42,15 +43,17 @@ RTC_DateTypeDef sDate;
 RTC_TimeTypeDef aTime;
 RTC_DateTypeDef aDate;
 
-typedef enum{
+typedef enum
+{
 	NONE,
 	UP,
 	DOWN,
 	RIGHT,
-	LEFT,
-	UNKNOWN
+	LEFT
 }_Direction;
-typedef enum{
+
+typedef enum
+{
 	AMPM=0,
 	HOUR_T,
 	HOUR_O,
@@ -59,7 +62,9 @@ typedef enum{
 	SECOND_T,
 	SECOND_O,
 }_SetMode;
-typedef enum{
+
+typedef enum
+{
 	SETTING,
 	NORMAL,
 	ALARM
@@ -79,31 +84,31 @@ typedef enum{
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+_MODE mode=SETTING;
 
 _SetMode setmode = AMPM;
 char tmpTime[100]= {0,};
 char ampm[2][3] = {"AM", "PM"};
-uint32_t adc_value=0;
-_Direction direction;
 
+_Direction direction;
 _Direction button;
-_Direction button_before=NONE;
+
 uint8_t user_pressed_flag=0;
 uint8_t user_pulled_flag=0;
 
-_MODE mode=SETTING;
-
 uint32_t old_tick=0;
 uint32_t current_tick=0;
-
 uint32_t old_alarm_tick=0;
 uint32_t current_alarm_tick=0;
 
 uint8_t alarm_on=0;
+
+uint32_t XY[2]; // Joystick
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+static void MX_NVIC_Init(void);
 /* USER CODE BEGIN PFP */
 _Direction getButton();
 void move_cur_time(RTC_TimeTypeDef *time, _Direction direction);
@@ -142,6 +147,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_ETH_Init();
   MX_USART3_UART_Init();
   MX_USB_OTG_FS_PCD_Init();
@@ -149,13 +155,18 @@ int main(void)
   MX_I2C1_Init();
   MX_RTC_Init();
   MX_TIM2_Init();
+
+  /* Initialize interrupts */
+  MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
+  uint8_t toggle=0;
 
   LCM1602_init();
-  uint8_t toggle=0;
 
   HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
   HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+
+  HAL_ADC_Start_DMA(&hadc1, XY, 2);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -168,51 +179,65 @@ int main(void)
 		  toggle^=1;
 
 		  lcd_put_cur(0,0);
-		  LCD_SendString("Time Setting   ");
-		  // ADC
-		  HAL_ADC_Start(&hadc1);
-		  HAL_ADC_PollForConversion(&hadc1, 10);
-		  adc_value = HAL_ADC_GetValue(&hadc1);
+		  LCD_SendString("Time is...     ");
+
 		  // read button
 		  button = getButton();
-		  // Processing when the button is changed
-		  if(button!=button_before){
-			  move_cur_time(&sTime, button);
-			  HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
-			  button_before=button;
+		  move_cur_time(&sTime, button);
+
+		  HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+
 		  }
 		  // the part where it's big and blinking
-		  if(toggle){
+		  if(toggle)
+		  {
 			  sprintf(tmpTime,"%s %02d:%02d:%02d", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes, sTime.Seconds);
-		  }else{
-			  if(setmode==AMPM){
+		  }
+		  else
+		  {
+			  if(setmode==AMPM)
+			  {
 				  sprintf(tmpTime,"   %02d:%02d:%02d", sTime.Hours, sTime.Minutes, sTime.Seconds);
-			  }else if(setmode==HOUR_T){
+			  }
+			  else if(setmode==HOUR_T)
+			  {
 				  sprintf(tmpTime,"%s  %d:%02d:%02d", ampm[sTime.TimeFormat], sTime.Hours%10, sTime.Minutes, sTime.Seconds);
-			  }else if(setmode==HOUR_O){
+			  }
+			  else if(setmode==HOUR_O)
+			  {
 				  sprintf(tmpTime,"%s %d :%02d:%02d", ampm[sTime.TimeFormat], sTime.Hours/10, sTime.Minutes, sTime.Seconds);
-			  }else if(setmode==MINUTE_T){
+			  }
+			  else if(setmode==MINUTE_T)
+			  {
 				  sprintf(tmpTime,"%s %02d: %d:%02d", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes%10, sTime.Seconds);
-			  }else if(setmode==MINUTE_O){
+			  }
+			  else if(setmode==MINUTE_O)
+			  {
 				  sprintf(tmpTime,"%s %02d:%d :%02d", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes/10, sTime.Seconds);
-			  }else if(setmode==SECOND_T){
+			  }
+			  else if(setmode==SECOND_T)
+			  {
 				  sprintf(tmpTime,"%s %02d:%02d: %d", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes, sTime.Seconds%10);
-			  }else if(setmode==SECOND_O){
+			  }
+			  else if(setmode==SECOND_O)
+			  {
 				  sprintf(tmpTime,"%s %02d:%02d:%d ", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes, sTime.Seconds/10);
 			  }
 		  }
 
-		  lcd_put_cur(1,0);;
+		  lcd_put_cur(1,0);
 		  LCD_SendString(tmpTime);
+
 		  // Check the Change Mode button
-		  if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)){
+		  if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13))
+		  {
 			  HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
 			  mode=NORMAL;
 		  }
 	  }
 	  // normal mode
-	  else if(mode==NORMAL){
-
+	  else if(mode==NORMAL)
+	  {
 		  HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
 		  HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
 		  sprintf(tmpTime,"%s %02d:%02d:%02d    ", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes, sTime.Seconds);
@@ -222,33 +247,37 @@ int main(void)
 		  LCD_SendString(tmpTime);
 
 
-		  if(sTime.TimeFormat==aTime.TimeFormat
-				  && sTime.Hours==aTime.Hours
-				  && sTime.Minutes==aTime.Minutes
-				  && sTime.Seconds==aTime.Seconds){
+		  if(sTime.TimeFormat==aTime.TimeFormat && sTime.Hours==aTime.Hours && sTime.Minutes==aTime.Minutes && sTime.Seconds==aTime.Seconds)
+		  {
 			  alarm_on=1;
 		  }
 
 
-		  if(alarm_on==1){
+		  if(alarm_on==1)
+		  {
 			  toggle^=1;
 			  current_alarm_tick=HAL_GetTick();
-			  if(toggle==1){
+			  if(toggle==1)
+			  {
 				  HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
-			  }else{
+			  }
+			  else
+			  {
 				  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
 			  }
-			  if(current_alarm_tick-old_alarm_tick > 3000){
+			  if(current_alarm_tick-old_alarm_tick > 3000)
+			  {
 				  old_alarm_tick=current_alarm_tick;
 				  alarm_on=0;
 				  HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
 			  }
 		  }
 
-
-		  if(user_pressed_flag==1){
+		  if(user_pressed_flag==1)
+		  {
 			  current_tick=HAL_GetTick();
-			  if(current_tick-old_tick > 2000){
+			  if(current_tick-old_tick > 2000)
+			  {
 				  old_tick=current_tick;
 				  user_pressed_flag=0;
 				  mode=ALARM;
@@ -257,57 +286,66 @@ int main(void)
 
 			  }
 		  }
-
-
-	// alarm mode
-	  }else if(mode==ALARM){
+	  }
+	  // alarm mode
+	  else if(mode==ALARM)
+	  {
 
 		  toggle^=1;
 
 		  lcd_put_cur(0,0);
 		  LCD_SendString("Alarm Setting");
 
-		  HAL_ADC_Start(&hadc1);
-		  HAL_ADC_PollForConversion(&hadc1, 10);
-		  adc_value = HAL_ADC_GetValue(&hadc1);
-
 		  button = getButton();
-
-		  if(button!=button_before){
-			  move_cur_time(&aTime, button);
-			  button_before=button;
-		  }
+		  move_cur_time(&aTime, button);
 
 
-		  if(toggle){
+
+		  if(toggle)
+		  {
 			  sprintf(tmpTime,"%s %02d:%02d:%02d  AL", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes, aTime.Seconds);
-		  }else{
-			  if(setmode==AMPM){
+		  }
+		  else
+		  {
+			  if(setmode==AMPM)
+			  {
 				  sprintf(tmpTime,"   %02d:%02d:%02d  AL", aTime.Hours, aTime.Minutes, aTime.Seconds);
-			  }else if(setmode==HOUR_T){
+			  }
+			  else if(setmode==HOUR_T)
+			  {
 				  sprintf(tmpTime,"%s  %d:%02d:%02d  AL", ampm[aTime.TimeFormat], aTime.Hours%10, aTime.Minutes, aTime.Seconds);
-			  }else if(setmode==HOUR_O){
+			  }
+			  else if(setmode==HOUR_O)
+			  {
 				  sprintf(tmpTime,"%s %d :%02d:%02d  AL", ampm[aTime.TimeFormat], aTime.Hours/10, aTime.Minutes, aTime.Seconds);
-			  }else if(setmode==MINUTE_T){
+			  }
+			  else if(setmode==MINUTE_T)
+			  {
 				  sprintf(tmpTime,"%s %02d: %d:%02d  AL", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes%10, aTime.Seconds);
-			  }else if(setmode==MINUTE_O){
+			  }
+			  else if(setmode==MINUTE_O)
+			  {
 				  sprintf(tmpTime,"%s %02d:%d :%02d  AL", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes/10, aTime.Seconds);
-			  }else if(setmode==SECOND_T){
+			  }
+			  else if(setmode==SECOND_T)
+			  {
 				  sprintf(tmpTime,"%s %02d:%02d: %d  AL", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes, aTime.Seconds%10);
-			  }else if(setmode==SECOND_O){
+			  }
+			  else if(setmode==SECOND_O)
+			  {
 				  sprintf(tmpTime,"%s %02d:%02d:%d   AL", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes, aTime.Seconds/10);
 			  }
 		  }
 
-
 		  lcd_put_cur(1,0);
 		  LCD_SendString(tmpTime);
 
-
-
-		  if(user_pressed_flag==1){
+		  if(user_pressed_flag==1)
+		  {
 			  current_tick=HAL_GetTick();
-			  if(current_tick-old_tick > 1){
+
+			  if(current_tick-old_tick > 1)
+			  {
 				  old_tick=current_tick;
 				  user_pressed_flag=0;
 				  mode=NORMAL;
@@ -367,25 +405,50 @@ void SystemClock_Config(void)
   }
 }
 
+/**
+  * @brief NVIC Configuration.
+  * @retval None
+  */
+static void MX_NVIC_Init(void)
+{
+  /* EXTI15_10_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+}
+
 /* USER CODE BEGIN 4 */
 _Direction getButton(){
 
-	if(adc_value > 3700){
-		return NONE;
-	}else if(adc_value < 20 && button_before==NONE){
-		return UP;
-	}else if(adc_value > 800 && adc_value < 900 && button_before==NONE){
-		return DOWN;
-	}else if(adc_value > 1700 && adc_value < 2100 && button_before==NONE){
-		return LEFT;
-	}else if(adc_value > 2700 && adc_value < 3100 && button_before==NONE){
+//	if(adc_value > 3700){
+//		return NONE;
+//	}else if(adc_value < 20 && button_before==NONE){
+//		return UP;
+//	}else if(adc_value > 800 && adc_value < 900 && button_before==NONE){
+//		return DOWN;
+//	}else if(adc_value > 1700 && adc_value < 2100 && button_before==NONE){
+//		return LEFT;
+//	}else if(adc_value > 2700 && adc_value < 3100 && button_before==NONE){
+//		return RIGHT;
+//	}else
+//		return UNKNOWN;
+	if(XY[0] < 300)
 		return RIGHT;
-	}else
-		return UNKNOWN;
+	else if(XY[0] > 4000)
+		return LEFT;
+	else if(XY[1] > 4000)
+		return UP;
+	else if(XY[1] < 300)
+		return DOWN;
+	else
+	{
+		return NONE;
+	}
 }
 
-void move_cur_time(RTC_TimeTypeDef *Time, _Direction direction){
-	switch(direction){
+void move_cur_time(RTC_TimeTypeDef *Time, _Direction direction)
+{
+	switch(direction)
+	{
 	case RIGHT:
 		setmode++;
 		if(setmode > SECOND_O) setmode = SECOND_O;
@@ -394,74 +457,98 @@ void move_cur_time(RTC_TimeTypeDef *Time, _Direction direction){
 		if(setmode > AMPM) setmode--;
 		break;
 	case UP:
-		if(setmode==AMPM){
+		if(setmode==AMPM)
+		{
 			Time->TimeFormat ^= 1;
-		}else if(setmode==HOUR_T){
+		}
+		else if(setmode==HOUR_T)
+		{
 			Time->Hours+=10;
 			if(!IS_RTC_HOUR12(Time->Hours)) Time->Hours = 1;
-		}else if(setmode==HOUR_O){
+		}
+		else if(setmode==HOUR_O)
+		{
 			Time->Hours++;
 			if(!IS_RTC_HOUR12(Time->Hours)) Time->Hours = 1;
-		}else if(setmode==MINUTE_T){
+		}
+		else if(setmode==MINUTE_T)
+		{
 			Time->Minutes+=10;
 			if(!IS_RTC_MINUTES(Time->Minutes)) Time->Minutes = 0;
-		}else if(setmode==MINUTE_O){
+		}
+		else if(setmode==MINUTE_O)
+		{
 			Time->Minutes++;
 			if(!IS_RTC_MINUTES(Time->Minutes)) Time->Minutes = 0;
-		}else if(setmode==SECOND_T){
+		}
+		else if(setmode==SECOND_T)
+		{
 			Time->Seconds+=10;
 			if(!IS_RTC_SECONDS(Time->Seconds)) Time->Seconds = 0;
-		}else if(setmode==SECOND_O){
+		}
+		else if(setmode==SECOND_O)
+		{
 			Time->Seconds++;
 			if(!IS_RTC_SECONDS(Time->Seconds)) Time->Seconds = 0;
 		}
 		break;
 	case DOWN:
-		if(setmode==AMPM){
+		if(setmode==AMPM)
+		{
 			Time->TimeFormat ^= 1;
-		}else if(setmode==HOUR_T){
+		}
+		else if(setmode==HOUR_T)
+		{
 			Time->Hours-=10;
 			if(!IS_RTC_HOUR12(Time->Hours)) Time->Hours = 12;
-		}else if(setmode==HOUR_O){
+		}
+		else if(setmode==HOUR_O)
+		{
 			Time->Hours--;
 			if(!IS_RTC_HOUR12(Time->Hours)) Time->Hours = 12;
-		}else if(setmode==MINUTE_T){
+		}
+		else if(setmode==MINUTE_T)
+		{
 			Time->Minutes-=10;
 			if(!IS_RTC_MINUTES(Time->Minutes)) Time->Minutes = 59;
-		}else if(setmode==MINUTE_O){
+		}
+		else if(setmode==MINUTE_O)
+		{
 			Time->Minutes--;
 			if(!IS_RTC_MINUTES(Time->Minutes)) Time->Minutes = 59;
-		}else if(setmode==SECOND_T){
+		}
+		else if(setmode==SECOND_T)
+		{
 			Time->Seconds-=10;
 			if(!IS_RTC_SECONDS(Time->Seconds)) Time->Seconds = 59;
-		}else if(setmode==SECOND_O){
+		}
+		else if(setmode==SECOND_O)
+		{
 			Time->Seconds--;
 			if(!IS_RTC_SECONDS(Time->Seconds)) Time->Seconds = 59;
 		}
 		break;
 	case NONE:
 		break;
-	case UNKNOWN:
-		break;
 	}
-
-
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-	if(GPIO_Pin == GPIO_PIN_13){
-
-		if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)){
+	if(GPIO_Pin == GPIO_PIN_13)
+	{
+		if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13))
+		{
 			user_pulled_flag=0;
 			user_pressed_flag=1;
 			old_tick=HAL_GetTick();
 			current_tick=HAL_GetTick();
-		}else {
+		}
+		else
+		{
 			user_pulled_flag=1;
 			user_pressed_flag=0;
 		}
-
 	}
 }
 /* USER CODE END 4 */

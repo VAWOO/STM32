@@ -1,10 +1,10 @@
-03:18:25 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+04:35:49 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
 make -j12 all 
 arm-none-eabi-size   BluetoothAlarmClock.elf 
    text	   data	    bss	    dec	    hex	filename
-  30096	    108	   4260	  34464	   86a0	BluetoothAlarmClock.elf
+  32428	    108	   4364	  36900	   9024	BluetoothAlarmClock.elf
 Finished building: default.size.stdout
  
 
-03:18:26 Build Finished. 0 errors, 0 warnings. (took 868ms)
+04:35:50 Build Finished. 0 errors, 0 warnings. (took 304ms)
 
