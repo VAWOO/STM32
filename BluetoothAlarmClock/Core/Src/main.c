@@ -104,6 +104,11 @@ uint32_t current_alarm_tick=0;
 uint8_t alarm_on=0;
 
 uint32_t XY[2]; // Joystick
+
+uint8_t double_click = 0;
+uint32_t interval = 0;
+uint32_t interval_chk[2] = {0, };
+int pulled_chk = -1;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -179,7 +184,7 @@ int main(void)
 		  toggle^=1;
 
 		  lcd_put_cur(0,0);
-		  LCD_SendString("Time is...     ");
+		  LCD_SendString("Setting Mode    ");
 
 		  // read button
 		  button = getButton();
@@ -187,7 +192,6 @@ int main(void)
 
 		  HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
 
-		  }
 		  // the part where it's big and blinking
 		  if(toggle)
 		  {
@@ -228,11 +232,17 @@ int main(void)
 		  lcd_put_cur(1,0);
 		  LCD_SendString(tmpTime);
 
-		  // Check the Change Mode button
-		  if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13))
+		  if(user_pressed_flag==1)
 		  {
-			  HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
-			  mode=NORMAL;
+			  current_tick=HAL_GetTick();
+
+			  if(current_tick-old_tick > 1)
+			  {
+				  old_tick=current_tick;
+				  user_pressed_flag=0;
+				  HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+				  mode=NORMAL;
+			  }
 		  }
 	  }
 	  // normal mode
@@ -242,7 +252,7 @@ int main(void)
 		  HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
 		  sprintf(tmpTime,"%s %02d:%02d:%02d    ", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes, sTime.Seconds);
 		  lcd_put_cur(0,0);
-		  LCD_SendString("Current Time   ");
+		  LCD_SendString("Choi Jin Woo    ");
 		  lcd_put_cur(1,0);
 		  LCD_SendString(tmpTime);
 
@@ -276,7 +286,7 @@ int main(void)
 		  if(user_pressed_flag==1)
 		  {
 			  current_tick=HAL_GetTick();
-			  if(current_tick-old_tick > 2000)
+			  if(current_tick-old_tick > 3000)
 			  {
 				  old_tick=current_tick;
 				  user_pressed_flag=0;
@@ -286,20 +296,24 @@ int main(void)
 
 			  }
 		  }
+
+		  if (double_click == 1)
+		  {
+			  lcd_put_cur(0,0);
+			  LCD_SendString("Double Click On ");
+			  double_click = 0;
+		  }
 	  }
 	  // alarm mode
 	  else if(mode==ALARM)
 	  {
-
 		  toggle^=1;
 
 		  lcd_put_cur(0,0);
-		  LCD_SendString("Alarm Setting");
+		  LCD_SendString("Alarm Mode      ");
 
 		  button = getButton();
 		  move_cur_time(&aTime, button);
-
-
 
 		  if(toggle)
 		  {
@@ -348,6 +362,7 @@ int main(void)
 			  {
 				  old_tick=current_tick;
 				  user_pressed_flag=0;
+				  pulled_chk = -1;
 				  mode=NORMAL;
 			  }
 		  }
@@ -417,20 +432,8 @@ static void MX_NVIC_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-_Direction getButton(){
-
-//	if(adc_value > 3700){
-//		return NONE;
-//	}else if(adc_value < 20 && button_before==NONE){
-//		return UP;
-//	}else if(adc_value > 800 && adc_value < 900 && button_before==NONE){
-//		return DOWN;
-//	}else if(adc_value > 1700 && adc_value < 2100 && button_before==NONE){
-//		return LEFT;
-//	}else if(adc_value > 2700 && adc_value < 3100 && button_before==NONE){
-//		return RIGHT;
-//	}else
-//		return UNKNOWN;
+_Direction getButton()
+{
 	if(XY[0] < 300)
 		return RIGHT;
 	else if(XY[0] > 4000)
@@ -539,15 +542,34 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	{
 		if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13))
 		{
-			user_pulled_flag=0;
-			user_pressed_flag=1;
+			user_pulled_flag = 0;
+			user_pressed_flag = 1;
 			old_tick=HAL_GetTick();
 			current_tick=HAL_GetTick();
+
+			if (mode == NORMAL)
+			{
+				interval_chk[0] = HAL_GetTick();
+
+				interval = interval_chk[0] - interval_chk[1];
+			}
 		}
 		else
 		{
-			user_pulled_flag=1;
-			user_pressed_flag=0;
+			user_pulled_flag = 1;
+			user_pressed_flag = 0;
+
+			if (mode == NORMAL)
+			{
+				interval_chk[1] = HAL_GetTick();
+
+				pulled_chk++;
+
+				if(interval > 0 && interval < 300 && pulled_chk > 1)
+				{
+					double_click = 1;
+				}
+			}
 		}
 	}
 }
