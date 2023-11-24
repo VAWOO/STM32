@@ -1,4 +1,4 @@
-15:20:06 **** Build of configuration Debug for project ADC_Control ****
+16:41:08 **** Build of configuration Debug for project ADC_Control ****
 make -j8 all 
 arm-none-eabi-size   ADC_Control.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   ADC_Control.elf
 Finished building: default.size.stdout
  
 
-15:20:06 Build Finished. 0 errors, 0 warnings. (took 461ms)
+16:41:09 Build Finished. 0 errors, 0 warnings. (took 465ms)
 

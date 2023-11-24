@@ -17221,3 +17221,178 @@ Finished building: default.size.stdout
  
 Finished building: BluetoothAlarmClock.list
  
+16:41:07 **** Build of configuration Debug for project 7segment_switch ****
+make -j8 all 
+arm-none-eabi-size   7segment_switch.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13048	     20	   3492	  16560	   40b0	7segment_switch.elf
+Finished building: default.size.stdout
+ 
+16:41:08 **** Build of configuration Debug for project ADC_Control ****
+make -j8 all 
+arm-none-eabi-size   ADC_Control.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21164	    100	   3932	  25196	   626c	ADC_Control.elf
+Finished building: default.size.stdout
+ 
+16:41:09 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:320:27: error: 'double_clicked' undeclared (first use in this function); did you mean 'double_click'?
+  320 |                           double_clicked=0;
+      |                           ^~~~~~~~~~~~~~
+      |                           double_click
+../Core/Src/main.c:320:27: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:41:11 **** Build of configuration Debug for project DAC_ADC ****
+make -j8 all 
+arm-none-eabi-size   DAC_ADC.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27936	    104	   4144	  32184	   7db8	DAC_ADC.elf
+Finished building: default.size.stdout
+ 
+16:41:12 **** Build of configuration Debug for project EXTI ****
+make -j8 all 
+arm-none-eabi-size   EXTI.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12772	     20	   3492	  16284	   3f9c	EXTI.elf
+Finished building: default.size.stdout
+ 
+16:41:12 **** Build of configuration Debug for project EXTI_UP_DOWN ****
+make -j8 all 
+arm-none-eabi-size   EXTI_UP_DOWN.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18840	    112	   3272	  22224	   56d0	EXTI_UP_DOWN.elf
+Finished building: default.size.stdout
+ 
+16:41:13 **** Build of configuration Debug for project PWM ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "PWM.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\PWM\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PWM.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PWM.elf
+ 
+arm-none-eabi-size   PWM.elf 
+arm-none-eabi-objdump -h -S  PWM.elf  > "PWM.list"
+   text	   data	    bss	    dec	    hex	filename
+  17912	     20	   3636	  21568	   5440	PWM.elf
+Finished building: default.size.stdout
+ 
+Finished building: PWM.list
+ 
+16:41:15 **** Build of configuration Debug for project RTC_CLOCK ****
+make -j8 all 
+arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+make: *** Deleting file 'RTC_CLOCK.elf'
+make: *** [makefile:64: RTC_CLOCK.elf] Error 3
+Command canceled
+16:45:49 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:320:27: error: 'double_clicked' undeclared (first use in this function); did you mean 'double_click'?
+  320 |                           double_clicked=0;
+      |                           ^~~~~~~~~~~~~~
+      |                           double_click
+../Core/Src/main.c:320:27: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'move_cur_bell':
+../Core/Src/main.c:593:14: error: 'UNKNOWN' undeclared (first use in this function)
+  593 |         case UNKNOWN:
+      |              ^~~~~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:46:30 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'move_cur_bell':
+../Core/Src/main.c:593:14: error: 'UNKNOWN' undeclared (first use in this function)
+  593 |         case UNKNOWN:
+      |              ^~~~~~~
+../Core/Src/main.c:593:14: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:46:54 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33020	    172	   4404	  37596	   92dc	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+16:48:05 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33028	    172	   4404	  37604	   92e4	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+16:51:13 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  32876	    172	   4404	  37452	   924c	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+16:52:12 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  32852	    172	   4404	  37428	   9234	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+16:58:40 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  32868	    172	   4404	  37444	   9244	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+16:59:45 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  32852	    172	   4404	  37428	   9234	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 

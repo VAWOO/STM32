@@ -60,8 +60,8 @@ all: main-build
 main-build: RTC_CLOCK.elf secondary-outputs
 
 # Tool invocations
-RTC_CLOCK.elf RTC_CLOCK.map: $(OBJS) $(USER_OBJS) D:\Nelly\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+RTC_CLOCK.elf RTC_CLOCK.map: $(OBJS) $(USER_OBJS) C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "RTC_CLOCK.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\RTC_CLOCK\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_CLOCK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

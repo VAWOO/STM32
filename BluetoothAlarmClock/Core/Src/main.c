@@ -65,9 +65,17 @@ typedef enum
 
 typedef enum
 {
+	LOVEDIVE=0,
+	FEARLESS,
+	ELEVEN
+}_Belltype;
+
+typedef enum
+{
 	SETTING,
 	NORMAL,
-	ALARM
+	ALARM,
+	BELL
 }_MODE;
 /* USER CODE END PTD */
 
@@ -89,6 +97,9 @@ _MODE mode=SETTING;
 _SetMode setmode = AMPM;
 char tmpTime[100]= {0,};
 char ampm[2][3] = {"AM", "PM"};
+_Belltype belltype = LOVEDIVE;
+char tmp_bell_name[20]={0,};
+char bell_name[3][20]={ {">> LOVE DIVE   "}, {">> FEARLESS    "}, {">> ELEVEN      "}, };
 
 _Direction direction;
 _Direction button;
@@ -116,7 +127,9 @@ void SystemClock_Config(void);
 static void MX_NVIC_Init(void);
 /* USER CODE BEGIN PFP */
 _Direction getButton();
+
 void move_cur_time(RTC_TimeTypeDef *time, _Direction direction);
+void move_cur_bell(_Direction direction);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -172,6 +185,10 @@ int main(void)
   HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
 
   HAL_ADC_Start_DMA(&hadc1, XY, 2);
+
+  char customChar[] = {0x01, 0x03, 0x05, 0x09, 0x09, 0x0B, 0x1B, 0x18};
+  LCD_SendCommand(LCD_ADDR, 0x40);
+  for(int i=0; i<8; i++) LCD_SendData(customChar[i]);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -262,7 +279,6 @@ int main(void)
 			  alarm_on=1;
 		  }
 
-
 		  if(alarm_on==1)
 		  {
 			  toggle^=1;
@@ -297,11 +313,10 @@ int main(void)
 			  }
 		  }
 
-		  if (double_click == 1)
+		  if(double_click==1)
 		  {
-			  lcd_put_cur(0,0);
-			  LCD_SendString("Double Click On ");
-			  double_click = 0;
+			  mode=BELL;
+			  double_click=0;
 		  }
 	  }
 	  // alarm mode
@@ -317,42 +332,44 @@ int main(void)
 
 		  if(toggle)
 		  {
-			  sprintf(tmpTime,"%s %02d:%02d:%02d  AL", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes, aTime.Seconds);
+			  sprintf(tmpTime,"%s %02d:%02d:%02d", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes, aTime.Seconds);
 		  }
 		  else
 		  {
 			  if(setmode==AMPM)
 			  {
-				  sprintf(tmpTime,"   %02d:%02d:%02d  AL", aTime.Hours, aTime.Minutes, aTime.Seconds);
+				  sprintf(tmpTime,"   %02d:%02d:%02d", aTime.Hours, aTime.Minutes, aTime.Seconds);
 			  }
 			  else if(setmode==HOUR_T)
 			  {
-				  sprintf(tmpTime,"%s  %d:%02d:%02d  AL", ampm[aTime.TimeFormat], aTime.Hours%10, aTime.Minutes, aTime.Seconds);
+				  sprintf(tmpTime,"%s  %d:%02d:%02d", ampm[aTime.TimeFormat], aTime.Hours%10, aTime.Minutes, aTime.Seconds);
 			  }
 			  else if(setmode==HOUR_O)
 			  {
-				  sprintf(tmpTime,"%s %d :%02d:%02d  AL", ampm[aTime.TimeFormat], aTime.Hours/10, aTime.Minutes, aTime.Seconds);
+				  sprintf(tmpTime,"%s %d :%02d:%02d", ampm[aTime.TimeFormat], aTime.Hours/10, aTime.Minutes, aTime.Seconds);
 			  }
 			  else if(setmode==MINUTE_T)
 			  {
-				  sprintf(tmpTime,"%s %02d: %d:%02d  AL", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes%10, aTime.Seconds);
+				  sprintf(tmpTime,"%s %02d: %d:%02d", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes%10, aTime.Seconds);
 			  }
 			  else if(setmode==MINUTE_O)
 			  {
-				  sprintf(tmpTime,"%s %02d:%d :%02d  AL", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes/10, aTime.Seconds);
+				  sprintf(tmpTime,"%s %02d:%d :%02d", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes/10, aTime.Seconds);
 			  }
 			  else if(setmode==SECOND_T)
 			  {
-				  sprintf(tmpTime,"%s %02d:%02d: %d  AL", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes, aTime.Seconds%10);
+				  sprintf(tmpTime,"%s %02d:%02d: %d", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes, aTime.Seconds%10);
 			  }
 			  else if(setmode==SECOND_O)
 			  {
-				  sprintf(tmpTime,"%s %02d:%02d:%d   AL", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes, aTime.Seconds/10);
+				  sprintf(tmpTime,"%s %02d:%02d:%d", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes, aTime.Seconds/10);
 			  }
 		  }
 
 		  lcd_put_cur(1,0);
 		  LCD_SendString(tmpTime);
+		  lcd_put_cur(1, 14);
+		  LCD_SendData(0);
 
 		  if(user_pressed_flag==1)
 		  {
@@ -364,6 +381,32 @@ int main(void)
 				  user_pressed_flag=0;
 				  pulled_chk = -1;
 				  mode=NORMAL;
+			  }
+		  }
+	  }
+	  else if (mode == BELL)
+	  {
+		  lcd_put_cur(0, 0);
+		  LCD_SendString("Select Bell     ");
+
+		  button = getButton();
+		  move_cur_bell(button);
+
+		  sprintf(tmp_bell_name, "%s", bell_name[belltype]);
+
+		  lcd_put_cur(1, 0);
+		  LCD_SendString(tmp_bell_name);
+
+		  if (user_pressed_flag == 1)
+		  {
+			  current_tick = HAL_GetTick();
+			  if (current_tick - old_tick > 1)
+			  {
+				  old_tick = current_tick;
+				  user_pressed_flag = 0;
+				  interval = 0;
+				  pulled_chk = -1;
+				  mode = NORMAL;
 			  }
 		  }
 	  }
@@ -532,6 +575,27 @@ void move_cur_time(RTC_TimeTypeDef *Time, _Direction direction)
 		}
 		break;
 	case NONE:
+		break;
+	}
+}
+
+void move_cur_bell(_Direction direction)
+{
+	switch(direction)
+	{
+	case RIGHT:
+		break;
+	case LEFT:
+		break;
+	case NONE:
+		break;
+	case UP:
+		if(belltype < 2) belltype++;
+		else belltype=0;
+		break;
+	case DOWN:
+		if(belltype > 0) belltype--;
+		else belltype=2;
 		break;
 	}
 }

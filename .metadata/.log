@@ -11859,3 +11859,21 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-22 10:14:41.740
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-11-24 10:30:37.592 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-24 10:31:01.039
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-24 10:31:01.052
+!MESSAGE Log4j2 initialized with config file C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-24 10:31:18.858
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-24 17:00:33.402
+!MESSAGE Indexed 'RTC_CLOCK' (45 sources, 139 headers) in 6.43 sec: 15,531 declarations; 98,070 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.13%)

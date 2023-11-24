@@ -1,4 +1,4 @@
-15:20:13 **** Build of configuration Debug for project EXTI_UP_DOWN ****
+16:41:12 **** Build of configuration Debug for project EXTI_UP_DOWN ****
 make -j8 all 
 arm-none-eabi-size   EXTI_UP_DOWN.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   EXTI_UP_DOWN.elf
 Finished building: default.size.stdout
  
 
-15:20:14 Build Finished. 0 errors, 0 warnings. (took 465ms)
+16:41:13 Build Finished. 0 errors, 0 warnings. (took 522ms)
 
