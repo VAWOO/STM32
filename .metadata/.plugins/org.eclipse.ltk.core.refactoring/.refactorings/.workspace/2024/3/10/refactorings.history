@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 15 resources" deleteContents="false" description="Delete 15 resources" element1="/7segment_switch" element10="/RTC_CLOCK" element11="/test1" element12="/test2" element13="/timer" element14="/UART" element15="/UART_ADC" element2="/ADC_Control" element3="/BluetoothAlarmClock" element4="/button_control" element5="/DAC_ADC" element6="/EXTI" element7="/EXTI_UP_DOWN" element8="/i2c_LCD" element9="/PWM" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="15" stamp="1709878245622"/>
+</session>

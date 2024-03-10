@@ -9,6 +9,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\wlsdn\Desktop\stm32_workspace-main\stm32_workspace-main\pwm_practice"/>
+			<item value="D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock"/>
 			<item value="C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\fffasdasdsad"/>
 			<item value="C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\Example (RTC, DHT11, LCD)"/>
 			<item value="C:\Users\CHOI_JIN_WOO\Desktop\workspace\STM32CubeIDE\DHT11"/>

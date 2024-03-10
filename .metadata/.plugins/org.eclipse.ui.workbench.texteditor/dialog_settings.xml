@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="AL"/>
+		<item key="selection" value="alarm"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="al"/>
-			<item value="unknown"/>
+			<item value="alarm"/>
+			<item value="SETTING"/>
 			<item value="double"/>
-			<item value="direction"/>
-			<item value="button"/>
-			<item value="un"/>
-			<item value="UP"/>
-			<item value="before"/>
-			<item value="befor"/>
-			<item value="adc_value"/>
-			<item value="adc"/>
-			<item value="tx_data"/>
-			<item value="button_before"/>
-			<item value="button_before."/>
-			<item value="59"/>
+			<item value="notes"/>
+			<item value="current_alarm_tick"/>
+			<item value="old_alarm_tick"/>
+			<item value="current"/>
+			<item value="HAL_TIM_PWM_Start(&amp;htim2, TIM_CHANNEL_1);"/>
+			<item value="song_playing"/>
+			<item value="pv"/>
+			<item value="이무진"/>
+			<item value="LOVE"/>
+			<item value="ELEVEN"/>
+			<item value="htim2"/>
+			<item value="start"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1283"/>
-		<item key="DIALOG_Y_ORIGIN" value="292"/>
+		<item key="DIALOG_X_ORIGIN" value="1107"/>
+		<item key="DIALOG_Y_ORIGIN" value="358"/>
 		<item key="DIALOG_WIDTH" value="322"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

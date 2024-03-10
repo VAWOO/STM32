@@ -17396,3 +17396,1519 @@ Finished building: default.size.stdout
  
 Finished building: BluetoothAlarmClock.list
  
+22:35:35 **** Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:104:7: error: 'LOVEDIVE' redeclared as different kind of symbol
+  104 | char *LOVEDIVE[] = {
+      |       ^~~~~~~~
+../Core/Src/main.c:68:9: note: previous definition of 'LOVEDIVE' with type 'enum <anonymous>'
+   68 |         LOVEDIVE=0,
+      |         ^~~~~~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+22:55:40 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  32864	    172	   4404	  37440	   9240	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+23:06:58 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:401:35: warning: implicit declaration of function 'playMusic' [-Wimplicit-function-declaration]
+  401 |                                   playMusic(verse1, verse1_time); // ?Œ?•… ?—°ì£?
+      |                                   ^~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:744:6: warning: conflicting types for 'playMusic'; have 'void(char **, int *)'
+  744 | void playMusic(char *musicNotes[], int *musicTime)
+      |      ^~~~~~~~~
+../Core/Src/main.c:401:35: note: previous implicit declaration of 'playMusic' with type 'void(char **, int *)'
+  401 |                                   playMusic(verse1, verse1_time); // ?Œ?•… ?—°ì£?
+      |                                   ^~~~~~~~~
+../Core/Src/main.c: In function 'playMusic':
+../Core/Src/main.c:787:5: warning: implicit declaration of function 'PWM_Start' [-Wimplicit-function-declaration]
+  787 |     PWM_Start(); // PWM ì¶œë ¥ ?‹œ?ž‘
+      |     ^~~~~~~~~
+../Core/Src/main.c:792:5: warning: implicit declaration of function 'PWM_Stop' [-Wimplicit-function-declaration]
+  792 |     PWM_Stop(); // PWM ì¶œë ¥ ? •ì§?
+      |     ^~~~~~~~
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `playMusic':
+D:/Nelly/workspace/STM32CubeIDE/BluetoothAlarmClock/Debug/../Core/Src/main.c:787: undefined reference to `PWM_Start'
+C:/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Nelly/workspace/STM32CubeIDE/BluetoothAlarmClock/Debug/../Core/Src/main.c:792: undefined reference to `PWM_Stop'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: BluetoothAlarmClock.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+23:08:46 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:401:35: warning: implicit declaration of function 'playMusic' [-Wimplicit-function-declaration]
+  401 |                                   playMusic(verse1, verse1_time); // ?Œ?•… ?—°ì£?
+      |                                   ^~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:757:6: warning: conflicting types for 'playMusic'; have 'void(char **, int *)'
+  757 | void playMusic(char *musicNotes[], int *musicTime)
+      |      ^~~~~~~~~
+../Core/Src/main.c:401:35: note: previous implicit declaration of 'playMusic' with type 'void(char **, int *)'
+  401 |                                   playMusic(verse1, verse1_time); // ?Œ?•… ?—°ì£?
+      |                                   ^~~~~~~~~
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33172	   1680	   4400	  39252	   9954	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+23:29:52 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:405:43: warning: implicit declaration of function 'playMusic' [-Wimplicit-function-declaration]
+  405 |                                           playMusic(verse1, verse1_time); // ?Œ?•… ?—°ì£?
+      |                                           ^~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:768:6: warning: conflicting types for 'playMusic'; have 'void(char **, int *)'
+  768 | void playMusic(char *musicNotes[], int *musicTime)
+      |      ^~~~~~~~~
+../Core/Src/main.c:405:43: note: previous implicit declaration of 'playMusic' with type 'void(char **, int *)'
+  405 |                                           playMusic(verse1, verse1_time); // ?Œ?•… ?—°ì£?
+      |                                           ^~~~~~~~~
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33236	   1680	   4400	  39316	   9994	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+23:32:46 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:405:43: warning: implicit declaration of function 'playMusic' [-Wimplicit-function-declaration]
+  405 |                                           playMusic(verse1, verse1_time); // ?Œ?•… ?—°ì£?
+      |                                           ^~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:768:6: warning: conflicting types for 'playMusic'; have 'void(char **, int *)'
+  768 | void playMusic(char *musicNotes[], int *musicTime)
+      |      ^~~~~~~~~
+../Core/Src/main.c:405:43: note: previous implicit declaration of 'playMusic' with type 'void(char **, int *)'
+  405 |                                           playMusic(verse1, verse1_time); // ?Œ?•… ?—°ì£?
+      |                                           ^~~~~~~~~
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33264	   1680	   4400	  39344	   99b0	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+23:58:42 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  32856	    172	   4404	  37432	   9238	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+02:45:35 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f429zitx.d" -MT"Core/Startup/startup_stm32f429zitx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f429zitx.o" "../Core/Startup/startup_stm32f429zitx.s"
+arm-none-eabi-gcc "../Core/Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/adc.d" -MT"Core/Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/adc.o"
+arm-none-eabi-gcc "../Core/Src/dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/dma.d" -MT"Core/Src/dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/dma.o"
+arm-none-eabi-gcc "../Core/Src/eth.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/eth.d" -MT"Core/Src/eth.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/eth.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/i2c.d" -MT"Core/Src/i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/i2c.o"
+arm-none-eabi-gcc "../Core/Src/lcm1602.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lcm1602.d" -MT"Core/Src/lcm1602.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/lcm1602.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/rtc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/rtc.d" -MT"Core/Src/rtc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/rtc.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:357:11: error: 'else' without a previous 'if'
+  357 |           else if(mode==ALARM)
+      |           ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:452:1: error: expected identifier or '(' before '}' token
+  452 | }
+      | ^
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+02:49:52 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+arm-none-eabi-gcc "../Core/Src/usb_otg.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usb_otg.d" -MT"Core/Src/usb_otg.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usb_otg.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33352	    172	   4404	  37928	   9428	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+02:50:44 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:217:14: warning: unused variable 'A' [-Wunused-variable]
+  217 |   enum notes A[] = {G4,G4,A4,A4,G4,G4,E4,G4,G4,E4,E4,D4,G4,G4,A4,A4,G4,G4,E4,G4,E4,D4,E4,C4};
+      |              ^
+../Core/Src/main.c:200:7: warning: unused variable 'PCLK1_Freq' [-Wunused-variable]
+  200 |   int PCLK1_Freq = HAL_RCC_GetPCLK2Freq();
+      |       ^~~~~~~~~~
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33200	    172	   4404	  37776	   9390	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+02:51:21 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  32852	    172	   4404	  37428	   9234	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+03:45:47 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o"
+arm-none-eabi-gcc "../Core/Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/adc.d" -MT"Core/Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/adc.o"
+arm-none-eabi-gcc "../Core/Src/dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/dma.d" -MT"Core/Src/dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/dma.o"
+arm-none-eabi-gcc "../Core/Src/eth.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/eth.d" -MT"Core/Src/eth.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/eth.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/i2c.d" -MT"Core/Src/i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/i2c.o"
+arm-none-eabi-gcc "../Core/Src/lcm1602.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lcm1602.d" -MT"Core/Src/lcm1602.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/lcm1602.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/rtc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/rtc.d" -MT"Core/Src/rtc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/rtc.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:420:44: error: assignment to expression with array type
+  420 |                                   interval = 0;
+      |                                            ^
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+03:47:07 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+arm-none-eabi-gcc "../Core/Src/usb_otg.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usb_otg.d" -MT"Core/Src/usb_otg.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usb_otg.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  32944	    172	   4396	  37512	   9288	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+03:49:44 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33240	    172	   4404	  37816	   93b8	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+04:06:58 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33240	    172	   4404	  37816	   93b8	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+04:07:58 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33240	    172	   4404	  37816	   93b8	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+04:10:16 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33240	    172	   4404	  37816	   93b8	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+04:29:09 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:197:38: error: 'bell' undeclared (first use in this function)
+  197 |   uint8_t butter_fly_length = sizeof(bell)/sizeof(uint16_t);
+      |                                      ^~~~
+../Core/Src/main.c:197:38: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:303:52: error: 'bell_length' undeclared (first use in this function)
+  303 |                                   for(int i=0; i < bell_length; i++)
+      |                                                    ^~~~~~~~~~~
+../Core/Src/main.c:309:61: error: 'bell_interval' undeclared (first use in this function); did you mean 'bell_index'?
+  309 |                                                   HAL_Delay(bell_interval[i]);
+      |                                                             ^~~~~~~~~~~~~
+      |                                                             bell_index
+../Core/Src/main.c:200:20: warning: unused variable 'song_playing' [-Wunused-variable]
+  200 |   volatile uint8_t song_playing = 0;
+      |                    ^~~~~~~~~~~~
+../Core/Src/main.c:199:11: warning: unused variable 'bell_index' [-Wunused-variable]
+  199 |   uint8_t bell_index = 0;
+      |           ^~~~~~~~~~
+../Core/Src/main.c:198:11: warning: unused variable 'butter_fly_interval' [-Wunused-variable]
+  198 |   uint8_t butter_fly_interval[] = {10, 10, 100, 10, 10, 10, 10, 10, 10, 10, 10, 10, 244, 10, 10, 10, 10, 10, 10, 150, 10, 10, 10, 10, 10, 10, 244, 10, 10, 10, 10, 10, 10, 244, 10, 10, 10, 10, 10, 10, 244, 10, 10, 10, 10, 10, 10, 150, 10, 10, 10, 10, 10, 10, 244};
+      |           ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:197:11: warning: unused variable 'butter_fly_length' [-Wunused-variable]
+  197 |   uint8_t butter_fly_length = sizeof(bell)/sizeof(uint16_t);
+      |           ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:196:12: warning: unused variable 'butter_fly' [-Wunused-variable]
+  196 |   uint16_t butter_fly[] = {G, E, E, F, D, D, C, D, E, F, G, G, G, G, E, E, E, F, D, D, C, E, G, G, E, E, E, D, D, D, D, D, E, F, E, E, E, E, E, F, G, G, E, E, E, F, D, D, C, E, G, G, E, E, E};
+      |            ^~~~~~~~~~
+../Core/Src/main.c: In function 'playSong':
+../Core/Src/main.c:665:12: error: 'song_playing' undeclared (first use in this function)
+  665 |     while (song_playing) {
+      |            ^~~~~~~~~~~~
+../Core/Src/main.c:667:13: error: 'bell_index' undeclared (first use in this function)
+  667 |         if (bell_index < bell_length) {
+      |             ^~~~~~~~~~
+../Core/Src/main.c:667:26: error: 'bell_length' undeclared (first use in this function)
+  667 |         if (bell_index < bell_length) {
+      |                          ^~~~~~~~~~~
+../Core/Src/main.c:668:25: error: 'bell' undeclared (first use in this function)
+  668 |             TIM2->ARR = bell[bell_index];
+      |                         ^~~~
+../Core/Src/main.c: In function 'HAL_RTCEx_RTCEventCallback':
+../Core/Src/main.c:688:25: warning: passing argument 1 of 'HAL_RTC_GetTime' from incompatible pointer type [-Wincompatible-pointer-types]
+  688 |         HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:708:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  708 | HAL_StatusTypeDef HAL_RTC_GetTime(RTC_HandleTypeDef *hrtc, RTC_TimeTypeDef *sTime, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/main.c:689:25: warning: passing argument 1 of 'HAL_RTC_GetDate' from incompatible pointer type [-Wincompatible-pointer-types]
+  689 |         HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:710:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  710 | HAL_StatusTypeDef HAL_RTC_GetDate(RTC_HandleTypeDef *hrtc, RTC_DateTypeDef *sDate, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+04:32:37 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:128:36: error: 'bell' undeclared here (not in a function)
+  128 | uint8_t butter_fly_length = sizeof(bell)/sizeof(uint16_t);
+      |                                    ^~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:304:52: error: 'bell_length' undeclared (first use in this function)
+  304 |                                   for(int i=0; i < bell_length; i++)
+      |                                                    ^~~~~~~~~~~
+../Core/Src/main.c:304:52: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:310:61: error: 'bell_interval' undeclared (first use in this function); did you mean 'bell_index'?
+  310 |                                                   HAL_Delay(bell_interval[i]);
+      |                                                             ^~~~~~~~~~~~~
+      |                                                             bell_index
+../Core/Src/main.c: In function 'playSong':
+../Core/Src/main.c:668:26: error: 'bell_length' undeclared (first use in this function)
+  668 |         if (bell_index < bell_length) {
+      |                          ^~~~~~~~~~~
+../Core/Src/main.c: In function 'HAL_RTCEx_RTCEventCallback':
+../Core/Src/main.c:689:25: warning: passing argument 1 of 'HAL_RTC_GetTime' from incompatible pointer type [-Wincompatible-pointer-types]
+  689 |         HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:708:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  708 | HAL_StatusTypeDef HAL_RTC_GetTime(RTC_HandleTypeDef *hrtc, RTC_TimeTypeDef *sTime, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/main.c:690:25: warning: passing argument 1 of 'HAL_RTC_GetDate' from incompatible pointer type [-Wincompatible-pointer-types]
+  690 |         HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:710:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  710 | HAL_StatusTypeDef HAL_RTC_GetDate(RTC_HandleTypeDef *hrtc, RTC_DateTypeDef *sDate, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+04:33:25 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:128:35: error: 'bell' undeclared here (not in a function)
+  128 | uint8_t butterfly_length = sizeof(bell)/sizeof(uint16_t);
+      |                                   ^~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:304:52: error: 'bell_length' undeclared (first use in this function)
+  304 |                                   for(int i=0; i < bell_length; i++)
+      |                                                    ^~~~~~~~~~~
+../Core/Src/main.c:304:52: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:310:61: error: 'bell_interval' undeclared (first use in this function); did you mean 'bell_index'?
+  310 |                                                   HAL_Delay(bell_interval[i]);
+      |                                                             ^~~~~~~~~~~~~
+      |                                                             bell_index
+../Core/Src/main.c: In function 'playSong':
+../Core/Src/main.c:668:26: error: 'bell_length' undeclared (first use in this function)
+  668 |         if (bell_index < bell_length) {
+      |                          ^~~~~~~~~~~
+../Core/Src/main.c: In function 'HAL_RTCEx_RTCEventCallback':
+../Core/Src/main.c:689:25: warning: passing argument 1 of 'HAL_RTC_GetTime' from incompatible pointer type [-Wincompatible-pointer-types]
+  689 |         HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:708:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  708 | HAL_StatusTypeDef HAL_RTC_GetTime(RTC_HandleTypeDef *hrtc, RTC_TimeTypeDef *sTime, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/main.c:690:25: warning: passing argument 1 of 'HAL_RTC_GetDate' from incompatible pointer type [-Wincompatible-pointer-types]
+  690 |         HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:710:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  710 | HAL_StatusTypeDef HAL_RTC_GetDate(RTC_HandleTypeDef *hrtc, RTC_DateTypeDef *sDate, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+04:33:49 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:128:35: error: 'bell' undeclared here (not in a function)
+  128 | uint8_t butterfly_length = sizeof(bell)/sizeof(uint16_t);
+      |                                   ^~~~
+../Core/Src/main.c: In function 'playSong':
+../Core/Src/main.c:668:26: error: 'bell_length' undeclared (first use in this function)
+  668 |         if (bell_index < bell_length) {
+      |                          ^~~~~~~~~~~
+../Core/Src/main.c:668:26: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'HAL_RTCEx_RTCEventCallback':
+../Core/Src/main.c:689:25: warning: passing argument 1 of 'HAL_RTC_GetTime' from incompatible pointer type [-Wincompatible-pointer-types]
+  689 |         HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:708:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  708 | HAL_StatusTypeDef HAL_RTC_GetTime(RTC_HandleTypeDef *hrtc, RTC_TimeTypeDef *sTime, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/main.c:690:25: warning: passing argument 1 of 'HAL_RTC_GetDate' from incompatible pointer type [-Wincompatible-pointer-types]
+  690 |         HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:710:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  710 | HAL_StatusTypeDef HAL_RTC_GetDate(RTC_HandleTypeDef *hrtc, RTC_DateTypeDef *sDate, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+04:33:57 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:128:35: error: 'bell' undeclared here (not in a function)
+  128 | uint8_t butterfly_length = sizeof(bell)/sizeof(uint16_t);
+      |                                   ^~~~
+../Core/Src/main.c: In function 'playSong':
+../Core/Src/main.c:668:26: error: 'bell_length' undeclared (first use in this function)
+  668 |         if (bell_index < bell_length) {
+      |                          ^~~~~~~~~~~
+../Core/Src/main.c:668:26: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'HAL_RTCEx_RTCEventCallback':
+../Core/Src/main.c:689:25: warning: passing argument 1 of 'HAL_RTC_GetTime' from incompatible pointer type [-Wincompatible-pointer-types]
+  689 |         HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:708:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  708 | HAL_StatusTypeDef HAL_RTC_GetTime(RTC_HandleTypeDef *hrtc, RTC_TimeTypeDef *sTime, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/main.c:690:25: warning: passing argument 1 of 'HAL_RTC_GetDate' from incompatible pointer type [-Wincompatible-pointer-types]
+  690 |         HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:710:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  710 | HAL_StatusTypeDef HAL_RTC_GetDate(RTC_HandleTypeDef *hrtc, RTC_DateTypeDef *sDate, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+04:34:13 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:128:35: error: 'bell' undeclared here (not in a function)
+  128 | uint8_t butterfly_length = sizeof(bell)/sizeof(uint16_t);
+      |                                   ^~~~
+../Core/Src/main.c: In function 'HAL_RTCEx_RTCEventCallback':
+../Core/Src/main.c:689:25: warning: passing argument 1 of 'HAL_RTC_GetTime' from incompatible pointer type [-Wincompatible-pointer-types]
+  689 |         HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:708:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  708 | HAL_StatusTypeDef HAL_RTC_GetTime(RTC_HandleTypeDef *hrtc, RTC_TimeTypeDef *sTime, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/main.c:690:25: warning: passing argument 1 of 'HAL_RTC_GetDate' from incompatible pointer type [-Wincompatible-pointer-types]
+  690 |         HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:710:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  710 | HAL_StatusTypeDef HAL_RTC_GetDate(RTC_HandleTypeDef *hrtc, RTC_DateTypeDef *sDate, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+04:34:45 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:306:63: error: 'bell' undeclared (first use in this function)
+  306 |                                                   TIM2->ARR = bell[i];
+      |                                                               ^~~~
+../Core/Src/main.c:306:63: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'playSong':
+../Core/Src/main.c:669:25: error: 'bell' undeclared (first use in this function)
+  669 |             TIM2->ARR = bell[bell_index];
+      |                         ^~~~
+../Core/Src/main.c: In function 'HAL_RTCEx_RTCEventCallback':
+../Core/Src/main.c:689:25: warning: passing argument 1 of 'HAL_RTC_GetTime' from incompatible pointer type [-Wincompatible-pointer-types]
+  689 |         HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:708:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  708 | HAL_StatusTypeDef HAL_RTC_GetTime(RTC_HandleTypeDef *hrtc, RTC_TimeTypeDef *sTime, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/main.c:690:25: warning: passing argument 1 of 'HAL_RTC_GetDate' from incompatible pointer type [-Wincompatible-pointer-types]
+  690 |         HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:710:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  710 | HAL_StatusTypeDef HAL_RTC_GetDate(RTC_HandleTypeDef *hrtc, RTC_DateTypeDef *sDate, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+04:34:54 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'playSong':
+../Core/Src/main.c:669:25: error: 'bell' undeclared (first use in this function)
+  669 |             TIM2->ARR = bell[bell_index];
+      |                         ^~~~
+../Core/Src/main.c:669:25: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'HAL_RTCEx_RTCEventCallback':
+../Core/Src/main.c:689:25: warning: passing argument 1 of 'HAL_RTC_GetTime' from incompatible pointer type [-Wincompatible-pointer-types]
+  689 |         HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:708:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  708 | HAL_StatusTypeDef HAL_RTC_GetTime(RTC_HandleTypeDef *hrtc, RTC_TimeTypeDef *sTime, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/main.c:690:25: warning: passing argument 1 of 'HAL_RTC_GetDate' from incompatible pointer type [-Wincompatible-pointer-types]
+  690 |         HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:710:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  710 | HAL_StatusTypeDef HAL_RTC_GetDate(RTC_HandleTypeDef *hrtc, RTC_DateTypeDef *sDate, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+04:35:05 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'playSong':
+../Core/Src/main.c:661:25: error: 'bell' undeclared (first use in this function)
+  661 |             TIM2->ARR = bell[bell_index];
+      |                         ^~~~
+../Core/Src/main.c:661:25: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'HAL_RTCEx_RTCEventCallback':
+../Core/Src/main.c:681:25: warning: passing argument 1 of 'HAL_RTC_GetTime' from incompatible pointer type [-Wincompatible-pointer-types]
+  681 |         HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:708:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  708 | HAL_StatusTypeDef HAL_RTC_GetTime(RTC_HandleTypeDef *hrtc, RTC_TimeTypeDef *sTime, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/main.c:682:25: warning: passing argument 1 of 'HAL_RTC_GetDate' from incompatible pointer type [-Wincompatible-pointer-types]
+  682 |         HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:710:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  710 | HAL_StatusTypeDef HAL_RTC_GetDate(RTC_HandleTypeDef *hrtc, RTC_DateTypeDef *sDate, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+04:35:18 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'playSong':
+../Core/Src/main.c:661:35: error: 'butterfly_index' undeclared (first use in this function); did you mean 'butterfly_interval'?
+  661 |             TIM2->ARR = butterfly[butterfly_index];
+      |                                   ^~~~~~~~~~~~~~~
+      |                                   butterfly_interval
+../Core/Src/main.c:661:35: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'HAL_RTCEx_RTCEventCallback':
+../Core/Src/main.c:681:25: warning: passing argument 1 of 'HAL_RTC_GetTime' from incompatible pointer type [-Wincompatible-pointer-types]
+  681 |         HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:708:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  708 | HAL_StatusTypeDef HAL_RTC_GetTime(RTC_HandleTypeDef *hrtc, RTC_TimeTypeDef *sTime, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/main.c:682:25: warning: passing argument 1 of 'HAL_RTC_GetDate' from incompatible pointer type [-Wincompatible-pointer-types]
+  682 |         HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:710:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  710 | HAL_StatusTypeDef HAL_RTC_GetDate(RTC_HandleTypeDef *hrtc, RTC_DateTypeDef *sDate, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+04:35:30 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_RTCEx_RTCEventCallback':
+../Core/Src/main.c:681:25: warning: passing argument 1 of 'HAL_RTC_GetTime' from incompatible pointer type [-Wincompatible-pointer-types]
+  681 |         HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:708:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  708 | HAL_StatusTypeDef HAL_RTC_GetTime(RTC_HandleTypeDef *hrtc, RTC_TimeTypeDef *sTime, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/main.c:682:25: warning: passing argument 1 of 'HAL_RTC_GetDate' from incompatible pointer type [-Wincompatible-pointer-types]
+  682 |         HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+      |                         ^~~~~
+      |                         |
+      |                         RTC_HandleTypeDef **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:391,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:710:54: note: expected 'RTC_HandleTypeDef *' but argument is of type 'RTC_HandleTypeDef **'
+  710 | HAL_StatusTypeDef HAL_RTC_GetDate(RTC_HandleTypeDef *hrtc, RTC_DateTypeDef *sDate, uint32_t Format);
+      |                                   ~~~~~~~~~~~~~~~~~~~^~~~
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33704	    284	   4404	  38392	   95f8	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+04:56:09 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:197:37: error: 'bell' undeclared (first use in this function)
+  197 |   uint8_t butterfly_length = sizeof(bell)/sizeof(uint16_t);
+      |                                     ^~~~
+../Core/Src/main.c:197:37: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:201:38: error: 'little_star' undeclared (first use in this function); did you mean 'littlestar'?
+  201 |   uint8_t littlestar_length = sizeof(little_star)/sizeof(uint16_t);
+      |                                      ^~~~~~~~~~~
+      |                                      littlestar
+../Core/Src/main.c:202:66: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                  ^~~
+../Core/Src/main.c:202:101: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                     ^~~
+../Core/Src/main.c:202:136: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                        ^~~
+../Core/Src/main.c:202:171: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                           ^~~
+../Core/Src/main.c:202:206: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                                                              ^~~
+../Core/Src/main.c:202:241: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                                                                                                 ^~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+04:57:42 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:202:66: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                  ^~~
+../Core/Src/main.c:202:101: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                     ^~~
+../Core/Src/main.c:202:136: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                        ^~~
+../Core/Src/main.c:202:171: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                           ^~~
+../Core/Src/main.c:202:206: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                                                              ^~~
+../Core/Src/main.c:202:241: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                                                                                                 ^~~
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33696	    172	   4404	  38272	   9580	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+05:04:30 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:202:66: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                  ^~~
+../Core/Src/main.c:202:101: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                     ^~~
+../Core/Src/main.c:202:136: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                        ^~~
+../Core/Src/main.c:202:171: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                           ^~~
+../Core/Src/main.c:202:206: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                                                              ^~~
+../Core/Src/main.c:202:241: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                                                                                                 ^~~
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33696	    172	   4404	  38272	   9580	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+05:05:24 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33696	    172	   4404	  38272	   9580	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+05:05:54 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:202:66: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                  ^~~
+../Core/Src/main.c:202:101: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                     ^~~
+../Core/Src/main.c:202:136: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                        ^~~
+../Core/Src/main.c:202:171: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                           ^~~
+../Core/Src/main.c:202:206: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                                                              ^~~
+../Core/Src/main.c:202:241: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                                                                                                 ^~~
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33284	    172	   4404	  37860	   93e4	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+05:08:02 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:202:66: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                  ^~~
+../Core/Src/main.c:202:101: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                     ^~~
+../Core/Src/main.c:202:136: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                        ^~~
+../Core/Src/main.c:202:171: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                           ^~~
+../Core/Src/main.c:202:206: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                                                              ^~~
+../Core/Src/main.c:202:241: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                                                                                                 ^~~
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33696	    172	   4404	  38272	   9580	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+05:10:44 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33696	    172	   4404	  38272	   9580	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+05:25:00 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:202:66: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                  ^~~
+../Core/Src/main.c:202:101: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                     ^~~
+../Core/Src/main.c:202:136: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                        ^~~
+../Core/Src/main.c:202:171: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                           ^~~
+../Core/Src/main.c:202:206: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                                                              ^~~
+../Core/Src/main.c:202:241: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  202 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                                                                                                 ^~~
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33608	    172	   4396	  38176	   9520	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+05:25:46 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:200:66: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  200 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                  ^~~
+../Core/Src/main.c:200:101: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  200 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                     ^~~
+../Core/Src/main.c:200:136: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  200 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                        ^~~
+../Core/Src/main.c:200:171: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  200 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                           ^~~
+../Core/Src/main.c:200:206: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  200 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                                                              ^~~
+../Core/Src/main.c:200:241: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  200 |   uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400, 200, 200, 200, 200, 200, 200, 400};
+      |                                                                                                                                                                                                                                                 ^~~
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33608	    172	   4396	  38176	   9520	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+05:46:12 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:126:83: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  126 | uint8_t butterfly_interval[] = {10, 10, 200, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400};
+      |                                                                                   ^~~
+../Core/Src/main.c:126:141: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  126 | uint8_t butterfly_interval[] = {10, 10, 200, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400};
+      |                                                                                                                                             ^~~
+../Core/Src/main.c:126:170: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  126 | uint8_t butterfly_interval[] = {10, 10, 200, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400};
+      |                                                                                                                                                                          ^~~
+../Core/Src/main.c:126:199: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  126 | uint8_t butterfly_interval[] = {10, 10, 200, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400};
+      |                                                                                                                                                                                                       ^~~
+../Core/Src/main.c:126:257: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  126 | uint8_t butterfly_interval[] = {10, 10, 200, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400};
+      |                                                                                                                                                                                                                                                                 ^~~
+../Core/Src/main.c:130:64: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '600' to '88' [-Woverflow]
+  130 | uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 800};
+      |                                                                ^~~
+../Core/Src/main.c:130:99: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '600' to '88' [-Woverflow]
+  130 | uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 800};
+      |                                                                                                   ^~~
+../Core/Src/main.c:130:134: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '600' to '88' [-Woverflow]
+  130 | uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 800};
+      |                                                                                                                                      ^~~
+../Core/Src/main.c:130:169: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '600' to '88' [-Woverflow]
+  130 | uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 800};
+      |                                                                                                                                                                         ^~~
+../Core/Src/main.c:130:204: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '600' to '88' [-Woverflow]
+  130 | uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 800};
+      |                                                                                                                                                                                                            ^~~
+../Core/Src/main.c:130:239: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '800' to '32' [-Woverflow]
+  130 | uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 800};
+      |                                                                                                                                                                                                                                               ^~~
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33120	    468	   4396	  37984	   9460	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+05:47:49 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:126:41: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  126 | uint8_t butterfly_interval[] = {10, 10, 400, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400};
+      |                                         ^~~
+../Core/Src/main.c:126:54: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  126 | uint8_t butterfly_interval[] = {10, 10, 400, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400};
+      |                                                      ^~~
+../Core/Src/main.c:126:83: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  126 | uint8_t butterfly_interval[] = {10, 10, 400, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400};
+      |                                                                                   ^~~
+../Core/Src/main.c:126:112: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  126 | uint8_t butterfly_interval[] = {10, 10, 400, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400};
+      |                                                                                                                ^~~
+../Core/Src/main.c:126:141: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  126 | uint8_t butterfly_interval[] = {10, 10, 400, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400};
+      |                                                                                                                                             ^~~
+../Core/Src/main.c:126:170: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  126 | uint8_t butterfly_interval[] = {10, 10, 400, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400};
+      |                                                                                                                                                                          ^~~
+../Core/Src/main.c:126:199: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  126 | uint8_t butterfly_interval[] = {10, 10, 400, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400};
+      |                                                                                                                                                                                                       ^~~
+../Core/Src/main.c:126:257: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '400' to '144' [-Woverflow]
+  126 | uint8_t butterfly_interval[] = {10, 10, 400, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 200, 10, 10, 10, 10, 10, 10, 400};
+      |                                                                                                                                                                                                                                                                 ^~~
+../Core/Src/main.c:130:64: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '600' to '88' [-Woverflow]
+  130 | uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 800};
+      |                                                                ^~~
+../Core/Src/main.c:130:99: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '600' to '88' [-Woverflow]
+  130 | uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 800};
+      |                                                                                                   ^~~
+../Core/Src/main.c:130:134: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '600' to '88' [-Woverflow]
+  130 | uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 800};
+      |                                                                                                                                      ^~~
+../Core/Src/main.c:130:169: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '600' to '88' [-Woverflow]
+  130 | uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 800};
+      |                                                                                                                                                                         ^~~
+../Core/Src/main.c:130:204: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '600' to '88' [-Woverflow]
+  130 | uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 800};
+      |                                                                                                                                                                                                            ^~~
+../Core/Src/main.c:130:239: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '800' to '32' [-Woverflow]
+  130 | uint8_t littlestar_interval[] = {200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 600, 200, 200, 200, 200, 200, 200, 800};
+      |                                                                                                                                                                                                                                               ^~~
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33120	    468	   4396	  37984	   9460	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+05:49:10 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33120	    568	   4392	  38080	   94c0	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+05:50:43 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33120	    568	   4392	  38080	   94c0	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+05:53:38 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33120	    568	   4392	  38080	   94c0	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+05:53:55 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33120	    568	   4392	  38080	   94c0	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+06:04:31 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:135:38: error: 'london_bridge' undeclared here (not in a function); did you mean 'londonbridge'?
+  135 | uint8_t londonbridge_length = sizeof(london_bridge) / sizeof(uint16_t);
+      |                                      ^~~~~~~~~~~~~
+      |                                      londonbridge
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+06:04:40 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33284	    712	   4392	  38388	   95f4	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+06:05:33 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33284	    712	   4392	  38388	   95f4	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+06:07:59 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33284	    712	   4392	  38388	   95f4	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+06:19:58 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:133:6: error: redeclaration of 'enum notes'
+  133 | enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
+      |      ^~~~~
+../Core/Src/main.c:123:6: note: originally defined here
+  123 | enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
+      |      ^~~~~
+../Core/Src/main.c:133:13: error: redeclaration of enumerator 'C'
+  133 | enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
+      |             ^
+../Core/Src/main.c:123:13: note: previous definition of 'C' with type 'enum notes'
+  123 | enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
+      |             ^
+../Core/Src/main.c:133:22: error: redeclaration of enumerator 'D'
+  133 | enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
+      |                      ^
+../Core/Src/main.c:123:22: note: previous definition of 'D' with type 'enum notes'
+  123 | enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
+      |                      ^
+../Core/Src/main.c:133:31: error: redeclaration of enumerator 'E'
+  133 | enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
+      |                               ^
+../Core/Src/main.c:123:31: note: previous definition of 'E' with type 'enum notes'
+  123 | enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
+      |                               ^
+../Core/Src/main.c:133:40: error: redeclaration of enumerator 'F'
+  133 | enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
+      |                                        ^
+../Core/Src/main.c:123:40: note: previous definition of 'F' with type 'enum notes'
+  123 | enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
+      |                                        ^
+../Core/Src/main.c:133:49: error: redeclaration of enumerator 'G'
+  133 | enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
+      |                                                 ^
+../Core/Src/main.c:123:49: note: previous definition of 'G' with type 'enum notes'
+  123 | enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
+      |                                                 ^
+../Core/Src/main.c:133:58: error: redeclaration of enumerator 'A'
+  133 | enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
+      |                                                          ^
+../Core/Src/main.c:123:58: note: previous definition of 'A' with type 'enum notes'
+  123 | enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
+      |                                                          ^
+../Core/Src/main.c:133:67: error: redeclaration of enumerator 'B'
+  133 | enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
+      |                                                                   ^
+../Core/Src/main.c:123:67: note: previous definition of 'B' with type 'enum notes'
+  123 | enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
+      |                                                                   ^
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+06:20:30 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33284	    740	   4396	  38420	   9614	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+06:28:16 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33284	    772	   4396	  38452	   9634	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+06:30:06 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33284	    772	   4396	  38452	   9634	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+06:32:49 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33284	    772	   4396	  38452	   9634	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+06:37:31 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33284	    768	   4392	  38444	   962c	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+06:39:34 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33284	    768	   4392	  38444	   962c	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+06:41:17 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33292	    768	   4392	  38452	   9634	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+06:44:38 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:294:51: warning: multi-character character constant [-Wmultichar]
+  294 |                           if (sTime.TimeFormat == 'AM' && sTime.Hours == '00' && sTime.Minutes =='00' && sTime.Seconds == '00')
+      |                                                   ^~~~
+../Core/Src/main.c:294:74: warning: multi-character character constant [-Wmultichar]
+  294 |                           if (sTime.TimeFormat == 'AM' && sTime.Hours == '00' && sTime.Minutes =='00' && sTime.Seconds == '00')
+      |                                                                          ^~~~
+../Core/Src/main.c:294:98: warning: multi-character character constant [-Wmultichar]
+  294 |                           if (sTime.TimeFormat == 'AM' && sTime.Hours == '00' && sTime.Minutes =='00' && sTime.Seconds == '00')
+      |                                                                                                  ^~~~
+../Core/Src/main.c:294:123: warning: multi-character character constant [-Wmultichar]
+  294 |                           if (sTime.TimeFormat == 'AM' && sTime.Hours == '00' && sTime.Minutes =='00' && sTime.Seconds == '00')
+      |                                                                                                                           ^~~~
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33284	    768	   4392	  38444	   962c	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+06:49:17 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:294:51: warning: multi-character character constant [-Wmultichar]
+  294 |                           if (sTime.TimeFormat == 'AM' && sTime.Hours == 0 && sTime.Minutes == 0 && sTime.Seconds == 0)
+      |                                                   ^~~~
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33284	    768	   4392	  38444	   962c	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+06:49:38 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:294:57: warning: multi-character character constant [-Wmultichar]
+  294 |                           if (ampm[sTime.TimeFormat] == 'AM' && sTime.Hours == 0 && sTime.Minutes == 0 && sTime.Seconds == 0)
+      |                                                         ^~~~
+../Core/Src/main.c:294:54: warning: comparison between pointer and integer
+  294 |                           if (ampm[sTime.TimeFormat] == 'AM' && sTime.Hours == 0 && sTime.Minutes == 0 && sTime.Seconds == 0)
+      |                                                      ^~
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33344	    768	   4392	  38504	   9668	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+06:51:18 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33284	    768	   4392	  38444	   962c	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 
+06:57:04 **** Incremental Build of configuration Debug for project BluetoothAlarmClock ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BluetoothAlarmClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluetoothAlarmClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluetoothAlarmClock.elf
+ 
+arm-none-eabi-size   BluetoothAlarmClock.elf 
+arm-none-eabi-objdump -h -S  BluetoothAlarmClock.elf  > "BluetoothAlarmClock.list"
+   text	   data	    bss	    dec	    hex	filename
+  33284	    768	   4392	  38444	   962c	BluetoothAlarmClock.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluetoothAlarmClock.list
+ 

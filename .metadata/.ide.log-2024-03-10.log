@@ -1,0 +1,123 @@
+2024-03-11 02:17:37,342 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-11 02:17:38,464 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-11 02:25:24,846 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 647311368 Bytes (1073741824)
+2024-03-11 02:25:24,923 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 684533768 Bytes (1073741824)
+2024-03-11 02:25:25,051 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 737488904 Bytes (1073741824)
+2024-03-11 02:25:25,241 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-03-11 02:25:25,242 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-03-11 02:25:25,242 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-03-11 02:25:25,242 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-03-11 02:25:25,242 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2024-03-11 02:25:25,242 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RTC
+2024-03-11 02:25:25,242 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-03-11 02:25:25,242 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-03-11 02:25:25,242 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-03-11 02:25:25,242 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2024-03-11 02:25:25,242 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-03-11 02:25:25,242 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ETH
+2024-03-11 02:25:25,243 [INFO] CodeGenerator:799 - code generatio: config db path: C:\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\
+2024-03-11 02:25:25,248 [INFO] Argument:319 - Argument : hdmavalue: null
+2024-03-11 02:25:25,248 [INFO] Argument:321 - 	 sub Args: 
+2024-03-11 02:25:25,248 [INFO] Argument:319 - Argument : Instancevalue: DMA2_Stream0
+2024-03-11 02:25:25,248 [INFO] Argument:329 - Argument : Instancevalue: DMA2_Stream0
+2024-03-11 02:25:25,248 [INFO] Argument:319 - Argument : Initvalue: null
+2024-03-11 02:25:25,248 [INFO] Argument:321 - 	 sub Args: 
+2024-03-11 02:25:25,248 [INFO] Argument:319 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-03-11 02:25:25,248 [INFO] Argument:329 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-03-11 02:25:25,248 [INFO] Argument:319 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-03-11 02:25:25,248 [INFO] Argument:329 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-03-11 02:25:25,248 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-03-11 02:25:25,248 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-03-11 02:25:25,248 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-03-11 02:25:25,248 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-03-11 02:25:25,248 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2024-03-11 02:25:25,248 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2024-03-11 02:25:25,248 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2024-03-11 02:25:25,248 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2024-03-11 02:25:25,248 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2024-03-11 02:25:25,248 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2024-03-11 02:25:25,248 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-03-11 02:25:25,248 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-03-11 02:25:25,248 [INFO] Argument:319 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-03-11 02:25:25,248 [INFO] Argument:329 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-03-11 02:25:25,248 [INFO] Argument:319 - Argument : FIFOThresholdvalue: null
+2024-03-11 02:25:25,248 [INFO] Argument:329 - Argument : FIFOThresholdvalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:319 - Argument : MemBurstvalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:329 - Argument : MemBurstvalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:319 - Argument : PeriphBurstvalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:329 - Argument : PeriphBurstvalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:319 - Argument : Lockvalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:329 - Argument : Lockvalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:319 - Argument : Statevalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:329 - Argument : Statevalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:319 - Argument : Parentvalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:329 - Argument : Parentvalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:319 - Argument : XferM1CpltCallbackvalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:329 - Argument : XferM1CpltCallbackvalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2024-03-11 02:25:25,249 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2024-03-11 02:25:25,361 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\MXTmpFiles\license.tmp_save
+2024-03-11 02:25:25,443 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\MXTmpFiles\license.tmp
+2024-03-11 02:25:25,473 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\gpio.c_save
+2024-03-11 02:25:25,555 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\gpio.c
+2024-03-11 02:25:25,558 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\gpio.h_save
+2024-03-11 02:25:25,627 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\gpio.h
+2024-03-11 02:25:25,811 [WARN] IPConfigManager:2937 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-03-11 02:25:25,831 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\adc.c_save
+2024-03-11 02:25:25,933 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\adc.c
+2024-03-11 02:25:25,942 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\adc.h_save
+2024-03-11 02:25:26,007 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\adc.h
+2024-03-11 02:25:26,025 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\dma.c_save
+2024-03-11 02:25:26,096 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\dma.c
+2024-03-11 02:25:26,105 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\dma.h_save
+2024-03-11 02:25:26,172 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\dma.h
+2024-03-11 02:25:26,184 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\eth.c_save
+2024-03-11 02:25:26,271 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\eth.c
+2024-03-11 02:25:26,279 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\eth.h_save
+2024-03-11 02:25:26,348 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\eth.h
+2024-03-11 02:25:26,359 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\i2c.c_save
+2024-03-11 02:25:26,443 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\i2c.c
+2024-03-11 02:25:26,446 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\i2c.h_save
+2024-03-11 02:25:26,509 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\i2c.h
+2024-03-11 02:25:26,519 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\rtc.c_save
+2024-03-11 02:25:26,598 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\rtc.c
+2024-03-11 02:25:26,601 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\rtc.h_save
+2024-03-11 02:25:26,669 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\rtc.h
+2024-03-11 02:25:26,681 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\tim.c_save
+2024-03-11 02:25:26,772 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\tim.c
+2024-03-11 02:25:26,781 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\tim.h_save
+2024-03-11 02:25:26,853 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\tim.h
+2024-03-11 02:25:26,868 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\usart.c_save
+2024-03-11 02:25:26,951 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\usart.c
+2024-03-11 02:25:26,954 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\usart.h_save
+2024-03-11 02:25:27,025 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\usart.h
+2024-03-11 02:25:27,038 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\usb_otg.c_save
+2024-03-11 02:25:27,124 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\usb_otg.c
+2024-03-11 02:25:27,128 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\usb_otg.h_save
+2024-03-11 02:25:27,197 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\usb_otg.h
+2024-03-11 02:25:27,211 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\stm32f4xx_it.c_save
+2024-03-11 02:25:27,381 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\stm32f4xx_it.c
+2024-03-11 02:25:27,392 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\stm32f4xx_it.h_save
+2024-03-11 02:25:27,468 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\stm32f4xx_it.h
+2024-03-11 02:25:27,484 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\stm32f4xx_hal_msp.c_save
+2024-03-11 02:25:27,592 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\stm32f4xx_hal_msp.c
+2024-03-11 02:25:27,595 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\MXTmpFiles\system.tmp_save
+2024-03-11 02:25:27,659 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\MXTmpFiles\system.tmp
+2024-03-11 02:25:27,673 [INFO] CodeEngine:311 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-03-11 02:25:27,760 [INFO] CodeEngine:335 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\stm32f4xx_hal_conf.h
+2024-03-11 02:25:27,788 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\main.h_save
+2024-03-11 02:25:27,871 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Inc\main.h
+2024-03-11 02:25:27,882 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\main.c_save
+2024-03-11 02:25:27,965 [INFO] CodeEngine:279 - Generated code: D:\Nelly\workspace\STM32CubeIDE\BluetoothAlarmClock\Core\Src\main.c
+2024-03-11 02:25:28,402 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 137mS.
+2024-03-11 02:25:28,405 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2024-03-11 02:25:28,596 [INFO] ConfigFileManager:1457 - The Die is : DIE419
+2024-03-11 02:25:29,507 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1102mS.
+2024-03-11 02:25:29,508 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2024-03-11 02:25:29,509 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.

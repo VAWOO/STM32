@@ -65,9 +65,9 @@ typedef enum
 
 typedef enum
 {
-	LOVEDIVE=0,
-	FEARLESS,
-	ELEVEN
+	BUTTERFLY=0,
+	LITTLESTAR,
+	JINGLEBELLS
 }_Belltype;
 
 typedef enum
@@ -97,9 +97,10 @@ _MODE mode=SETTING;
 _SetMode setmode = AMPM;
 char tmpTime[100]= {0,};
 char ampm[2][3] = {"AM", "PM"};
-_Belltype belltype = LOVEDIVE;
+
+_Belltype belltype = BUTTERFLY;
 char tmp_bell_name[20]={0,};
-char bell_name[3][20]={ {">> LOVE DIVE   "}, {">> FEARLESS    "}, {">> ELEVEN      "}, };
+char bell_name[3][20]={ {">> Butterfly    "}, {">> Little Star  "}, {">> Jingle Bells "}, };
 
 _Direction direction;
 _Direction button;
@@ -109,8 +110,6 @@ uint8_t user_pulled_flag=0;
 
 uint32_t old_tick=0;
 uint32_t current_tick=0;
-uint32_t old_alarm_tick=0;
-uint32_t current_alarm_tick=0;
 
 uint8_t alarm_on=0;
 
@@ -120,6 +119,20 @@ uint8_t double_click = 0;
 uint32_t interval = 0;
 uint32_t interval_chk[2] = {0, };
 int pulled_chk = -1;
+
+enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
+
+uint16_t butterfly[] = {G, E, E, F, D, D, C, D, E, F, G, G, G, G, E, E, E, F, D, D, C, E, G, G, E, E, E, D, D, D, D, D, E, F, E, E, E, E, E, F, G, G, E, E, E, F, D, D, C, E, G, G, E, E, E};
+uint16_t butterfly_interval[] = {10, 10, 400, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 800};
+uint8_t butterfly_length = sizeof(butterfly)/sizeof(uint16_t);
+
+uint16_t littlestar[] = {C, C, G, G, A, A, G, F, F, E, E, D, D, C, G, G, F, F, E, E, D, G, G, F, F, E, E, D, C, C, G, G, A, A, G, F, F, E, E, D, D, C};
+uint16_t littlestar_interval[] = {10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 400, 10, 10, 10, 10, 10, 10, 800};
+uint8_t littlestar_length = sizeof(littlestar)/sizeof(uint16_t);
+
+uint16_t jinglebells[] = {E, E, E, E, E, E, E, G, C, D, E, F, F, F, F, F, E, E, E, E, D, D, E, D, G, E, E, E, E, E, E, E, G, C, D, E, F, F, F, F, F, E, E, E, G, G, F, D, C};
+uint16_t jinglebells_interval[] = {10, 10, 400, 10, 10, 400, 10, 10, 10, 10, 800, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 400, 600, 10, 10, 400, 10, 10, 400, 10, 10, 10, 10, 800, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 800};
+uint8_t jinglebells_length = sizeof(jinglebells) / sizeof(uint16_t);
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -267,7 +280,7 @@ int main(void)
 	  {
 		  HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
 		  HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
-		  sprintf(tmpTime,"%s %02d:%02d:%02d    ", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes, sTime.Seconds);
+		  sprintf(tmpTime,"%s %02d:%02d:%02d     ", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes, sTime.Seconds);
 		  lcd_put_cur(0,0);
 		  LCD_SendString("Choi Jin Woo    ");
 		  lcd_put_cur(1,0);
@@ -281,35 +294,96 @@ int main(void)
 
 		  if(alarm_on==1)
 		  {
-			  toggle^=1;
-			  current_alarm_tick=HAL_GetTick();
-			  if(toggle==1)
+			  if (belltype == BUTTERFLY)
 			  {
-				  HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
+				  toggle^=1;
+
+				  if(toggle==1)
+				  {
+					  HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
+				  }
+				  else
+				  {
+					  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+
+					  for(int i=0; i < butterfly_length; i++)
+					  {
+					  		  TIM2->ARR = butterfly[i];
+					  		  TIM2->CCR1 = TIM2->ARR / 2;
+					  		  HAL_Delay(500);
+					  		  TIM2->CCR1 = 0;
+					  		  HAL_Delay(butterfly_interval[i]);
+					  		  TIM2->CCR1 = TIM2->ARR / 2;
+					  }
+
+					  alarm_on=0;
+					  HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
+				  }
 			  }
-			  else
+			  else if (belltype == LITTLESTAR)
 			  {
-				  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+				  toggle^=1;
+
+				  if(toggle==1)
+				  {
+					  HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
+				  }
+				  else
+				  {
+					  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+
+					  for(int i=0; i < littlestar_length; i++)
+					  {
+					  		  TIM2->ARR = littlestar[i];
+					  		  TIM2->CCR1 = TIM2->ARR / 2;
+					  		  HAL_Delay(500);
+					  		  TIM2->CCR1 = 0;
+					  		  HAL_Delay(littlestar_interval[i]);
+					  		  TIM2->CCR1 = TIM2->ARR / 2;
+					  }
+
+					  alarm_on=0;
+					  HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
+				  }
 			  }
-			  if(current_alarm_tick-old_alarm_tick > 3000)
+			  else if (belltype == JINGLEBELLS)
 			  {
-				  old_alarm_tick=current_alarm_tick;
-				  alarm_on=0;
-				  HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
+				  toggle^=1;
+
+				  if(toggle==1)
+				  {
+					  HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
+				  }
+				  else
+				  {
+					  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+
+					  for(int i=0; i < jinglebells_length; i++)
+					  {
+					  		  TIM2->ARR = jinglebells[i];
+					  		  TIM2->CCR1 = TIM2->ARR / 2;
+					  		  HAL_Delay(500);
+					  		  TIM2->CCR1 = 0;
+					  		  HAL_Delay(jinglebells_interval[i]);
+					  		  TIM2->CCR1 = TIM2->ARR / 2;
+					  }
+
+					  alarm_on=0;
+					  HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
+				  }
 			  }
 		  }
 
 		  if(user_pressed_flag==1)
 		  {
 			  current_tick=HAL_GetTick();
-			  if(current_tick-old_tick > 3000)
+			  if(current_tick-old_tick > 2000)
 			  {
 				  old_tick=current_tick;
 				  user_pressed_flag=0;
 				  mode=ALARM;
 				  HAL_RTC_GetTime(&hrtc, &aTime, RTC_FORMAT_BIN);
 				  HAL_RTC_GetDate(&hrtc, &aDate, RTC_FORMAT_BIN);
-
 			  }
 		  }
 
