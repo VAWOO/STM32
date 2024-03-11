@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="FLASH_SECTOR_7"/>
+		<item key="selection" value="uart_buf"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="uart_buf"/>
+			<item value="rxBuffer"/>
+			<item value="RX_BUFFER_SIZE"/>
+			<item value="huart"/>
+			<item value="huart3"/>
+			<item value="button"/>
+			<item value="rx3_data"/>
+			<item value="HAL_UART_Receive_IT"/>
+			<item value="rx_data"/>
+			<item value="at"/>
 			<item value="erase"/>
 			<item value="FLASH_SECTOR_7"/>
 			<item value="interval_chk"/>
 			<item value="sTime"/>
 			<item value="hrtc"/>
-			<item value="readRtcData."/>
-			<item value="readRtcData"/>
-			<item value="fffff"/>
-			<item value="data"/>
-			<item value="12"/>
-			<item value="DATA_SIZE"/>
-			<item value="HAL_RTC_SetTime"/>
-			<item value="sDate"/>
-			<item value="HAL_RTC_GetTime"/>
-			<item value="aDate"/>
 		</list>
 		<list key="replacehistory">
 		</list>
