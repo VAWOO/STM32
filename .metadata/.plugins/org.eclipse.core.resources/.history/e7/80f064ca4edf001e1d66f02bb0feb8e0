@@ -1,0 +1,18 @@
+/*
+ * flash.h
+ *
+ *  Created on: Mar 11, 2024
+ *      Author: wlsdn
+ */
+
+#ifndef INC_FLASH_H_
+#define INC_FLASH_H_
+
+#include "stm32f4xx_hal.h"
+
+// 함수 원형 선언
+HAL_StatusTypeDef FLASH_Write(uint32_t address, uint32_t *data, uint32_t size);
+HAL_StatusTypeDef FLASH_Read(uint32_t address, uint32_t *data, uint32_t size);
+
+
+#endif /* INC_FLASH_H_ */

@@ -1,1 +1,6 @@
 1710094076763	Delete resource 'pwm_practice'
+1710115916203	Delete resource 'BluetoothAlarmClock/Core/Src/stm32f4xx_hal_conf.h'
+1710115919188	Delete resource 'BluetoothAlarmClock/Core/Src/stm32f4xx_it.h'
+1710118868806	Delete resource 'BluetoothAlarmClock/Core/Inc/stm32f4xx_it.h'
+1710118870097	Delete resource 'BluetoothAlarmClock/Core/Inc/stm32f4xx_hal_conf.h'
+1710119625931	Delete resource 'BluetoothAlarmClock/Core/Inc/flash'

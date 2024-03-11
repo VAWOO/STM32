@@ -27,7 +27,7 @@
 #include "usart.h"
 #include "usb_otg.h"
 #include "gpio.h"
-
+#include "flash.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <string.h>
@@ -81,7 +81,7 @@ typedef enum
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define RTC_FLASH_ADDRESS 0x08060000
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -202,6 +202,14 @@ int main(void)
   char customChar[] = {0x01, 0x03, 0x05, 0x09, 0x09, 0x0B, 0x1B, 0x18};
   LCD_SendCommand(LCD_ADDR, 0x40);
   for(int i=0; i<8; i++) LCD_SendData(customChar[i]);
+
+  uint32_t readRtcData[3];
+  FLASH_Read(RTC_FLASH_ADDRESS, readRtcData, sizeof(readRtcData) / sizeof(readRtcData[0]));
+  sTime.Hours = readRtcData[0];
+  sTime.Minutes = readRtcData[1];
+  sTime.Seconds = readRtcData[2];
+  HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -377,6 +385,7 @@ int main(void)
 		  if(user_pressed_flag==1)
 		  {
 			  current_tick=HAL_GetTick();
+
 			  if(current_tick-old_tick > 2000)
 			  {
 				  old_tick=current_tick;
@@ -389,6 +398,9 @@ int main(void)
 
 		  if(double_click==1)
 		  {
+			  uint32_t rtcData[3] = {sTime.Hours, sTime.Minutes, sTime.Seconds};
+			  FLASH_Write(RTC_FLASH_ADDRESS, rtcData, sizeof(rtcData) / sizeof(rtcData[0]));
+
 			  mode=BELL;
 			  double_click=0;
 		  }
