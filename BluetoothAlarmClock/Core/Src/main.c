@@ -27,6 +27,7 @@
 #include "usart.h"
 #include "usb_otg.h"
 #include "gpio.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <string.h>
@@ -94,31 +95,15 @@ typedef enum
 /* USER CODE BEGIN PV */
 _MODE mode=SETTING;
 
+// AM/PM
 _SetMode setmode = AMPM;
 char tmpTime[100]= {0,};
 char ampm[2][3] = {"AM", "PM"};
 
+// Bell
 _Belltype belltype = BUTTERFLY;
 char tmp_bell_name[20]={0,};
 char bell_name[3][20]={ {">> Butterfly    "}, {">> Little Star  "}, {">> Jingle Bells "}, };
-
-_Direction direction;
-_Direction button;
-
-uint8_t user_pressed_flag=0;
-uint8_t user_pulled_flag=0;
-
-uint32_t old_tick=0;
-uint32_t current_tick=0;
-
-uint8_t alarm_on=0;
-
-uint32_t XY[2]; // Joystick
-
-uint8_t double_click = 0;
-uint32_t interval = 0;
-uint32_t interval_chk[2] = {0, };
-int pulled_chk = -1;
 
 enum notes {C = 956, D = 852, E = 758, F = 716, G = 638, A = 568, B = 506};
 uint16_t butterfly[] = {G, E, E, F, D, D, C, D, E, F, G, G, G, G, E, E, E, F, D, D, C, E, G, G, E, E, E, D, D, D, D, D, E, F, E, E, E, E, E, F, G, G, E, E, E, F, D, D, C, E, G, G, E, E, E};
@@ -133,8 +118,30 @@ uint16_t jinglebells[] = {E, E, E, E, E, E, E, G, C, D, E, F, F, F, F, F, E, E, 
 uint16_t jinglebells_interval[] = {10, 10, 400, 10, 10, 400, 10, 10, 10, 10, 800, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 400, 600, 10, 10, 400, 10, 10, 400, 10, 10, 10, 10, 800, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 800};
 uint8_t jinglebells_length = sizeof(jinglebells) / sizeof(uint16_t);
 
-uint8_t pc_data;
-uint8_t bt_data;
+// Button
+_Direction direction;
+_Direction button;
+_Direction Bl_button;
+
+uint8_t user_pressed_flag=0;
+uint8_t user_pulled_flag=0;
+
+uint32_t old_tick=0;
+uint32_t current_tick=0;
+
+uint8_t double_click = 0;
+uint32_t interval = 0;
+uint32_t interval_chk[2] = {0, };
+int pulled_chk = -1;
+
+// Alarm
+uint8_t alarm_on=0;
+
+// Joystick
+uint32_t XY[2];
+
+// Bluetooth
+uint8_t rx2_data;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -183,23 +190,25 @@ int main(void)
   MX_DMA_Init();
   MX_ETH_Init();
   MX_USART3_UART_Init();
-  MX_USART6_UART_Init();
   MX_USB_OTG_FS_PCD_Init();
   MX_ADC1_Init();
   MX_I2C1_Init();
   MX_RTC_Init();
   MX_TIM2_Init();
+  MX_USART2_UART_Init();
   /* Initialize interrupts */
   MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
-  uint8_t toggle=0;
-
   LCM1602_init();
+
+  HAL_UART_Receive_IT(&huart2, &rx2_data, sizeof(rx2_data));
 
   HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
   HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
 
   HAL_ADC_Start_DMA(&hadc1, XY, 2);
+
+  uint8_t toggle=0;
 
   char customChar[] = {0x01, 0x03, 0x05, 0x09, 0x09, 0x0B, 0x1B, 0x18};
   LCD_SendCommand(LCD_ADDR, 0x40);
@@ -211,9 +220,6 @@ int main(void)
   sTime.Minutes = readRtcData[1];
   sTime.Seconds = readRtcData[2];
   HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
-
-  HAL_UART_Receive_IT(&huart3, &pc_data, sizeof(pc_data));
-  HAL_UART_Receive_IT(&huart6, &bt_data, sizeof(bt_data));
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -228,7 +234,7 @@ int main(void)
 		  lcd_put_cur(0,0);
 		  LCD_SendString("Setting Mode    ");
 
-		  // read button
+		  // Read Button
 		  button = getButton();
 		  move_cur_time(&sTime, button);
 
@@ -237,33 +243,33 @@ int main(void)
 		  // the part where it's big and blinking
 		  if(toggle)
 		  {
-			  sprintf(tmpTime,"%s %02d:%02d:%02d", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes, sTime.Seconds);
+			  sprintf(tmpTime,"%s %02d:%02d:%02d ", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes, sTime.Seconds);
 		  }
 		  else
 		  {
 			  if(setmode==AMPM)
 			  {
-				  sprintf(tmpTime,"   %02d:%02d:%02d", sTime.Hours, sTime.Minutes, sTime.Seconds);
+				  sprintf(tmpTime,"   %02d:%02d:%02d ", sTime.Hours, sTime.Minutes, sTime.Seconds);
 			  }
 			  else if(setmode==HOUR_T)
 			  {
-				  sprintf(tmpTime,"%s  %d:%02d:%02d", ampm[sTime.TimeFormat], sTime.Hours%10, sTime.Minutes, sTime.Seconds);
+				  sprintf(tmpTime,"%s  %d:%02d:%02d ", ampm[sTime.TimeFormat], sTime.Hours%10, sTime.Minutes, sTime.Seconds);
 			  }
 			  else if(setmode==HOUR_O)
 			  {
-				  sprintf(tmpTime,"%s %d :%02d:%02d", ampm[sTime.TimeFormat], sTime.Hours/10, sTime.Minutes, sTime.Seconds);
+				  sprintf(tmpTime,"%s %d :%02d:%02d ", ampm[sTime.TimeFormat], sTime.Hours/10, sTime.Minutes, sTime.Seconds);
 			  }
 			  else if(setmode==MINUTE_T)
 			  {
-				  sprintf(tmpTime,"%s %02d: %d:%02d", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes%10, sTime.Seconds);
+				  sprintf(tmpTime,"%s %02d: %d:%02d ", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes%10, sTime.Seconds);
 			  }
 			  else if(setmode==MINUTE_O)
 			  {
-				  sprintf(tmpTime,"%s %02d:%d :%02d", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes/10, sTime.Seconds);
+				  sprintf(tmpTime,"%s %02d:%d :%02d ", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes/10, sTime.Seconds);
 			  }
 			  else if(setmode==SECOND_T)
 			  {
-				  sprintf(tmpTime,"%s %02d:%02d: %d", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes, sTime.Seconds%10);
+				  sprintf(tmpTime,"%s %02d:%02d: %d ", ampm[sTime.TimeFormat], sTime.Hours, sTime.Minutes, sTime.Seconds%10);
 			  }
 			  else if(setmode==SECOND_O)
 			  {
@@ -422,37 +428,37 @@ int main(void)
 
 		  if(toggle)
 		  {
-			  sprintf(tmpTime,"%s %02d:%02d:%02d", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes, aTime.Seconds);
+			  sprintf(tmpTime,"%s %02d:%02d:%02d   ", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes, aTime.Seconds);
 		  }
 		  else
 		  {
 			  if(setmode==AMPM)
 			  {
-				  sprintf(tmpTime,"   %02d:%02d:%02d", aTime.Hours, aTime.Minutes, aTime.Seconds);
+				  sprintf(tmpTime,"   %02d:%02d:%02d ", aTime.Hours, aTime.Minutes, aTime.Seconds);
 			  }
 			  else if(setmode==HOUR_T)
 			  {
-				  sprintf(tmpTime,"%s  %d:%02d:%02d", ampm[aTime.TimeFormat], aTime.Hours%10, aTime.Minutes, aTime.Seconds);
+				  sprintf(tmpTime,"%s  %d:%02d:%02d ", ampm[aTime.TimeFormat], aTime.Hours%10, aTime.Minutes, aTime.Seconds);
 			  }
 			  else if(setmode==HOUR_O)
 			  {
-				  sprintf(tmpTime,"%s %d :%02d:%02d", ampm[aTime.TimeFormat], aTime.Hours/10, aTime.Minutes, aTime.Seconds);
+				  sprintf(tmpTime,"%s %d :%02d:%02d ", ampm[aTime.TimeFormat], aTime.Hours/10, aTime.Minutes, aTime.Seconds);
 			  }
 			  else if(setmode==MINUTE_T)
 			  {
-				  sprintf(tmpTime,"%s %02d: %d:%02d", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes%10, aTime.Seconds);
+				  sprintf(tmpTime,"%s %02d: %d:%02d ", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes%10, aTime.Seconds);
 			  }
 			  else if(setmode==MINUTE_O)
 			  {
-				  sprintf(tmpTime,"%s %02d:%d :%02d", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes/10, aTime.Seconds);
+				  sprintf(tmpTime,"%s %02d:%d :%02d ", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes/10, aTime.Seconds);
 			  }
 			  else if(setmode==SECOND_T)
 			  {
-				  sprintf(tmpTime,"%s %02d:%02d: %d", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes, aTime.Seconds%10);
+				  sprintf(tmpTime,"%s %02d:%02d: %d ", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes, aTime.Seconds%10);
 			  }
 			  else if(setmode==SECOND_O)
 			  {
-				  sprintf(tmpTime,"%s %02d:%02d:%d", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes, aTime.Seconds/10);
+				  sprintf(tmpTime,"%s %02d:%02d:%d ", ampm[aTime.TimeFormat], aTime.Hours, aTime.Minutes, aTime.Seconds/10);
 			  }
 		  }
 
@@ -559,9 +565,9 @@ void SystemClock_Config(void)
   */
 static void MX_NVIC_Init(void)
 {
-  /* USART6_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(USART6_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(USART6_IRQn);
+  /* USART2_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(USART2_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(USART2_IRQn);
   /* USART3_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(USART3_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(USART3_IRQn);
@@ -573,18 +579,23 @@ static void MX_NVIC_Init(void)
 /* USER CODE BEGIN 4 */
 _Direction getButton()
 {
+    if (Bl_button != NONE)
+    {
+        _Direction temp = Bl_button;
+        Bl_button = NONE;
+        return temp;
+    }
+
 	if(XY[0] < 300)
-		return RIGHT;
-	else if(XY[0] > 4000)
-		return LEFT;
-	else if(XY[1] > 4000)
 		return UP;
-	else if(XY[1] < 300)
+	else if(XY[0] > 3800)
 		return DOWN;
+	else if(XY[1] > 3800)
+		return LEFT;
+	else if(XY[1] < 300)
+		return RIGHT;
 	else
-	{
 		return NONE;
-	}
 }
 
 void move_cur_time(RTC_TimeTypeDef *Time, _Direction direction)
@@ -734,18 +745,42 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	}
 }
 
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef* huart)
 {
-	if(huart->Instance==USART3)
+	if (huart->Instance == USART2)
 	{
-		HAL_UART_Transmit(&huart6, &pc_data, sizeof(pc_data), 10);
-		HAL_UART_Receive_IT(&huart3, &pc_data, sizeof(pc_data));
+		HAL_UART_Transmit(&huart3, &rx2_data, sizeof(rx2_data), 10);
+		HAL_UART_Receive_IT(&huart2, &rx2_data, sizeof(rx2_data));
 
-	}
-	else if(huart->Instance==USART6)
-	{
-		HAL_UART_Transmit(&huart3, &bt_data, sizeof(bt_data), 10);
-		HAL_UART_Receive_IT(&huart6, &bt_data, sizeof(bt_data));
+		switch(rx2_data)
+		{
+		case 'U':
+			Bl_button = UP;
+			break;
+		case 'D':
+			Bl_button = DOWN;
+			break;
+		case 'L':
+			Bl_button = LEFT;
+			break;
+		case 'R':
+			Bl_button = RIGHT;
+			break;
+		case 'E':
+			if (mode != NORMAL)
+				user_pressed_flag=1;
+			break;
+		case 'B':
+			if (mode == NORMAL)
+				double_click=1;
+			break;
+		case 'A':
+			if (mode == NORMAL)
+				user_pressed_flag=1;
+			break;
+		default:
+			break;
+		}
 	}
 }
 /* USER CODE END 4 */
