@@ -290,6 +290,9 @@ int main(void)
 				  user_pressed_flag=0;
 				  HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
 				  mode=NORMAL;
+
+				  uint32_t rtcData[3] = {sTime.Hours, sTime.Minutes, sTime.Seconds};
+				  FLASH_Write(RTC_FLASH_ADDRESS, rtcData, sizeof(rtcData) / sizeof(rtcData[0]));
 			  }
 		  }
 	  }
